@@ -1,0 +1,10 @@
+{
+  "name": "chaarteeke-scripts",
+  "private": true,
+  "type": "module",
+  "description": "Tooling for scripts/ui_check.mjs only. Install with: cd scripts && npm install",
+  "engines": { "node": ">=22" },
+  "devDependencies": {
+    "playwright-core": "1.48.2"
+  }
+}

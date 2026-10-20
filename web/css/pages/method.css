@@ -1,0 +1,42 @@
+/* Method page: one narrow column of plain text. Logical properties only. */
+
+.method {
+  --stack-gap: var(--s-6);
+}
+.method p {
+  max-inline-size: 62ch;
+}
+.method__sec {
+  scroll-margin-block-start: 4.5rem;
+}
+.method__sec:target h2 {
+  box-shadow: inset 4px 0 0 var(--primary);
+  padding-inline-start: var(--s-3);
+}
+.method__toc {
+  padding: var(--s-4);
+  background: var(--surface);
+  border: var(--border) solid var(--line);
+  border-radius: var(--radius-l);
+}
+.method__toc-title {
+  font-weight: var(--weight-bold);
+  margin-block-end: var(--s-1);
+}
+.method__toc ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--s-5);
+}
+.method__toc a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--target);
+}
+.method__list {
+  display: grid;
+  gap: var(--s-2);
+  padding-inline-start: var(--s-5);
+  list-style: disc;
+  max-inline-size: 62ch;
+}

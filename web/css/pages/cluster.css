@@ -1,0 +1,107 @@
+.cluster-back {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--target);
+  align-self: flex-start;
+  font-weight: var(--weight-medium);
+}
+.cluster-back::before {
+  content: "\2190";
+  margin-inline-end: var(--s-2);
+}
+html[dir="rtl"] .cluster-back::before {
+  content: "\2192";
+}
+.cluster-top {
+  display: grid;
+  gap: var(--s-5);
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+}
+@media (min-width: 64rem) {
+  .cluster-top {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  }
+}
+
+.wards-narrow {
+  display: none;
+}
+.ward-row {
+  align-items: flex-start;
+  padding-block: var(--s-3);
+}
+@media (max-width: 40rem) {
+  .wards-wide {
+    display: none;
+  }
+  .wards-narrow {
+    display: block;
+  }
+}
+
+/* Bites each week: one row per week; a bar is a length only for a real count. */
+.weekly {
+  margin: 0;
+  display: grid;
+  gap: var(--s-2);
+}
+.weekly__rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--s-1);
+  max-inline-size: 36rem;
+}
+.weekly__row {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr) 6.5rem;
+  align-items: center;
+  column-gap: var(--s-3);
+  min-block-size: 1.75rem;
+}
+.weekly__date {
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+.weekly__n {
+  font-variant-numeric: tabular-nums;
+  text-align: end;
+}
+.weekly__track {
+  display: block;
+  block-size: 1rem;
+  direction: ltr;
+}
+.weekly__bar {
+  display: block;
+  block-size: 100%;
+  inline-size: calc(var(--len, 0) * 100%);
+  min-inline-size: 2px;
+  background: var(--primary);
+  border-radius: var(--radius-s);
+}
+.weekly__bar--hatched {
+  inline-size: 3rem;
+  background: repeating-linear-gradient(135deg, var(--map-hatch) 0 2px, transparent 2px 5px);
+  outline: var(--border) solid var(--map-hatch);
+  outline-offset: -1px;
+}
+.weekly__bar--partial {
+  outline: 2px dashed var(--primary);
+  outline-offset: -2px;
+}
+.weekly__bar--partial:not(.weekly__bar--hatched) {
+  background: var(--primary-tint);
+}
+@media (forced-colors: active) {
+  .weekly__bar {
+    background: CanvasText;
+  }
+  .weekly__bar--hatched,
+  .weekly__bar--partial:not(.weekly__bar--hatched) {
+    background: Canvas;
+    outline: 2px dashed CanvasText;
+  }
+}

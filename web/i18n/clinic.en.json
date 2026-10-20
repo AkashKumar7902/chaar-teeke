@@ -1,0 +1,118 @@
+{
+  "_meta": {
+    "lang": "en",
+    "bundle": "clinic",
+    "note": "Shared by the Today, Enrol and Patient pages. Plain words; the never-on-screen list is in docs/DESIGN.md."
+  },
+  "clinic": {
+    "title": "Today",
+    "enrol": "Enrol a patient",
+    "stickers": "Print bite-card stickers",
+    "clinicLabel": "Clinic",
+    "readOnlyTitle": "Read-only view: changes are refused",
+    "days": "Days {list}",
+    "registerNo": "Register no. {no}",
+    "noRegister": "No register number",
+    "wasDue": "was due {date}",
+    "find": "Find by register number",
+    "showMore": "Show {count} more",
+    "noMatch": "No patient with that number.",
+    "showDone": "Show given ({count})",
+    "hideDone": "Hide given",
+    "given": "Given",
+    "givenFor": "Mark dose {dose} given for register no. {no}",
+    "markedToast": "Dose {n} marked given for {no}.",
+    "dueOn": "due {date}",
+    "lastCall": {
+      "none": "No call yet",
+      "called": "{kind} called {time}",
+      "tried": "{kind} tried {time}, not answered"
+    },
+    "callKind": {
+      "first": "First call",
+      "reminder": "Reminder",
+      "missed_dose": "Missed-dose call",
+      "duplicate_notice": "Already-enrolled notice",
+      "withdrawn_notice": "Withdrawal notice"
+    },
+    "lang": {
+      "hi": "Hindi",
+      "doi": "Dogri",
+      "ur": "Urdu"
+    },
+    "regimen": {
+      "id_trc": "Intradermal, Updated Thai Red Cross",
+      "im_essen": "Intramuscular, Essen",
+      "reexposure": "Re-exposure after a complete course",
+      "id_1week": "Intradermal one-week (WHO 2018)",
+      "im_abbrev": "Intramuscular abbreviated (WHO 2018)"
+    },
+    "tiles": {
+      "label": "Counts",
+      "due": "Due today",
+      "left": "left",
+      "dueGiven": "Due today · {given} given",
+      "dueAria": "Due today: {left} left, {given} given",
+      "missed": "Missed doses",
+      "waiting": "Waiting for first call",
+      "next": "Next due"
+    },
+    "lists": {
+      "due": "Due today",
+      "missed": "Missed doses",
+      "waiting": "Waiting for first call",
+      "next": "Next due"
+    },
+    "empty": {
+      "due": "No one is due today.",
+      "dueNext": "Next due {date}.",
+      "dueDone": "Every dose due today is marked given.",
+      "next": "No one is due in the next 2 days.",
+      "missed": "No missed doses.",
+      "waiting": "No one is waiting for a first call."
+    },
+    "offline": {
+      "title": "Lists come back when the server answers."
+    },
+    "vaccine": {
+      "title": "Vaccine",
+      "topic": "the vaccine switch",
+      "in": "In stock",
+      "out": "Out",
+      "inLine": "Reminders now give the dose date and say come to the clinic.",
+      "outLine": "Out {since}. Reminders now say: call the clinic first.",
+      "outNoTime": "Out. Reminders now say: call the clinic first.",
+      "explain": "Switch to Out when the clinic has no vaccine. Reminder calls then ask patients to call the clinic first. Switch back to In stock when it arrives.",
+      "confirmTitle": "Mark the vaccine as out?",
+      "confirmBody": "Reminder calls will tell patients to call the clinic first.",
+      "confirmOut": "Mark vaccine out"
+    },
+    "callbacks": {
+      "title": "Call-back requests ({count})",
+      "topic": "call-back requests",
+      "explain": "Phone them, then press Done. If you could not reach them, press Couldn't reach. The call-back never shows what the patient said on the call.",
+      "ask": "The ABC team asked the clinic to phone this patient.",
+      "asked": "Asked {when}",
+      "show": "Show number and call",
+      "shown": "Number shown for {s} seconds. Each look is logged.",
+      "done": "Done",
+      "noContact": "Couldn't reach",
+      "doneTitle": "Call-back done",
+      "noContactTitle": "Could not reach the patient",
+      "noteLabel": "Note (optional, one line)",
+      "save": "Save"
+    },
+    "unlinked": {
+      "title": "Missed calls to link ({count})",
+      "topic": "missed calls to link",
+      "explain": "Someone gave a missed call and no patient is linked to the number yet. Link it to the patient who is waiting for the first call. Numbers that stay unlinked are deleted automatically.",
+      "link": "Link to a patient"
+    },
+    "link": {
+      "title": "Link to a patient",
+      "pick": "Missed call {when}, {phone}. Tap the patient who gave it.",
+      "none": "No patient is waiting for a first call. Enrol the patient first, then link the call.",
+      "done": "Linked to {no}"
+    }
+  }
+}

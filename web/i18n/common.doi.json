@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "lang": "doi",
+    "bundle": "common",
+    "subset": true,
+    "machine_written": true,
+    "needs_native_check": true,
+    "note": "Patient-page subset only (frame, retry, loading, errors, QR). Dogri in Devanagari, written by Claude and not yet read by a native Dogri speaker; spellings and verb forms need a check. Pages put their own Dogri text in their own bundle."
+  },
+  "frame": {
+    "skip": "पन्ने उप्पर जाओ",
+    "home": "चार टीके मुखपृष्ठ",
+    "brand": "चार टीके",
+    "language": "भाशा",
+    "draft": "एह् अनुवाद मसौदा ऐ। कुसै डोगरी बोलने आले ने इसगी नेईं दिक्खेआ।",
+    "demo": {
+      "region": "डेमो डेटा दी सूचना",
+      "label": "DEMO DATA:",
+      "note": "बनावटी आंकड़े, असली मरीज़ नेईं",
+      "clock": "डेमो घड़ी: {when}"
+    }
+  },
+  "buttons": {
+    "retry": "दुबारा कोशश करो",
+    "close": "बंद करो"
+  },
+  "states": {
+    "loading": "लोड होआ करदा ऐ",
+    "offline": "सर्वर कन्नै संपर्क नेईं होआ करदा। दुबारा कोशश होआ करदी ऐ।",
+    "notifications": "सूचनां"
+  },
+  "errors": {
+    "network": "सर्वर कन्नै संपर्क नेईं होई सकेआ। कनेक्शन दिक्खियै दुबारा कोशश करो।",
+    "timeout": "सर्वर ने जवाब देने च बड़ी देर लाई।",
+    "server": "सर्वर उप्पर किश गड़बड़ होई।",
+    "generic": "किश गड़बड़ होई।",
+    "signedOut": "जारी रक्खने आस्तै साइन इन करो।"
+  },
+  "qr": {
+    "alt": "फ़ोन दा पन्ना खोह्लने आला QR कोड",
+    "missing": "QR तस्वीर लोड नेईं होई। इसदे थाहरै फ़ोन उप्पर एह् लिंक खोह्लो:"
+  }
+}

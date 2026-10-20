@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "lang": "en",
+    "bundle": "privacy"
+  },
+  "privacy": {
+    "page": "Privacy notice · Chaar Teeke",
+    "title": "How we use your information",
+    "items": {
+      "kept": {
+        "h": "What we keep",
+        "p": "Your phone number (kept from your missed call, only for this), your language, your dose dates, and what you press or say on the calls. The questions about the bite are optional. Your answer about where it happened is a short voice clip."
+      },
+      "why": {
+        "h": "Why",
+        "p": "To remind you before each injection. Answers about the bite show the Smart City dog team where to look, by area. They never see your number."
+      },
+      "register": {
+        "h": "Your answers and the register",
+        "p": "Your answers are kept apart from your number, but they are tied to your entry in the clinic's register. If the dog looked sick, the clinic may call you."
+      },
+      "long": {
+        "h": "For how long",
+        "p": "Phone numbers leave the reminder system 7 days after the course. A voice clip is deleted once it has been checked, and in any case within 7 days. A missed call that is not linked to a patient is deleted after 48 hours."
+      },
+      "stop": {
+        "h": "How to stop",
+        "p": "Press 9 when we call, or give a second missed call. The calls stop and your number is removed."
+      },
+      "complain": {
+        "h": "How to complain",
+        "p": "Tell the clinic that gave you the card first. If it is not solved, you can write to the Data Protection Board of India."
+      },
+      "who": {
+        "h": "Who is responsible",
+        "p": "The clinic, under the Health department, decides how your information is used (the data fiduciary)."
+      }
+    }
+  }
+}

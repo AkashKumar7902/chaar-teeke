@@ -1,0 +1,75 @@
+{
+  "_meta": { "lang": "en", "bundle": "course", "note": "Patient page. It never shows place or dog answers." },
+  "course": {
+    "title": "Patient",
+    "heading": "Patient {no}",
+    "backToday": "Today",
+    "timeline": "Doses",
+    "facts": "Details",
+    "status": {
+      "awaiting_call": "Waiting for first call",
+      "active": "Reminders on",
+      "completed": "Course complete",
+      "stopped": "Reminders stopped"
+    },
+    "dose": {
+      "title": "{dose}",
+      "none": "No dose to mark today",
+      "waitingTitle": "Can't mark doses yet",
+      "waiting": "Doses can be marked after the patient's missed call is linked.",
+      "next": "Next: {dose}, {date}.",
+      "wasDue": "was due {date}",
+      "markToday": "Mark dose {n} given today",
+      "otherDay": "Given on another day",
+      "dateLabel": "Date it was given",
+      "markOn": "Mark given",
+      "marked": "Dose {n} marked given."
+    },
+    "day": "Day {n}",
+    "givenOn": "Given {date}, {by}",
+    "by": { "clinic": "clinic marked", "patient": "patient says taken" },
+    "f": { "schedule": "Schedule", "lang": "Call language", "age": "Age", "phone": "Phone" },
+    "age": { "adult": "18 or older", "minor": "Under 18, guardian consented", "unconfirmed": "Not confirmed" },
+    "phone": {
+      "show": "Show full number",
+      "hide": "Hide",
+      "logged": "Showing the full number is logged.",
+      "shown": "Hidden again in {s} seconds. Logged.",
+      "none": "No number yet",
+      "topic": "the removed number",
+      "purged": "The phone number has been removed, as promised to the patient."
+    },
+    "calls": {
+      "title": "Calls",
+      "topic": "the call log",
+      "explain": "Each call the system placed or tried: when, what kind, how it ended, which try, and how many seconds the patient listened. A failed call shows the reason in plain words.",
+      "try": "Try {n}",
+      "listened": "Listened {s} s",
+      "kindDose": "{kind}, {dose}"
+    },
+    "kind": {
+      "first": "First call",
+      "reminder": "Reminder",
+      "missed_dose": "Missed-dose call",
+      "duplicate_notice": "Already-enrolled notice",
+      "withdrawn_notice": "Withdrawal notice"
+    },
+    "stop": {
+      "button": "Stop reminders",
+      "topic": "stopping reminders",
+      "explain": "Stopping ends the reminder calls for good. The phone number leaves the reminder system within 7 days. The reason is kept in the audit log.",
+      "title": "Stop reminders?",
+      "ask": "Why are reminders stopping?",
+      "reasonLabel": "Reason",
+      "reason": { "asked": "Patient asked to stop", "finished": "Finished the course elsewhere", "wrong": "Wrong number or wrong patient", "other": "Other" },
+      "otherLabel": "What is the reason?",
+      "needReason": "Choose a reason.",
+      "needOther": "Write the reason.",
+      "confirm": "Stop reminders",
+      "done": "Reminders stopped."
+    },
+    "offline": {
+      "title": "The patient comes back when the server answers."
+    }
+  }
+}

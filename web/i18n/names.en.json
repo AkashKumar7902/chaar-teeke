@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "lang": "en",
+    "bundle": "names",
+    "note": "Known names: ward names and the names the reviewer taught the system."
+  },
+  "names": {
+    "title": "Known names",
+    "search": {
+      "label": "Search names",
+      "placeholder": "A name or a ward number"
+    },
+    "wardNo": "Ward {no}",
+    "count": "{shown} of {total} names",
+    "list": "Names and their wards",
+    "kind": {
+      "alias": "Learned",
+      "ward": "Ward name"
+    },
+    "added": "Added by {who}, {when}",
+    "noLearned": "No learned names yet. Tick the box when you place a recording, or add a name here.",
+    "noMatch": "No name matches \"{q}\".",
+    "more": "Show more",
+    "add": {
+      "title": "Add a name",
+      "name": "Name",
+      "nameHint": "As people say it, for example Talab Tillo chowk.",
+      "ward": "Ward",
+      "choose": "Choose a ward",
+      "loading": "Loading the wards",
+      "failed": "The list of wards did not load.",
+      "submit": "Add name",
+      "nameRequired": "Write a name.",
+      "wardRequired": "Choose a ward.",
+      "added": "Added: {text}",
+      "exists": "That name is already known."
+    },
+    "readOnly": "Your role can't do this"
+  }
+}

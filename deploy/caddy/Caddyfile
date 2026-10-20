@@ -1,0 +1,16 @@
+# Chaar Teeke: the HTTPS front door. Installed by deploy/install.sh as /etc/caddy/Caddyfile.
+# HTTPS is needed for the browser microphone (the browser phone) and for the Secure login cookie.
+# The app itself listens on 127.0.0.1:8080 only.
+#
+# @@SITE@@ is your host name. @@TLS_LINE@@ is empty (Caddy gets a public certificate; needs ports 80 and
+# 443 reachable from the internet and a public DNS name) or "tls internal" (Caddy's own certificate
+# authority, for a name on a private network; every browser must trust Caddy's root certificate).
+#
+# No access log is configured on purpose: a log of paths and addresses is more personal data to look after.
+@@SITE@@ {
+	@@TLS_LINE@@
+	reverse_proxy 127.0.0.1:8080 {
+		# the event stream (/api/events) must not be held back
+		flush_interval -1
+	}
+}

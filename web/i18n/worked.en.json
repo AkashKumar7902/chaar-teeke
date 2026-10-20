@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "lang": "en",
+    "bundle": "worked",
+    "note": "Record the wards the team worked."
+  },
+  "worked": {
+    "title": "Wards the team covered",
+    "date": "Date worked",
+    "search": "Find a ward by name or number",
+    "wards": "Wards",
+    "selectShown": "Select shown",
+    "reset": "Reset",
+    "noMatch": "No ward matches",
+    "selected": {
+      "one": "1 ward selected",
+      "other": "{count} wards selected"
+    },
+    "noneSelected": "No ward selected",
+    "effect": "Patients bitten in these wards with a dose due will hear one sentence about the work.",
+    "effectCount": "Patients who would hear it: {n}.",
+    "record": "Record wards the team covered",
+    "lastWorked": "Last worked {date}",
+    "recent": "Recent",
+    "recentNone": "No covered wards recorded yet",
+    "wardCount": {
+      "one": "1 ward",
+      "other": "{count} wards"
+    },
+    "saved": "Recorded for {date}.",
+    "needWard": "Choose at least one ward",
+    "needDate": "Choose the date",
+    "futureDate": "That day has not come yet",
+    "readOnly": "Read-only view. The team records the wards it covered."
+  }
+}

@@ -1,0 +1,122 @@
+{
+ "meta": {
+  "generated": "2026-10-19",
+  "note": "Urban PHCs / UPHCs (NUHM) of Jammu city and the J&K health department ARV-site list were NOT found in any open source; see research/JAMMU-DATA.md. Do not treat UNVERIFIED rows as ARV sites.",
+  "licences": "NRCP/MyJammu: government public information, no licence stated. OSM coordinates: ODbL 1.0."
+ },
+ "clinics": [
+  {
+   "id": "arc-gmc-jammu",
+   "name": "Government Medical College & Hospital, Jammu - Anti-Rabies Clinic (Dept of Community Medicine)",
+   "name_hi": "राजकीय मेडिकल कॉलेज जम्मू - एंटी-रेबीज़ क्लिनिक",
+   "kind": "model_arc",
+   "address": "Government Medical College, Bakshi Nagar, Jammu",
+   "lat": 32.736,
+   "lon": 74.854,
+   "coord_source": "OpenStreetMap contributors (ODbL 1.0), way/168951822, Overpass snapshot 2026-10-18",
+   "email": null,
+   "arv_service": "CONFIRMED: listed as Model Anti Rabies Clinic under NRCP; intradermal PEP used since 2011-12 (doda.nic.in, Jul 2021)",
+   "sources": [
+    "National Rabies Control Programme, List of Anti Rabies Clinics (last updated 26 Mar 2026): https://rabiesfreeindia.mohfw.gov.in/resources/uploads/PageContentPdf/177452428483.pdf",
+    "MyJammu portal, Public Utilities > Hospitals: https://myjammu.jk.gov.in/Common/Hospitals (page last updated 28-07-23)",
+    "https://doda.nic.in/2021/07/model-anti-rabies-clinic-made-operational-in-government-medical-college-doda-_second-centre-in-jammu-division-apart-from-gmc-jammu-to-extend-animal-bite-services-_/"
+   ],
+   "ward_nos": [
+    27
+   ]
+  },
+  {
+   "id": "smgs-hospital",
+   "name": "SMGS Hospital (Shri Maharaja Gulab Singh Hospital), Jammu",
+   "name_hi": "एस एम जी एस अस्पताल, जम्मू",
+   "kind": "associated_hospital_of_GMC",
+   "address": "Super Bazar / near Raghunath Bazar area, Jammu (OSM address field: \"Shop No 1, Super Bazar\")",
+   "lat": 32.7333,
+   "lon": 74.8617,
+   "coord_source": "OpenStreetMap contributors (ODbL 1.0), way/168148618, Overpass snapshot 2026-10-18",
+   "email": null,
+   "arv_service": "UNVERIFIED: hospital exists; no source found saying it runs an ARV/ARC service. Ask GMC Community Medicine whether bite patients are referred here.",
+   "sources": [
+    "OpenStreetMap contributors (ODbL 1.0), way/168148618, Overpass snapshot 2026-10-18"
+   ],
+   "ward_nos": [
+    15
+   ]
+  },
+  {
+   "id": "gh-gandhi-nagar",
+   "name": "Government Hospital Gandhi Nagar, Jammu (OSM: \"District Hospital Gandhi Nagar\")",
+   "name_hi": "सरकारी अस्पताल गांधी नगर, जम्मू",
+   "kind": "district_hospital_candidate",
+   "address": "Gandhi Nagar, Jammu",
+   "lat": 32.7047,
+   "lon": 74.8603,
+   "coord_source": "OpenStreetMap contributors (ODbL 1.0), node/6911122319, Overpass snapshot 2026-10-18",
+   "email": null,
+   "website": "https://www.gandhinagarhospital.in/ (not reachable from this machine on 2026-10-19)",
+   "arv_service": "UNVERIFIED: listed as a government hospital on MyJammu; no source found for ARV service.",
+   "sources": [
+    "MyJammu portal, Public Utilities > Hospitals: https://myjammu.jk.gov.in/Common/Hospitals (page last updated 28-07-23)",
+    "OpenStreetMap contributors (ODbL 1.0), node/6911122319, Overpass snapshot 2026-10-18"
+   ],
+   "ward_nos": [
+    21
+   ]
+  },
+  {
+   "id": "gh-sarwal",
+   "name": "Government Hospital Sarwal, Jammu",
+   "name_hi": "सरकारी अस्पताल सरवाल, जम्मू",
+   "kind": "government_hospital",
+   "address": "Rehari Colony / Sarwal, Jammu",
+   "lat": 32.747,
+   "lon": 74.8535,
+   "coord_source": "OpenStreetMap contributors (ODbL 1.0), way/559444502, Overpass snapshot 2026-10-18",
+   "email": null,
+   "website": "https://ghsarwaljk.co.in/ (reachable; no rabies/ARV mention on home page)",
+   "arv_service": "UNVERIFIED",
+   "sources": [
+    "MyJammu portal, Public Utilities > Hospitals: https://myjammu.jk.gov.in/Common/Hospitals (page last updated 28-07-23)",
+    "OpenStreetMap contributors (ODbL 1.0), way/559444502, Overpass snapshot 2026-10-18"
+   ],
+   "ward_nos": [
+    25
+   ]
+  },
+  {
+   "id": "gh-rajiv-gandhi-gangyal",
+   "name": "Govt. Rajiv Gandhi General Hospital, Gangyal, Jammu",
+   "name_hi": "राजीव गांधी जनरल अस्पताल, गंग्याल, जम्मू",
+   "kind": "government_hospital",
+   "address": "Babliana, Gangyal, Jammu",
+   "lat": 32.6724,
+   "lon": 74.8578,
+   "coord_source": "OpenStreetMap contributors (ODbL 1.0), node/7669583999 (named \"Rajiv Gandhi Hospital\"), Overpass snapshot 2026-10-18",
+   "email": null,
+   "arv_service": "UNVERIFIED",
+   "sources": [
+    "MyJammu portal, Public Utilities > Hospitals: https://myjammu.jk.gov.in/Common/Hospitals (page last updated 28-07-23)",
+    "OpenStreetMap contributors (ODbL 1.0), node/7669583999, Overpass snapshot 2026-10-18"
+   ],
+   "ward_nos": [
+    56
+   ]
+  },
+  {
+   "id": "police-hospital-gandhi-nagar",
+   "name": "Police Hospital, Police Lines, Gandhi Nagar, Jammu",
+   "name_hi": "पुलिस अस्पताल, गांधी नगर",
+   "kind": "departmental_hospital",
+   "address": "Police Lines, Gandhi Nagar, Jammu",
+   "lat": null,
+   "lon": null,
+   "coord_source": null,
+   "email": null,
+   "arv_service": "UNVERIFIED (departmental hospital; probably not a public ARC)",
+   "sources": [
+    "MyJammu portal, Public Utilities > Hospitals: https://myjammu.jk.gov.in/Common/Hospitals (page last updated 28-07-23)"
+   ],
+   "ward_nos": []
+  }
+ ]
+}

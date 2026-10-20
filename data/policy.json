@@ -1,0 +1,128 @@
+{
+  "version": "2026.10.9",
+  "note": "Every threshold the code uses. A change needs a new version; tests/test_policy.py pins each version's hash.",
+  "version_note": "2026.10.9 (20 Oct 2026): calls.speech_frame_rms_min (0.02) and calls.speech_min_voiced_s (0.25) are how the app decides, from the recording it fetched, whether a spoken place holds speech: 20 ms frames whose RMS (samples scaled to -1..1) reaches the first number are voiced, and the recording counts as speech when its voiced seconds reach the second; Asterisk reports talking time in whole seconds, so a place named in a second or less arrived as 0 and was asked for again (5 of 18 SIP calls). Checked on data/demo/clips (all twelve voiced 0.46 s or more); no existing threshold changed. 2026.10.8 (19 Oct 2026): matcher.kws_possible_min (5), kws_likely_min (40), kws_likely_gap (20) and kws_sure_min_pieces (4) are the thresholds of gazetteer keyword spotting, which searches each place name in the speech model's frame probabilities and is combined with the transcript matcher; they were chosen on the tuning sets of scripts/eval_kws.py (docs/EVALS.md), and no existing threshold changed. 2026.10.7 (19 Oct 2026): calls.full_notice_max_plays (2) is how many times a listener may press 0 at the first call's consent question to hear the full notice; no existing threshold changed. 2026.10.6 (19 Oct 2026): new feed section (max_items, max_real_alerts) caps the landing page's Latest list; no existing threshold changed. 2026.10.5 (19 Oct 2026): adds the thresholds the review round introduced (reminder retry gaps per kind, simulator clip and orphan clip retention, backup keep days, minimum free disk, the clinic edit window, phone socket limits per address) to the shipped file; they had lived only in a test helper.",
+  "calls": {
+    "reminder_local_time": "18:30",
+    "morning_after_local_time": "09:30",
+    "window_start_local": "09:00",
+    "window_end_local": "20:00",
+    "window_applies_to_simulator": false,
+    "ring_timeout_s": 30,
+    "max_attempts": 3,
+    "retry_gaps_min": [
+      20,
+      120
+    ],
+    "first_call_delay_s": 8,
+    "no_input_wait_s": 6,
+    "no_input_repeats": 2,
+    "place_record_max_s": 8,
+    "place_record_silence_s": 2,
+    "speech_frame_rms_min": 0.02,
+    "speech_min_voiced_s": 0.25,
+    "reconsent_after_days": 7,
+    "step_timeout_s": 90,
+    "max_parallel_ari": 1,
+    "full_notice_max_plays": 2,
+    "retry_gaps_min_by_kind": {
+      "reminder": [
+        20,
+        60
+      ]
+    }
+  },
+  "retention": {
+    "phone_purge_days_after_last_dose": 7,
+    "clip_max_age_days": 7,
+    "unlinked_missed_call_hours": 48,
+    "purge_local_time": "00:00",
+    "sim_clip_hours": 8,
+    "orphan_clip_minutes": 60,
+    "backup_keep_days": 7
+  },
+  "doses": {
+    "late_minor_days": [
+      1,
+      2
+    ],
+    "late_review_from_days": 3,
+    "three_doses_by_day": 10,
+    "all_but_last_by_day": 28
+  },
+  "stats": {
+    "coverage_window_weeks": 12,
+    "min_n_for_share": 25,
+    "bracket_n_below": 50,
+    "suppress_below": 5,
+    "z": 1.96,
+    "lookhere_window_weeks": 4,
+    "lookhere_z": 2.73,
+    "lookhere_max": 3,
+    "claim_band": [
+      0.78,
+      0.8
+    ]
+  },
+  "matcher": {
+    "likely_min": 88,
+    "likely_gap": 8,
+    "possible_min": 70,
+    "max_candidates": 3,
+    "kws_possible_min": 5,
+    "kws_likely_min": 40,
+    "kws_likely_gap": 20,
+    "kws_sure_min_pieces": 4
+  },
+  "visitor": {
+    "phone_sessions_per_visitor": 3,
+    "phone_sessions_total": 12,
+    "session_hours": 12,
+    "phone_missed_calls_per_minute": 6,
+    "phone_session_attach_minutes": 10,
+    "clock_jumps_per_session": 10,
+    "clock_jumps_per_hour": 60,
+    "phone_sessions_per_address": 8,
+    "phone_sessions_reserved": 2,
+    "phone_socket_idle_s": 300,
+    "phone_socket_max_s": 1800
+  },
+  "auth": {
+    "max_failed_signins": 5,
+    "window_min": 10,
+    "visitor_sessions_per_min": 30,
+    "max_failed_signins_per_address": 30,
+    "signin_delay_base_s": 30,
+    "signin_delay_max_s": 600
+  },
+  "clinic": {
+    "phone_reveals_per_hour": 30,
+    "undo_dose_minutes": 15,
+    "undo_callback_minutes": 15,
+    "edit_window_minutes": 30
+  },
+  "telephony": {
+    "reconnect_min_s": 5,
+    "reconnect_max_s": 60
+  },
+  "limits": {
+    "json_body_max_bytes": 65536,
+    "upload_body_max_bytes": 5242880,
+    "event_streams_per_principal": 5
+  },
+  "alerts": {
+    "unseen_by_vet_minutes": 30
+  },
+  "feed": {
+    "max_items": 6,
+    "max_real_alerts": 3
+  },
+  "scheduler": {
+    "loop_s": 5,
+    "lock_stale_s": 30,
+    "purge_every_s": 60
+  },
+  "storage": {
+    "min_free_mb": 200
+  }
+}

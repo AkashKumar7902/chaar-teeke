@@ -1,0 +1,242 @@
+{
+  "_meta": {
+    "lang": "en",
+    "bundle": "common",
+    "note": "Plain words. The never-on-screen word list is in docs/DESIGN.md."
+  },
+  "frame": {
+    "skip": "Skip to the page",
+    "home": "Chaar Teeke home",
+    "brand": "Chaar Teeke",
+    "language": "Language",
+    "draft": "This translation is a draft. No native speaker has read it yet.",
+    "lineDown": "Calls are not going out: the phone line is down.",
+    "mainNav": "Main",
+    "visitorNote": "Read-only view",
+    "viewAs": "View as {role}",
+    "signOut": "Sign out",
+    "account": "Account",
+    "jump": "Move clock",
+    "demo": {
+      "region": "Demo data notice",
+      "label": "DEMO DATA:",
+      "note": "synthetic, not real patients",
+      "clock": "Demo clock: {when}"
+    }
+  },
+  "jump": {
+    "next_call": "Next call",
+    "evening_before_next_dose": "Evening before the next dose",
+    "morning_after": "Morning after the next dose",
+    "done": "Clock moved to: {what}"
+  },
+  "nav": {
+    "today": "Today",
+    "enrol": "Enrol",
+    "coverage": "Coverage",
+    "alerts": "Alerts",
+    "worked": "Wards the team covered",
+    "sight": "Dogs seen on rounds",
+    "summary": "Summary",
+    "digest": "Weekly digest",
+    "method": "How we know",
+    "review": "Review",
+    "names": "Known names",
+    "admin": "Admin"
+  },
+  "roles": {
+    "clinic": "Clinic",
+    "abc": "ABC team",
+    "vet": "Vet",
+    "oversight": "Oversight",
+    "reviewer": "Reviewer",
+    "admin": "Admin",
+    "visitor": "Visitor"
+  },
+  "buttons": {
+    "about": "About {topic}",
+    "retry": "Retry",
+    "close": "Close",
+    "cancel": "Cancel",
+    "back": "Back",
+    "next": "Next",
+    "save": "Save",
+    "send": "Send",
+    "confirm": "Confirm",
+    "fewer": "One fewer: {label}",
+    "more": "One more: {label}"
+  },
+  "states": {
+    "offline": "Can't reach the server. Retrying.",
+    "forbidden": "Your role can't do this",
+    "why": "Why?",
+    "noCalls": "No calls yet",
+    "notSent": "Not sent. What you typed is still here.",
+    "notifications": "Notifications",
+    "loading": "Loading",
+    "lastChecked": "Last checked {when}"
+  },
+  "errors": {
+    "network": "Can't reach the server. Check the connection and retry.",
+    "timeout": "The server took too long to answer.",
+    "server": "Something went wrong on the server.",
+    "generic": "Something went wrong.",
+    "signedOut": "Sign in to continue."
+  },
+  "format": {
+    "since": "since {when}",
+    "range": "{low} to {high}",
+    "phoneMasked": "ending {last4}",
+    "phonePurged": "number removed",
+    "dose": "Dose {n}",
+    "hidden": "hidden"
+  },
+  "share": {
+    "n": "n = {n}",
+    "tooFew": "n = {n} of {min} needed",
+    "label": "Notched share of street-dog bites",
+    "explain": "Of the street-dog bites where the patient could tell, the share of dogs that had the right-ear V-notch, the mark of a sterilised dog. Patients who could not see are left out of the percentage and counted below. The interval shows how far chance alone could move the figure.",
+    "bounds": "If every could-not-see answer had gone one way, the share would lie between {range}.",
+    "counts": "Notch seen: {notched}. No notch seen: {unnotched}. Could not see: {unsure}.",
+    "couldNotSee": "Could not see",
+    "tooFewNote": "Too few answers to give a percentage.",
+    "interval": "interval {range}",
+    "barLabel": "{share}, interval {range}, on a scale of 0 to 100",
+    "bracketedNote": "Fewer than 50 answers. Read with care.",
+    "claim": "{lo}-{hi}% claimed: expected only if sterilised and unsterilised dogs bite equally"
+  },
+  "status": {
+    "dose": {
+      "due": "Due",
+      "given": "Given",
+      "late_minor": "Late",
+      "late_review": "Late, clinic to review",
+      "not_needed": "Not needed"
+    },
+    "clinicRow": {
+      "due_today": "Due today",
+      "reminded": "Reminded",
+      "tried": {
+        "one": "Tried 1 time",
+        "other": "Tried {count} times"
+      },
+      "patient_says_taken": "Patient says taken",
+      "marked_given": "Marked given",
+      "late_minor": "Late",
+      "late_review": "Late, review",
+      "awaiting_call": "Waiting for first call",
+      "no_answer": "No answer"
+    },
+    "call": {
+      "scheduled": "Scheduled",
+      "dialing": "Dialling",
+      "ringing": "Ringing",
+      "answered": "Answered",
+      "completed": "Completed",
+      "no_answer": "No answer",
+      "failed": "Call failed",
+      "cancelled": "Cancelled"
+    },
+    "alert": {
+      "new": "New",
+      "claimed": "Someone is on it",
+      "acted": "Acted",
+      "not_acted": "Not acted"
+    },
+    "location": {
+      "pending": "Waiting",
+      "matched": "Ward: estimate",
+      "needs_review": "Needs review",
+      "decided": "Decided",
+      "outside_jmc": "Outside JMC",
+      "cant_tell": "Can't tell",
+      "no_place_heard": "No place heard",
+      "skipped": "Skipped"
+    },
+    "confidence": {
+      "likely": "Likely",
+      "possible": "Possible",
+      "none": "No match"
+    },
+    "system": {
+      "ok": "Working",
+      "fault": "Fault"
+    },
+    "source": {
+      "simulator": "Simulated",
+      "demo": "Demo",
+      "clinic": "Clinic"
+    }
+  },
+  "placeType": {
+    "home_street": "Home or street",
+    "school": "School",
+    "hospital": "Hospital",
+    "bus_market": "Bus stand or market",
+    "other": "Other",
+    "no_answer": "No answer"
+  },
+  "alert": {
+    "title": "Alert",
+    "ward": "Ward {no}, {name}",
+    "wardNo": "Ward {no}",
+    "estimate": "estimate",
+    "area": "Area {id}",
+    "noPlace": "Place not known",
+    "claim": "I'm on it",
+    "acted": "Mark as acted",
+    "notActed": "Not acted",
+    "callback": "Ask the clinic to call the patient",
+    "answerSigns": "Patient says the dog showed signs",
+    "factWhere": "Where",
+    "factPlace": "Place type",
+    "factAnswer": "Answer",
+    "factClaimedBy": "Taken by",
+    "factNote": "Note",
+    "factCallback": "Call-back",
+    "callback_open": "Asked, waiting",
+    "callback_done": "Done",
+    "callback_declined": "Declined",
+    "callback_closed_no_contact": "Closed, no contact",
+    "takenByMe": "You are on it",
+    "takenBy": "Taken by {name}",
+    "you": "You"
+  },
+  "map": {
+    "label": "Ward map",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "attribution": "Ward boundaries: Jammu Municipal Corporation (MyJammu GIS)",
+    "ward": "Ward",
+    "failed": "The map could not load",
+    "stopped": "The map stopped drawing",
+    "bin1": "under 40%",
+    "bin2": "40 to 55%",
+    "bin3": "55 to 70%",
+    "bin4": "70 to 80%",
+    "bin5": "80% or more",
+    "tooFew": "Too few answers",
+    "noData": "No calls yet",
+    "simulated": "Includes simulated",
+    "lookHere": "Look here",
+    "legendNote": "Colour is the notched share. The list has each interval and n."
+  },
+  "qr": {
+    "alt": "QR code that opens the phone page",
+    "missing": "The QR picture did not load. Open this link on the phone instead:"
+  },
+  "form": {
+    "problem": {
+      "one": "There is 1 problem",
+      "other": "There are {count} problems"
+    }
+  },
+  "lookHere": {
+    "strong": "Fewer of the street dogs that bit had the notch here than in the rest of the city in the last 4 full weeks, by more than chance explains ({n} answers here)."
+  },
+  "demoData": {
+    "topic": "this demo data",
+    "title": "About this demo data",
+    "body": "This demo history is synthetic and sized like several clinics over 12 weeks. A one-clinic pilot gives about 175 answers in 12 weeks: enough for a city-wide share, not for area flags."
+  }
+}

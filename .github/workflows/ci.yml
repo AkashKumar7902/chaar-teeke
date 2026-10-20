@@ -1,0 +1,36 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # tests/test_repo_rules.py reads the commit trailers; scripts/gate.sh scans the whole history
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: uv sync --frozen
+      - run: npm install --prefix scripts --no-audit --no-fund # playwright-core, pinned in scripts/package.json
+      - uses: browser-actions/setup-chrome@v1 # the UI check drives a real Chrome
+        id: chrome
+        with:
+          chrome-version: stable
+      - run: scripts/gate.sh --ui
+        env:
+          CHROME_PATH: ${{ steps.chrome.outputs.chrome-path }}

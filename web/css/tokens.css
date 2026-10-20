@@ -1,0 +1,326 @@
+/* Chaar Teeke design tokens. Colours, type, space, motion. No selectors for components here.
+   Rules and reasons: docs/DESIGN.md. Fonts: web/fonts/FONTS.md (self-hosted, SIL OFL). */
+
+/* ---------------------------------------------------------------- fonts */
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/atkinson-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308,
+    U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/atkinson-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
+}
+@font-face {
+  font-family: "Noto Sans Devanagari";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/noto-sans-devanagari.woff2") format("woff2");
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC,
+    U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+@font-face {
+  font-family: "Noto Nastaliq Urdu";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/noto-nastaliq-urdu-arabic.woff2") format("woff2");
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E,
+    U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E,
+    U+10EC2-10EFF;
+}
+
+/* --------------------------------------------------------------- tokens */
+:root {
+  color-scheme: light dark;
+
+  /* type: one stack, the browser picks by script. Latin and digits always come from Atkinson. */
+  --font-sans: "Atkinson Hyperlegible Next", "Noto Sans Devanagari", "Noto Nastaliq Urdu", system-ui,
+    sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* scale in rem; the smallest step is 14 px and nothing goes below it */
+  --text-xs: 0.875rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.5rem;
+  --text-4xl: 3.5rem;
+
+  --leading-tight: 1.2;
+  --leading-body: 1.5;
+  --leading-indic: 1.6; /* Devanagari: matras need room, never below 1.55 */
+  --leading-urdu: 2; /* Nastaliq descends far; 2 stops clipping */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+
+  /* space: 4 px grid */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4rem;
+  --gutter: 1rem; /* 16 px side gutter on a phone */
+  --page-max: 76rem;
+  --measure: 66ch;
+
+  /* shape */
+  --radius-s: 0.25rem;
+  --radius-m: 0.5rem;
+  --radius-l: 0.875rem;
+  --radius-pill: 999px;
+  --border: 1px;
+  --border-strong: 2px;
+
+  /* targets and focus */
+  --target: 2.75rem; /* 44 px */
+  --target-lg: 3.5rem; /* 56 px: stepper and keypad */
+  --focus-width: 3px;
+  --focus-offset: 2px;
+
+  /* motion */
+  --dur-fast: 120ms;
+  --dur-med: 200ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+
+  /* layers */
+  --z-sticky: 20;
+  --z-popover: 40;
+  --z-dialog: 60;
+  --z-toast: 80;
+
+  /* ---- colour, light. Pairs are checked at 4.5:1 (text) and 3:1 (lines, icons) in docs/DESIGN.md. */
+  --paper: #f4f7f8;
+  --surface: #ffffff;
+  --surface-2: #e9eff2; /* sunken: table heads, inputs at rest, skeleton */
+  --line: #c9d5db;
+  --line-strong: #6b7d89; /* input borders, chart lines: 4:1 on paper */
+  --ink: #12202a;
+  --ink-2: #3f4f5b; /* secondary text */
+  --ink-3: #566672; /* tertiary text, still 5.4:1 on paper */
+
+  /* primary: the action colour, one meaning only (Tawi blue) */
+  --primary: #0a5c78;
+  --primary-hover: #084a61;
+  --primary-ink: #ffffff;
+  --primary-tint: #dcedf3;
+  --primary-text: #0a5c78;
+
+  /* attention: amber, for alerts, late and "look here". Never red. */
+  --attention: #8a4b00; /* text and icon */
+  --attention-tint: #fff1cf;
+  --attention-line: #c27c0a;
+  --attention-solid: #f2a900;
+  --attention-solid-ink: #231500;
+
+  /* alarm: red, for real system faults only (dongle offline, database down, alert not delivered) */
+  --alarm: #b42318;
+  --alarm-tint: #fdeceb;
+  --alarm-line: #d4564b;
+
+  /* estimate and simulated: a dashed line plus this tint, always with a word */
+  --estimate-line: #3f4f5b;
+  --estimate-tint: #eef2f6;
+
+  /* the DEMO strip: heavy and neutral, so it cannot be mistaken for attention or alarm */
+  --demo-bg: #12202a;
+  --demo-ink: #f4f7f8;
+
+  --focus: #0b5fd6;
+  --scrim: rgb(18 32 42 / 0.55);
+  --shadow-pop: 0 6px 24px rgb(18 32 42 / 0.18), 0 1px 3px rgb(18 32 42 / 0.2);
+
+  /* map: land, no-data fill, ward line, and a five-step ramp for the notched share.
+     Darker = a higher share. The steps differ in lightness, so they hold up under colour blindness. */
+  --map-bg: #dfe7eb;
+  --map-nodata: #f1f3f4;
+  --map-ward-line: #8798a3;
+  --map-hatch: #5d6f7b;
+  --ramp-1: #a9cde0;
+  --ramp-2: #78b0cc;
+  --ramp-3: #4a8fb5;
+  --ramp-4: #286f98;
+  --ramp-5: #0f4c75;
+  --ramp-ink-on-dark: #ffffff;
+  --band-claim: #8a4b00; /* the 78 to 80 per cent reference band on the interval bar */
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --gutter: 1.5rem;
+  }
+}
+@media (min-width: 80rem) {
+  :root {
+    --gutter: 2rem;
+  }
+}
+
+/* ---- colour, dark: follows the system unless [data-theme="light"] is set */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0e161c;
+    --surface: #16222b;
+    --surface-2: #1d2c37;
+    --line: #2f4351;
+    --line-strong: #7b919f;
+    --ink: #e8f0f4;
+    --ink-2: #b6c5ce;
+    --ink-3: #97a9b4;
+
+    --primary: #4fb0d4;
+    --primary-hover: #74c4e2;
+    --primary-ink: #06222d;
+    --primary-tint: #17323f;
+    --primary-text: #7cc6e3;
+
+    --attention: #ffc857;
+    --attention-tint: #3a2d0e;
+    --attention-line: #b9831a;
+    --attention-solid: #f2b134;
+    --attention-solid-ink: #231500;
+
+    --alarm: #ff9b90;
+    --alarm-tint: #3f1713;
+    --alarm-line: #c9483c;
+
+    --estimate-line: #b6c5ce;
+    --estimate-tint: #1b2a35;
+
+    --demo-bg: #dbe6ec;
+    --demo-ink: #0e161c;
+
+    --focus: #8ad3ee;
+    --scrim: rgb(0 0 0 / 0.65);
+    --shadow-pop: 0 6px 24px rgb(0 0 0 / 0.5), 0 0 0 1px rgb(255 255 255 / 0.06);
+
+    --map-bg: #1a2832;
+    --map-nodata: #243642;
+    --map-ward-line: #5b7282;
+    --map-hatch: #9db0bb;
+    --ramp-1: #356179;
+    --ramp-2: #4584a6;
+    --ramp-3: #5ea3c6;
+    --ramp-4: #8ec6e0;
+    --ramp-5: #c6e5f1;
+    --ramp-ink-on-dark: #06222d;
+    --band-claim: #ffc857;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0e161c;
+  --surface: #16222b;
+  --surface-2: #1d2c37;
+  --line: #2f4351;
+  --line-strong: #7b919f;
+  --ink: #e8f0f4;
+  --ink-2: #b6c5ce;
+  --ink-3: #97a9b4;
+
+  --primary: #4fb0d4;
+  --primary-hover: #74c4e2;
+  --primary-ink: #06222d;
+  --primary-tint: #17323f;
+  --primary-text: #7cc6e3;
+
+  --attention: #ffc857;
+  --attention-tint: #3a2d0e;
+  --attention-line: #b9831a;
+  --attention-solid: #f2b134;
+  --attention-solid-ink: #231500;
+
+  --alarm: #ff9b90;
+  --alarm-tint: #3f1713;
+  --alarm-line: #c9483c;
+
+  --estimate-line: #b6c5ce;
+  --estimate-tint: #1b2a35;
+
+  --demo-bg: #dbe6ec;
+  --demo-ink: #0e161c;
+
+  --focus: #8ad3ee;
+  --scrim: rgb(0 0 0 / 0.65);
+  --shadow-pop: 0 6px 24px rgb(0 0 0 / 0.5), 0 0 0 1px rgb(255 255 255 / 0.06);
+
+  --map-bg: #1a2832;
+  --map-nodata: #243642;
+  --map-ward-line: #5b7282;
+  --map-hatch: #9db0bb;
+  --ramp-1: #356179;
+  --ramp-2: #4584a6;
+  --ramp-3: #5ea3c6;
+  --ramp-4: #8ec6e0;
+  --ramp-5: #c6e5f1;
+  --ramp-ink-on-dark: #06222d;
+  --band-claim: #ffc857;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+/* --------------------------------------------------------- script rules */
+/* Devanagari (Hindi, Dogri): 16 px body, nothing under 14 px, room for matras, no ALL CAPS, no italics. */
+:lang(hi),
+:lang(doi) {
+  line-height: var(--leading-indic);
+  letter-spacing: 0;
+  font-style: normal;
+}
+/* Nastaliq reads small beside Devanagari, and 1.4 leading clips it. */
+html[lang="ur"] {
+  font-size: 115%;
+}
+[lang="ur"] {
+  line-height: var(--leading-urdu);
+  letter-spacing: 0;
+  font-style: normal;
+  text-align: start;
+}
+[lang="ur"] [lang="ur"] {
+  font-size: 1em;
+}
+
+/* ---------------------------------------------------------- user prefs */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0.01ms;
+    --dur-med: 0.01ms;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (forced-colors: active) {
+  :root {
+    --focus: Highlight;
+    --line: CanvasText;
+    --line-strong: CanvasText;
+    --primary: ButtonText;
+    --primary-ink: ButtonFace;
+  }
+}

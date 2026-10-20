@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "lang": "en",
+    "bundle": "sticker",
+    "note": "The sticker's own lines (lines, privacy) are for the patient and are the same in the en and hi bundles: Hindi, Dogri and Urdu, whatever language the staff page is in. Dogri and Urdu are machine drafts, not yet read by a native speaker.",
+    "machine_written_lines": [
+      "doi",
+      "ur"
+    ],
+    "needs_native_check": true
+  },
+  "sticker": {
+    "title": "Bite-card stickers",
+    "intro": "Print on A4, 8 stickers a sheet. Stick one on each bite card.",
+    "print": "Print 8 stickers",
+    "today": "Back to Today",
+    "draft": "The Dogri and Urdu lines are machine drafts. Have a native speaker read them before you print.",
+    "localOnly": "No public address is set, so the codes open only on this computer.",
+    "noNumber": "The missed-call number is not set up yet. Nothing can be printed.",
+    "simulator": "SIMULATOR",
+    "codeAlt": "QR code",
+    "lines": {
+      "hi": {
+        "call": "टीके की याद दिलाने के लिए मिस्ड कॉल दें।",
+        "keep": "फ़ोन नंबर कोर्स के 7 दिन बाद रिमाइंडर सिस्टम से हट जाता है। रोकने के लिए कॉल पर 9 दबाएँ।"
+      },
+      "doi": {
+        "call": "टीके दी याद करुआने लेई मिस्ड कॉल देओ।",
+        "keep": "फ़ोन नंबर कोर्स दे 7 दिन बाद याद करुआने आले सिस्टम चा हटी जंदा ऐ। कॉल बंद करुआने लेई 9 दबाओ।"
+      },
+      "ur": {
+        "call": "ٹیکے کی یاد دہانی کے لیے مسڈ کال دیں۔",
+        "keep": "فون نمبر کورس کے 7 دن بعد یاد دہانی کے نظام سے ہٹ جاتا ہے۔ روکنے کے لیے کال پر 9 دبائیں۔"
+      }
+    },
+    "privacy": {
+      "hi": "गोपनीयता सूचना",
+      "doi": "गोपनीयता सूचना",
+      "ur": "رازداری کا نوٹس"
+    }
+  }
+}

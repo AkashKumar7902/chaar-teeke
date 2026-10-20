@@ -1,0 +1,48 @@
+{
+  "_meta": { "lang": "en", "bundle": "enrol", "note": "Enrol page. Dose 1 is the visit that starts the course." },
+  "enrol": {
+    "title": "Enrol a patient",
+    "progress": "Step {n} of {total}",
+    "submit": "Enrol patient",
+    "change": "Change",
+    "dateToday": "Today, {date}",
+    "clinicDefault": "Clinic default",
+    "q": {
+      "register": "Register number",
+      "type": "New or old patient?",
+      "regimen": "Vaccine schedule",
+      "lang": "Language for the calls",
+      "date": "Date of the first dose",
+      "age": "Age",
+      "check": "Check the answers"
+    },
+    "type": { "new": "New patient", "old": "Old patient" },
+    "age": {
+      "adult": "18 or older",
+      "minor": "Under 18: guardian present and consented"
+    },
+    "hint": { "date": "Today unless the first dose was earlier." },
+    "info": {
+      "regimen": "The clinic chooses the schedule. Only schedules switched on for this system are listed.",
+      "age": "For a patient under 18 the guardian must be present and must have consented, ticked on the card. The server refuses the enrolment otherwise."
+    },
+    "err": {
+      "register": "Enter the register number.",
+      "registerLong": "The register number is too long (20 at most).",
+      "date": "Choose a date, today or earlier.",
+      "age": "Choose 18 or older, or under 18 with guardian consent."
+    },
+    "done": {
+      "title": "Patient {no} added",
+      "ask": "Ask the patient to give a missed call to this number, or give it from their phone.",
+      "askSim": "Give the patient's missed call from the browser phone.",
+      "orSim": "In the demo, use the browser phone instead.",
+      "phone": "Open the browser phone",
+      "noNumber": "The missed-call number is not set up yet.",
+      "linked": "Missed call received",
+      "open": "Open patient",
+      "another": "Enrol another patient",
+      "today": "Back to Today"
+    }
+  }
+}

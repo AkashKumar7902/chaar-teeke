@@ -1,0 +1,151 @@
+{
+ "note": "Machine voice drafts made by scripts/make_prompt_audio.py with Meta MMS-TTS (CC-BY-NC 4.0, prototype only). Not read or approved by a native speaker. Replace with human recordings.",
+ "target": "clips",
+ "format": "8 kHz mono 16-bit PCM WAV, loudness-normalised with ffmpeg loudnorm",
+ "files": [
+  {
+   "file": "1.wav",
+   "lang": "hi",
+   "text": "mera ghar Gujjar Nagar mein hai",
+   "spoken_text": "मेरा घर गुज्जर नगर में है",
+   "source": "demo seed transcript for place-1 on the test clock (2026-10-19 10:00 IST)",
+   "model": "facebook/mms-tts-hin",
+   "generated_at": "2026-10-19T09:36:53Z",
+   "seconds": 1.61,
+   "characters_not_spoken": [],
+   "review_status": "machine voice draft"
+  },
+  {
+   "file": "10.wav",
+   "lang": "hi",
+   "text": "नानक नगर उत्तर में",
+   "spoken_text": "नानक नगर उत्तर में",
+   "source": "demo seed transcript for place-10 on the test clock (2026-10-19 10:00 IST)",
+   "model": "facebook/mms-tts-hin",
+   "generated_at": "2026-10-19T09:36:57Z",
+   "seconds": 1.43,
+   "characters_not_spoken": [],
+   "review_status": "machine voice draft"
+  },
+  {
+   "file": "11.wav",
+   "lang": "hi",
+   "text": "mera ghar Channi Biza mein hai",
+   "spoken_text": "मेरा घर छन्नी बीज़ा त्रिकुटा नगर में है",
+   "source": "demo seed transcript for place-11 on the test clock (2026-10-19 10:00 IST)",
+   "model": "facebook/mms-tts-hin",
+   "generated_at": "2026-10-19T09:36:58Z",
+   "seconds": 3.04,
+   "characters_not_spoken": [],
+   "review_status": "machine voice draft"
+  },
+  {
+   "file": "12.wav",
+   "lang": "hi",
+   "text": "wahan school ke saamne",
+   "spoken_text": "वहाँ स्कूल के सामने",
+   "source": "demo seed transcript for place-12 on the test clock (2026-10-19 10:00 IST)",
+   "model": "facebook/mms-tts-hin",
+   "generated_at": "2026-10-19T09:36:59Z",
+   "seconds": 1.32,
+   "characters_not_spoken": [],
+   "review_status": "machine voice draft"
+  },
+  {
+   "file": "2.wav",
+   "lang": "hi",
+   "text": "अपर मुट्ठी में",
+   "spoken_text": "अपर मुट्ठी में",
+   "source": "demo seed transcript for place-2 on the test clock (2026-10-19 10:00 IST)",
+   "model": "facebook/mms-tts-hin",
+   "generated_at": "2026-10-19T09:36:54Z",
+   "seconds": 0.95,
+   "characters_not_spoken": [],
+   "review_status": "machine voice draft"
+  },
+  {
+   "file": "3.wav",
+   "lang": "hi",
+   "text": "bus adde ke paas",
+   "spoken_text": "बस अड्डे के पास",
+   "source": "demo seed transcript for place-3 on the test clock (2026-10-19 10:00 IST)",
+   "model": "facebook/mms-tts-hin",
+   "generated_at": "2026-10-19T09:36:54Z",
+   "seconds": 1.15,
+   "characters_not_spoken": [],
+   "review_status": "machine voice draft"
+  },
+  {
+   "file": "4.wav",
+   "lang": "hi",
+   "text": "चक चंगरवां दुर्गा नगर के पास",
+   "spoken_text": "चक चंगरवां दुर्गा नगर के पास",
+   "source": "demo seed transcript for place-4 on the test clock (2026-10-19 10:00 IST)",
+   "model": "facebook/mms-tts-hin",
+   "generated_at": "2026-10-19T09:36:55Z",
+   "seconds": 2.32,
+   "characters_not_spoken": [],
+   "review_status": "machine voice draft"
+  },
+  {
+   "file": "5.wav",
+   "lang": "hi",
+   "text": "Gole chowk par",
+   "spoken_text": "गोल चौक पर",
+   "source": "demo seed transcript for place-5 on the test clock (2026-10-19 10:00 IST)",
+   "model": "facebook/mms-tts-hin",
+   "generated_at": "2026-10-19T09:36:55Z",
+   "seconds": 0.82,
+   "characters_not_spoken": [],
+   "review_status": "machine voice draft"
+  },
+  {
+   "file": "6.wav",
+   "lang": "hi",
+   "text": "wahan school ke saamne",
+   "spoken_text": "वहाँ स्कूल के सामने",
+   "source": "demo seed transcript for place-6 on the test clock (2026-10-19 10:00 IST)",
+   "model": "facebook/mms-tts-hin",
+   "generated_at": "2026-10-19T09:36:55Z",
+   "seconds": 1.25,
+   "characters_not_spoken": [],
+   "review_status": "machine voice draft"
+  },
+  {
+   "file": "7.wav",
+   "lang": "hi",
+   "text": "Upper Muthi ke paas",
+   "spoken_text": "अपर मुट्ठी के पास",
+   "source": "demo seed transcript for place-7 on the test clock (2026-10-19 10:00 IST)",
+   "model": "facebook/mms-tts-hin",
+   "generated_at": "2026-10-19T09:36:56Z",
+   "seconds": 1.25,
+   "characters_not_spoken": [],
+   "review_status": "machine voice draft"
+  },
+  {
+   "file": "8.wav",
+   "lang": "hi",
+   "text": "नानक नगर पश्चिम में",
+   "spoken_text": "नानक नगर पश्चिम में",
+   "source": "demo seed transcript for place-8 on the test clock (2026-10-19 10:00 IST)",
+   "model": "facebook/mms-tts-hin",
+   "generated_at": "2026-10-19T09:36:56Z",
+   "seconds": 1.48,
+   "characters_not_spoken": [],
+   "review_status": "machine voice draft"
+  },
+  {
+   "file": "9.wav",
+   "lang": "hi",
+   "text": "hospital ke bahar",
+   "spoken_text": "अस्पताल के बाहर",
+   "source": "demo seed transcript for place-9 on the test clock (2026-10-19 10:00 IST)",
+   "model": "facebook/mms-tts-hin",
+   "generated_at": "2026-10-19T09:36:57Z",
+   "seconds": 1.12,
+   "characters_not_spoken": [],
+   "review_status": "machine voice draft"
+  }
+ ]
+}

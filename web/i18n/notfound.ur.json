@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "lang": "ur",
+    "bundle": "notfound",
+    "machine_written": true,
+    "needs_native_check": true,
+    "note": "Written by Claude, not yet read by a native speaker."
+  },
+  "notfound": {
+    "page": "صفحہ نہیں ملا · چار ٹیکے",
+    "title": "یہ صفحہ موجود نہیں ہے۔",
+    "body": "پتا دیکھیں، یا شروع پر جائیں۔",
+    "home": "شروع پر جائیں"
+  }
+}

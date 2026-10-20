@@ -1,0 +1,27 @@
+{
+  "_meta": { "lang": "en", "bundle": "alerts", "note": "Sick-dog alerts. Ward, day, place type and answer only; never a phone number." },
+  "alerts": {
+    "title": "Alerts",
+    "filter": "Show alerts",
+    "open": "Open ({count})",
+    "closed": "Closed ({count})",
+    "none": "No alerts {since}",
+    "noneEver": "No alerts yet",
+    "noneClosed": "No closed alerts yet",
+    "fault": "Alert not delivered to a vet on duty",
+    "vetsOnly": "Vets take alerts. You can read them.",
+    "more": "Show more",
+    "claimed": "You are on it.",
+    "closedDone": "Alert closed.",
+    "callbackAsked": "Asked the clinic to call the patient.",
+    "callbackAskedAt": "Asked {clinic} to call the patient.",
+    "dialog": {
+      "actedTitle": "Mark as acted",
+      "notActedTitle": "Not acted",
+      "actedLabel": "What was done (optional)",
+      "notActedLabel": "Why was no action taken?",
+      "needReason": "Say why",
+      "save": "Save"
+    }
+  }
+}

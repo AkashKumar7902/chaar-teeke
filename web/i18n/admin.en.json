@@ -1,0 +1,278 @@
+{
+  "_meta": {
+    "lang": "en",
+    "bundle": "admin",
+    "note": "Admin tabs: clinics, people, prompts, retention, system. Plain words; the never-on-screen list is in docs/DESIGN.md."
+  },
+  "admin": {
+    "title": "Admin",
+    "tabsLabel": "Admin sections",
+    "readOnlyTitle": "Read-only view: changes are refused",
+    "required": "Required",
+    "tabs": {
+      "clinics": "Clinics",
+      "people": "People",
+      "prompts": "Prompts",
+      "retention": "Retention",
+      "system": "System"
+    },
+    "lang": {
+      "hi": "Hindi",
+      "doi": "Dogri",
+      "ur": "Urdu"
+    },
+    "regimen": {
+      "id_trc": "Intradermal, Updated Thai Red Cross",
+      "im_essen": "Intramuscular, Essen",
+      "reexposure": "Re-exposure after a complete course",
+      "id_1week": "Intradermal one-week (WHO 2018)",
+      "im_abbrev": "Intramuscular abbreviated (WHO 2018)"
+    },
+    "clinics": {
+      "title": "Clinics",
+      "topic": "clinic setup",
+      "add": "Add a clinic",
+      "addTitle": "Add a clinic",
+      "editTitle": "Edit {name}",
+      "editNamed": "Edit {name}",
+      "edit": "Edit",
+      "saved": "Saved {name}",
+      "added": "Added {name}",
+      "emptyTitle": "No clinics yet",
+      "emptyBody": "Add the first clinic to start enrolling patients.",
+      "noWard": "No ward",
+      "wardNo": "Ward {no}",
+      "notSet": "Not set",
+      "choose": "Choose",
+      "days": "days {list}",
+      "regimenOff": "Not switched on: {name}",
+      "regimenHint": "Only schedules that are switched on are listed.",
+      "visitHint": "24-hour time, like 09:30. Said in reminder calls.",
+      "phoneHint": "Include the area code.",
+      "listFailed": "The {what} list did not load. Close this and try again.",
+      "cols": {
+        "name": "Clinic",
+        "ward": "Ward",
+        "regimen": "Schedule",
+        "lang": "Call language",
+        "visit": "Visit time",
+        "phone": "Phone",
+        "arv": "ARV status",
+        "actions": "Change"
+      },
+      "fields": {
+        "name": "Clinic name",
+        "short": "Short name",
+        "ward": "Ward",
+        "regimen": "Vaccine schedule",
+        "lang": "Call language",
+        "visit": "Visit time",
+        "phone": "Clinic phone",
+        "arv": "ARV status"
+      },
+      "arv": {
+        "confirmed": "Confirmed",
+        "unverified": "Unverified"
+      },
+      "about": {
+        "arv": "ARV is anti-rabies vaccine. Confirmed: a source says the clinic gives it. Unverified: none does yet.",
+        "gaps": "Without a visit time, reminder calls fail. Without a phone number, the vaccine-out reminder fails.",
+        "phone": "Numbers show masked here and in full only while you edit."
+      },
+      "timeBad": "Use 24-hour time, like 09:30."
+    },
+    "people": {
+      "title": "People",
+      "topic": "roles",
+      "about": "A role decides what a person can see and do, and the server enforces it. A clinic login belongs to one clinic. Switching someone off signs them out at once.",
+      "add": "Add a person",
+      "addTitle": "Add a person",
+      "emptyTitle": "No people yet",
+      "emptyBody": "Add the first person.",
+      "noClinic": "None",
+      "active": "Active",
+      "off": "Switched off",
+      "cols": {
+        "name": "Name",
+        "role": "Role",
+        "clinic": "Clinic",
+        "status": "Status",
+        "actions": "Change"
+      },
+      "fields": {
+        "username": "Sign-in name",
+        "name": "Name shown",
+        "role": "Role",
+        "clinic": "Clinic"
+      },
+      "usernameHint": "3 to 32 lower-case letters, digits, dots, dashes or underscores.",
+      "passwordNote": "A password is made for you and shown once after you add.",
+      "reset": "Reset password",
+      "resetNamed": "Reset password for {name}",
+      "resetTitle": "Reset the password for {name}?",
+      "resetBody": "Their sign-ins end now. You will see the new password once.",
+      "switchOff": "Switch off",
+      "switchOn": "Switch on",
+      "switchOffNamed": "Switch off {name}",
+      "switchOnNamed": "Switch on {name}",
+      "offTitle": "Switch off {name}?",
+      "offBody": "They are signed out now and cannot sign in until you switch them on.",
+      "switchedOff": "{name} is switched off",
+      "switchedOn": "{name} is switched on",
+      "newPasswordTitle": "New password for {name}",
+      "newPasswordLead": "Shown once. Copy it now: it cannot be shown again.",
+      "passwordLabel": "New password",
+      "copy": "Copy password",
+      "copied": "Copied.",
+      "copyFailed": "Copy failed. Select the password and copy it.",
+      "done": "Done"
+    },
+    "prompts": {
+      "title": "Prompts",
+      "topic": "prompts",
+      "about": "A language is ready when no audio file is missing; a clinic cannot use a language that is not. An uploaded recording replaces the machine voice draft. Uploads must be WAV, mono, 16-bit.",
+      "langsLabel": "Language",
+      "ready": "Ready",
+      "missingCount": {
+        "one": "1 file missing",
+        "other": "{count} files missing"
+      },
+      "search": "Search prompts",
+      "searchPlaceholder": "Name, call or words",
+      "call": "Call",
+      "allCalls": "All calls",
+      "missingOnly": "Missing only",
+      "showing": "Showing {shown} of {total}",
+      "noMatch": "Nothing matches.",
+      "showAll": "Show all",
+      "present": "File present",
+      "missing": "File missing",
+      "play": "Play",
+      "stop": "Stop",
+      "playNamed": "Play {name}",
+      "playFailed": "The file could not be played.",
+      "upload": "Upload",
+      "replace": "Replace",
+      "uploadNamed": "Upload a recording for {name}",
+      "part": "Part {n}",
+      "partNamed": "{id}, part {n} of {total}",
+      "checking": "Checking the file",
+      "uploading": "Uploading",
+      "uploaded": "Uploaded {name}",
+      "clips": {
+        "one": "Number, date and place clips: 1 missing",
+        "other": "Number, date and place clips: {count} missing"
+      },
+      "clipsNote": "The calls speak these between the sentences.",
+      "notDefined": "{id}: the calls need this prompt, but it has no text yet.",
+      "voice": {
+        "machine": "machine voice draft",
+        "uploaded": "recording uploaded"
+      },
+      "review": {
+        "needs_check": "Needs a check",
+        "machine_draft_needs_native_review": "Needs a native speaker's check",
+        "source": "Source text"
+      },
+      "wav": {
+        "not_wav": "This is not a WAV file.",
+        "not_pcm": "The WAV must be plain PCM, not compressed.",
+        "not_mono": "The WAV must be mono (one channel).",
+        "not_16bit": "The WAV must be 16-bit.",
+        "empty": "The WAV has no sound in it.",
+        "unreadable": "This file could not be read."
+      },
+      "clip": {
+        "clinic": "Clinic name",
+        "time": "Time {value}",
+        "ward": "Ward {value}",
+        "day": "Day {value}",
+        "month": "Month {value}",
+        "weekday": "Weekday {value}",
+        "num": "Number {value}"
+      },
+      "calls": {
+        "all": "all",
+        "evening_before_reminder": "evening-before reminder",
+        "evening_before_reminder_vaccine_out": "evening-before reminder (vaccine out)",
+        "final_call": "final call",
+        "first_call": "first call",
+        "first_call_adult": "first call (adult)",
+        "first_call_dose_key_0": "first call (dose key 0)",
+        "first_call_last_dose_taken_today": "first call (last dose taken today)",
+        "first_call_street_dog_only": "first call (street dog only)",
+        "first_call_under_18": "first call (under 18)",
+        "missed_call_repeat": "missed call (repeat)",
+        "missed_dose_call": "missed-dose call",
+        "missed_dose_morning_call": "missed-dose morning call",
+        "opt_out": "opt-out",
+        "reminders": "reminders",
+        "vaccine_out_notice": "vaccine-out notice",
+        "wrong_number": "wrong number"
+      }
+    },
+    "retention": {
+      "title": "Retention",
+      "lastRun": "Deletion job last ran {when}",
+      "neverRun": "The deletion job has not run yet",
+      "held": "Held now",
+      "due": "Due for deletion",
+      "deleted": "Deleted so far",
+      "kinds": {
+        "phones": "Phone numbers",
+        "clips": "Place recordings",
+        "missed": "Missed calls"
+      },
+      "rules": {
+        "phones": "Deleted {days} days after the last dose, or when the patient withdraws.",
+        "clips": "Deleted when the reviewer decides, or after {days} days.",
+        "missed": "Missed calls with no patient linked are deleted after {hours} hours."
+      }
+    },
+    "system": {
+      "title": "System",
+      "summary": "{ok} of {total} checks working",
+      "faults": {
+        "one": "1 fault. Read the red line below.",
+        "other": "{count} faults. Read the red lines below."
+      },
+      "mode": "Mode",
+      "link": "Phone link",
+      "policy": "Policy version",
+      "modes": {
+        "demo": "Demo",
+        "pilot": "Pilot"
+      },
+      "links": {
+        "sim": "Browser phone (SIMULATOR)",
+        "ari": "Phone line",
+        "ari,sim": "Phone line and browser phone (SIMULATOR)"
+      },
+      "checks": {
+        "database": "Database",
+        "scheduler": "Scheduler",
+        "telephony": "Telephony",
+        "speech": "Speech model",
+        "voice_hi": "Hindi prompts",
+        "voice_doi": "Dogri prompts",
+        "voice_ur": "Urdu prompts",
+        "purge": "Deletion job",
+        "alerts": "Unseen alerts",
+        "session_key": "Session key"
+      },
+      "off": "Not active",
+      "late": "Behind",
+      "reconnect": "Reconnect",
+      "openPrompts": "Open prompts",
+      "demo": {
+        "title": "Demo data",
+        "body": "Rebuild the synthetic history and set the demo clock to real time.",
+        "button": "Reset demo data",
+        "confirmTitle": "Reset the demo data?",
+        "done": "Demo data rebuilt",
+        "confirmBody": "Everything in the demo is replaced. Other staff are signed out and get new passwords. You stay signed in."
+      },
+      "notReady": "Not ready"
+    }
+  }
+}

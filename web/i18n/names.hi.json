@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "lang": "hi",
+    "bundle": "names",
+    "machine_written": true,
+    "needs_native_check": true,
+    "note": "Written by Claude, not yet read by a native Hindi speaker. Same keys as names.en.json."
+  },
+  "names": {
+    "title": "जाने-पहचाने नाम",
+    "search": {
+      "label": "नाम खोजें",
+      "placeholder": "कोई नाम या वार्ड नंबर"
+    },
+    "wardNo": "वार्ड {no}",
+    "count": "{total} नामों में से {shown}",
+    "list": "नाम और उनके वार्ड",
+    "kind": {
+      "alias": "सिखाया गया",
+      "ward": "वार्ड का नाम"
+    },
+    "added": "{who} ने जोड़ा, {when}",
+    "noLearned": "अभी कोई सिखाया हुआ नाम नहीं। रिकॉर्डिंग का वार्ड तय करते समय डिब्बे में टिक करें, या यहाँ नाम जोड़ें।",
+    "noMatch": "\"{q}\" से कोई नाम नहीं मिलता।",
+    "more": "और दिखाएँ",
+    "add": {
+      "title": "नाम जोड़ें",
+      "name": "नाम",
+      "nameHint": "जैसे लोग बोलते हैं, उदाहरण: तालाब टिल्लो चौक।",
+      "ward": "वार्ड",
+      "choose": "वार्ड चुनें",
+      "loading": "वार्ड लोड हो रहे हैं",
+      "failed": "वार्डों की सूची लोड नहीं हुई।",
+      "submit": "नाम जोड़ें",
+      "nameRequired": "एक नाम लिखें।",
+      "wardRequired": "एक वार्ड चुनें।",
+      "added": "जोड़ा गया: {text}",
+      "exists": "यह नाम पहले से मालूम है।"
+    },
+    "readOnly": "आपकी भूमिका यह नहीं कर सकती"
+  }
+}

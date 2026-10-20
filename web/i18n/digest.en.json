@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "lang": "en",
+    "bundle": "digest",
+    "note": "Weekly digest page and the printed sheet. Loaded with the oversight bundle, which holds the shared share and count words."
+  },
+  "digest": {
+    "title": "Weekly digest",
+    "print": "Print",
+    "sheetLang": "Language of the sheet",
+    "both": "Both",
+    "downloads": "Download",
+    "weekly": "Weekly figures (CSV)",
+    "register": "Register extract (CSV)",
+    "registerMissing": "Only Health staff (the reviewer login) can download the register extract. Oversight gets the weekly figures.",
+    "saved": "Saved {name}",
+    "sheet": {
+      "title": "Chaar Teeke weekly digest",
+      "for": "Counts and shares only. No name or phone number is in this sheet.",
+      "figures": "Figures",
+      "areasCaption": "Notched share by area",
+      "area": "Area",
+      "bites": "Bites",
+      "street": "Street-dog bites",
+      "share": "Notched share",
+      "unsure": "Could not see",
+      "foot": "Counts below 5 show as <5. A percentage appears only when enough patients answered. See the page How we know."
+    },
+    "empty": {
+      "title": "Nothing to print yet",
+      "body": "The sheet appears once courses are enrolled and patients answer calls."
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.alerts-grid {
+  --grid-min: 22rem;
+  align-items: start;
+}
+.alerts-fault:empty {
+  display: none;
+}
+.alerts-fault .banner {
+  margin: 0;
+}

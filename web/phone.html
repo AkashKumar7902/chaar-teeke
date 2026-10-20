@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="hi" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phone simulator · Chaar Teeke</title>
+    <meta name="description" content="A web page that plays the patient's phone call. Not a real call." />
+    <link rel="icon" href="/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/fonts/atkinson-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/pages/phone.css" />
+  </head>
+  <body class="phone-page">
+    <div class="sim-bar" role="note"><span class="sim-bar__label" dir="ltr" data-i18n="phone.simulatorLabel">SIMULATOR:</span> <span data-i18n="phone.simulatorNote">this is a web page, not a phone call</span></div>
+    <main id="main" class="page page--narrow phone" aria-busy="true"></main>
+    <script type="module" src="/js/pages/phone.js"></script>
+  </body>
+</html>

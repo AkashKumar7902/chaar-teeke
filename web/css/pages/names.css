@@ -1,0 +1,45 @@
+/* Known names: search and list, and the add form. Logical properties only. */
+
+.nm-grid {
+  display: grid;
+  gap: var(--s-5);
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+}
+@media (min-width: 64rem) {
+  .nm-grid {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  }
+  /* the form stays in reach while the long list of names scrolls */
+  .nm-form {
+    position: sticky;
+    inset-block-start: var(--s-4);
+  }
+}
+.nm-note {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-2);
+}
+.nm-note .icon {
+  flex: none;
+  margin-block-start: 0.2em;
+}
+.nm-row {
+  padding-block: var(--s-3);
+}
+.nm-form {
+  align-content: start;
+}
+.nm-slot:empty {
+  display: none;
+}
+.btn[aria-busy="true"] {
+  opacity: 0.6;
+}
+[role="status"]:empty {
+  display: none;
+}
+.nm-grid .stack > .btn {
+  align-self: flex-start;
+}

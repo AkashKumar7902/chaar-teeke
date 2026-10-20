@@ -1,0 +1,90 @@
+{
+  "_meta": {
+    "lang": "en",
+    "bundle": "phone"
+  },
+  "phone": {
+    "simulatorLabel": "SIMULATOR:",
+    "page": "Phone simulator · Chaar Teeke",
+    "simulatorNote": "this is a web page, not a phone call",
+    "connecting": "Connecting the phone",
+    "ready": {
+      "title": "Be the patient",
+      "body": "Give a missed call. We call you back and ask a few questions.",
+      "give": "Give a missed call",
+      "promise": "Phone numbers leave the reminder system 7 days after the course.",
+      "privacy": "Privacy notice"
+    },
+    "waiting": {
+      "title": "We will call you back",
+      "body": "Keep this page open. The phone will ring.",
+      "again": "Give another missed call"
+    },
+    "ring": {
+      "title": "Incoming call",
+      "answer": "Answer",
+      "decline": "Decline"
+    },
+    "call": {
+      "in": "In call",
+      "end": "End call",
+      "keypad": "Keypad",
+      "hintAgain": "hear again",
+      "hintStop": "stop calls",
+      "machineVoice": "Machine voice draft",
+      "words": "What is being said",
+      "starting": "The call is starting"
+    },
+    "record": {
+      "title": "Your answer",
+      "hold": "Hold to speak",
+      "holding": "Speaking. Let go to send.",
+      "tapStop": "Tap to send",
+      "tapHint": "Or tap once to start, tap again to send.",
+      "upTo": "Up to {n} s",
+      "left": "{n} s left",
+      "level": "Microphone level",
+      "skip": "Skip this question",
+      "sent": "Answer sent."
+    },
+    "mic": {
+      "pending": "Waiting for the microphone",
+      "denied": "The microphone is blocked. Allow it in the browser, or skip this question.",
+      "insecure": "This page needs a secure address (https) to use the microphone. Skip this question.",
+      "none": "No microphone was found. Skip this question.",
+      "busy": "The microphone is in use by another app.",
+      "failed": "The microphone could not start.",
+      "allow": "Allow the microphone"
+    },
+    "ended": {
+      "title": "The call ended",
+      "body": "Any answers you gave reached the dashboard, marked simulated.",
+      "again": "Call again"
+    },
+    "dropped": {
+      "title": "Call dropped",
+      "body": "The connection to the phone was lost.",
+      "rejoin": "Rejoin"
+    },
+    "err": {
+      "busy": "All the demo phones are in use. Try again in a minute.",
+      "full": "You already have as many phones open as are allowed. Close one first.",
+      "off": "The browser phone is switched off on this server.",
+      "connect": "The phone could not connect.",
+      "tooMany": "Too many missed calls in a minute. Wait a moment and try again."
+    },
+    "stoppedRinging": "The call stopped ringing. Give a missed call to try again.",
+    "declined": "You declined the call.",
+    "audio": {
+      "missing": "A voice file is missing: {file}",
+      "blocked": "Sound is blocked in this browser.",
+      "paused": "Sound is paused.",
+      "resume": "Resume sound"
+    },
+    "captions": {
+      "off": "The words of this call are not available.",
+      "englishOff": "The English words of this call are not available.",
+      "noWords": "(words not available)"
+    }
+  }
+}

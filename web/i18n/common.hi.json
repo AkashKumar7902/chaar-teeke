@@ -1,0 +1,245 @@
+{
+  "_meta": {
+    "lang": "hi",
+    "bundle": "common",
+    "machine_written": true,
+    "needs_native_check": true,
+    "note": "Written by Claude, not yet read by a native Hindi speaker. DEMO DATA stays in Latin letters on purpose so the honesty label is identical in every language.",
+    "nurse_check": "NOT DONE. A nurse must read every string in clinic.hi.json, enrol.hi.json and course.hi.json before any real patient uses it. Record the nurse's role and the date here when it is done."
+  },
+  "frame": {
+    "skip": "पेज पर जाएँ",
+    "home": "चार टीके मुखपृष्ठ",
+    "brand": "चार टीके",
+    "language": "भाषा",
+    "draft": "यह अनुवाद मसौदा है। किसी मूल भाषा-भाषी ने इसे अभी नहीं पढ़ा है।",
+    "lineDown": "कॉल नहीं जा रहीं: फ़ोन लाइन बंद है।",
+    "mainNav": "मुख्य मेनू",
+    "visitorNote": "केवल देखने के लिए",
+    "viewAs": "{role} के रूप में देखें",
+    "signOut": "साइन आउट",
+    "account": "खाता",
+    "jump": "घड़ी आगे करें",
+    "demo": {
+      "region": "डेमो डेटा की सूचना",
+      "label": "DEMO DATA:",
+      "note": "बनावटी आँकड़े, असली मरीज़ नहीं",
+      "clock": "डेमो घड़ी: {when}"
+    }
+  },
+  "jump": {
+    "next_call": "अगली कॉल",
+    "evening_before_next_dose": "अगली खुराक से एक शाम पहले",
+    "morning_after": "अगली खुराक के अगले दिन की सुबह",
+    "done": "घड़ी यहाँ पहुँची: {what}"
+  },
+  "nav": {
+    "today": "आज",
+    "enrol": "नया मरीज़",
+    "coverage": "कवरेज",
+    "alerts": "अलर्ट",
+    "worked": "टीम के कवर किए वार्ड",
+    "sight": "गश्त में देखे कुत्ते",
+    "summary": "सारांश",
+    "digest": "साप्ताहिक रिपोर्ट",
+    "method": "हम कैसे जानते हैं",
+    "review": "समीक्षा",
+    "names": "जाने-पहचाने नाम",
+    "admin": "एडमिन"
+  },
+  "roles": {
+    "clinic": "क्लिनिक",
+    "abc": "ABC टीम",
+    "vet": "पशु चिकित्सक",
+    "oversight": "निगरानी",
+    "reviewer": "समीक्षक",
+    "admin": "एडमिन",
+    "visitor": "आगंतुक"
+  },
+  "buttons": {
+    "about": "{topic} के बारे में",
+    "retry": "फिर कोशिश करें",
+    "close": "बंद करें",
+    "cancel": "रद्द करें",
+    "back": "वापस",
+    "next": "आगे",
+    "save": "सहेजें",
+    "send": "भेजें",
+    "confirm": "पक्का करें",
+    "fewer": "एक कम: {label}",
+    "more": "एक ज़्यादा: {label}"
+  },
+  "states": {
+    "offline": "सर्वर से संपर्क नहीं हो पा रहा। फिर कोशिश हो रही है।",
+    "forbidden": "आपकी भूमिका यह नहीं कर सकती",
+    "why": "क्यों?",
+    "noCalls": "अभी कोई कॉल नहीं",
+    "notSent": "भेजा नहीं गया। आपका लिखा यहीं है।",
+    "notifications": "सूचनाएँ",
+    "loading": "लोड हो रहा है",
+    "lastChecked": "आख़िरी जाँच {when}"
+  },
+  "errors": {
+    "network": "सर्वर से संपर्क नहीं हो पा रहा। कनेक्शन देखकर फिर कोशिश करें।",
+    "timeout": "सर्वर ने जवाब देने में बहुत देर की।",
+    "server": "सर्वर पर कुछ गड़बड़ हुई।",
+    "generic": "कुछ गड़बड़ हुई।",
+    "signedOut": "जारी रखने के लिए साइन इन करें।"
+  },
+  "format": {
+    "since": "{when} से",
+    "range": "{low} से {high}",
+    "phoneMasked": "अंतिम अंक {last4}",
+    "phonePurged": "नंबर हटा दिया गया",
+    "dose": "खुराक {n}",
+    "hidden": "छिपा हुआ"
+  },
+  "share": {
+    "n": "n = {n}",
+    "tooFew": "n = {n}, कम से कम {min} चाहिए",
+    "label": "गली के कुत्तों के काटने में V-कट वाले कुत्तों का हिस्सा",
+    "explain": "जिन मामलों में मरीज़ बता सका, उनमें गली के कुत्तों में से कितनों के दाहिने कान में V-कट था (यह नसबंदी वाले कुत्ते की पहचान है)। जो मरीज़ देख नहीं सके, वे प्रतिशत में नहीं गिने जाते; उन्हें नीचे अलग गिना गया है। अंतराल बताता है कि संयोग से यह आँकड़ा कितना हिल सकता है।",
+    "bounds": "अगर \"देख नहीं सका\" के सभी जवाब एक ही तरफ़ जाते, तो हिस्सा {range} के बीच होता।",
+    "counts": "V-कट दिखा: {notched}। V-कट नहीं दिखा: {unnotched}। देख नहीं सका: {unsure}।",
+    "couldNotSee": "देख नहीं सके",
+    "tooFewNote": "प्रतिशत बताने के लिए जवाब बहुत कम हैं।",
+    "interval": "अंतराल {range}",
+    "barLabel": "{share}, अंतराल {range}, 0 से 100 के पैमाने पर",
+    "bracketedNote": "50 से कम जवाब हैं। सावधानी से पढ़ें।",
+    "claim": "{lo} से {hi}% का दावा: यह तभी अपेक्षित है जब नसबंदी वाले और बिना नसबंदी वाले कुत्ते बराबर काटते हों"
+  },
+  "status": {
+    "dose": {
+      "due": "बाक़ी",
+      "given": "लग गई",
+      "late_minor": "देर से",
+      "late_review": "देर से: क्लिनिक तय करे",
+      "not_needed": "ज़रूरी नहीं"
+    },
+    "clinicRow": {
+      "due_today": "आज की खुराक",
+      "reminded": "याद दिलाया गया",
+      "tried": {
+        "one": "1 बार कोशिश की",
+        "other": "{count} बार कोशिश की"
+      },
+      "patient_says_taken": "मरीज़ के अनुसार टीका लग गया",
+      "marked_given": "टीका दर्ज",
+      "late_minor": "देर से",
+      "late_review": "देर से: क्लिनिक तय करे",
+      "awaiting_call": "पहली कॉल का इंतज़ार",
+      "no_answer": "जवाब नहीं"
+    },
+    "call": {
+      "scheduled": "तय",
+      "dialing": "लगाई जा रही",
+      "ringing": "घंटी बज रही",
+      "answered": "उठाई गई",
+      "completed": "पूरी हुई",
+      "no_answer": "जवाब नहीं",
+      "failed": "कॉल नहीं लगी",
+      "cancelled": "रद्द"
+    },
+    "alert": {
+      "new": "नया",
+      "claimed": "कोई देख रहा है",
+      "acted": "कार्रवाई हुई",
+      "not_acted": "कार्रवाई नहीं हुई"
+    },
+    "location": {
+      "pending": "इंतज़ार",
+      "matched": "वार्ड: अनुमान",
+      "needs_review": "समीक्षा चाहिए",
+      "decided": "तय हुआ",
+      "outside_jmc": "JMC के बाहर",
+      "cant_tell": "बता नहीं सकते",
+      "no_place_heard": "जगह सुनाई नहीं दी",
+      "skipped": "छोड़ा गया"
+    },
+    "confidence": {
+      "likely": "संभावित",
+      "possible": "हो सकता है",
+      "none": "कोई मेल नहीं"
+    },
+    "system": {
+      "ok": "चालू",
+      "fault": "ख़राबी"
+    },
+    "source": {
+      "simulator": "सिम्युलेटेड",
+      "demo": "डेमो",
+      "clinic": "क्लिनिक"
+    }
+  },
+  "placeType": {
+    "home_street": "घर या सड़क",
+    "school": "स्कूल",
+    "hospital": "अस्पताल",
+    "bus_market": "बस अड्डा या बाज़ार",
+    "other": "अन्य",
+    "no_answer": "जवाब नहीं"
+  },
+  "alert": {
+    "title": "अलर्ट",
+    "ward": "वार्ड {no}, {name}",
+    "wardNo": "वार्ड {no}",
+    "estimate": "अनुमान",
+    "area": "क्षेत्र {id}",
+    "noPlace": "जगह पता नहीं",
+    "claim": "मैं देख रहा हूँ",
+    "acted": "कार्रवाई हुई, दर्ज करें",
+    "notActed": "कार्रवाई नहीं हुई",
+    "callback": "क्लिनिक से मरीज़ को फ़ोन करवाएँ",
+    "answerSigns": "मरीज़ के अनुसार कुत्ते में लक्षण दिखे थे",
+    "factWhere": "कहाँ",
+    "factPlace": "जगह का प्रकार",
+    "factAnswer": "जवाब",
+    "factClaimedBy": "किसने लिया",
+    "factNote": "टिप्पणी",
+    "factCallback": "कॉल-बैक",
+    "callback_open": "अनुरोध किया गया",
+    "callback_done": "हो गया",
+    "callback_declined": "मना किया गया",
+    "callback_closed_no_contact": "बंद, संपर्क नहीं हुआ",
+    "takenByMe": "आप इस पर काम कर रहे हैं",
+    "takenBy": "{name} ने लिया",
+    "you": "आप"
+  },
+  "map": {
+    "label": "वार्ड का नक्शा",
+    "zoomIn": "बड़ा करें",
+    "zoomOut": "छोटा करें",
+    "attribution": "वार्ड सीमाएँ: जम्मू नगर निगम (MyJammu GIS)",
+    "ward": "वार्ड",
+    "failed": "नक्शा लोड नहीं हुआ",
+    "stopped": "नक्शा बनना बंद हो गया",
+    "bin1": "40% से कम",
+    "bin2": "40 से 55%",
+    "bin3": "55 से 70%",
+    "bin4": "70 से 80%",
+    "bin5": "80% या ज़्यादा",
+    "tooFew": "जवाब बहुत कम",
+    "noData": "अभी कोई कॉल नहीं",
+    "simulated": "सिम्युलेटेड शामिल",
+    "lookHere": "यहाँ देखें",
+    "legendNote": "रंग V-कट वाले कुत्तों का हिस्सा दिखाता है। हर अंतराल और n सूची में है।"
+  },
+  "qr": {
+    "alt": "फ़ोन का पेज खोलने वाला QR कोड",
+    "missing": "QR तस्वीर लोड नहीं हुई। इसके बदले फ़ोन पर यह लिंक खोलें:"
+  },
+  "form": {
+    "problem": {
+      "one": "1 समस्या है",
+      "other": "{count} समस्याएँ हैं"
+    }
+  },
+  "lookHere": {
+    "strong": "पिछले पूरे 4 हफ़्तों में शहर के बाक़ी हिस्से के मुक़ाबले यहाँ काटने वाले गली के कुत्तों में V-कट वाले कम थे। इतना अंतर सिर्फ़ संयोग से नहीं आता (यहाँ {n} जवाब)।"
+  },
+  "demoData": {
+    "topic": "इस डेमो डेटा",
+    "title": "इस डेमो डेटा के बारे में",
+    "body": "यह डेमो इतिहास बनावटी है और 12 हफ़्तों में कई क्लिनिकों जितना बड़ा है। एक क्लिनिक का पायलट 12 हफ़्तों में लगभग 175 जवाब देता है: पूरे शहर के हिस्से के लिए काफ़ी, क्षेत्र के संकेत के लिए नहीं।"
+  }
+}

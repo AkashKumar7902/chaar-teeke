@@ -1,0 +1,243 @@
+/* Weekly digest: the controls and the sheet that prints on A4. Logical properties only. */
+
+/* ---- controls */
+.dg-controls {
+  display: grid;
+  gap: var(--s-3);
+}
+.dg-lang {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2) var(--s-3);
+}
+.dg-lang__label {
+  font-weight: var(--weight-medium);
+}
+.dg-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+}
+.dg-why {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-2);
+}
+.dg-why .icon {
+  flex: none;
+  margin-block-start: 0.2em;
+}
+.dg-msg {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-2);
+  color: var(--attention);
+  font-weight: var(--weight-medium);
+}
+.dg-msg:empty {
+  display: none;
+}
+.dg-msg .icon {
+  flex: none;
+  margin-block-start: 0.2em;
+}
+a.btn {
+  text-decoration: none;
+}
+.btn[aria-busy="true"] {
+  opacity: 0.6;
+}
+
+/* ---- the sheet: always paper, whatever the theme, so the preview is what prints */
+.sheets {
+  display: grid;
+  gap: var(--s-5);
+}
+.sheet {
+  --paper: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #eef2f5;
+  --ink: #12202a;
+  --ink-2: #33434e;
+  --ink-3: #4a5a66;
+  --line: #b8c6cf;
+  --line-strong: #6b7d89;
+  --attention: #7a4300;
+  background: #fff;
+  color: var(--ink);
+  border: var(--border) solid var(--line);
+  border-radius: var(--radius-m);
+  padding: var(--s-5);
+  display: grid;
+  gap: var(--s-5);
+  inline-size: 100%;
+  max-inline-size: 56rem;
+  margin-inline: auto;
+}
+.sheet__head {
+  display: grid;
+  gap: var(--s-1);
+  padding-block-end: var(--s-3);
+  border-block-end: var(--border-strong) solid var(--ink);
+}
+.sheet__title {
+  font-size: var(--text-2xl);
+}
+.sheet__window {
+  font-weight: var(--weight-medium);
+}
+.sheet__for,
+.sheet__sub,
+.sheet__foot {
+  color: var(--ink-2);
+  font-size: var(--text-sm);
+}
+.sheet__sec {
+  display: grid;
+  gap: var(--s-2);
+  align-content: start;
+}
+.sheet__sec h3 {
+  font-size: var(--text-lg);
+}
+.sheet__figs {
+  display: grid;
+  gap: var(--s-3) var(--s-5);
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 40rem) {
+  .sheet__figs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  /* the completion figure carries a sentence, so it takes the whole row */
+  .sheet__fig:first-child {
+    grid-column: 1 / -1;
+  }
+}
+.sheet__fig {
+  display: grid;
+  gap: var(--s-1);
+  align-content: start;
+  padding-block-end: var(--s-2);
+  border-block-end: var(--border) solid var(--line);
+}
+.sheet__fig dt {
+  color: var(--ink-2);
+  font-size: var(--text-sm);
+}
+.sheet__fig dd {
+  display: grid;
+  gap: var(--s-1);
+}
+.sheet__val {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  font-variant-numeric: tabular-nums;
+}
+.sheet__share {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  max-inline-size: none;
+}
+.sheet .table-wrap {
+  margin-block-start: var(--s-2);
+}
+.sheet .table caption {
+  text-align: start;
+  font-weight: var(--weight-bold);
+  padding-block: var(--s-2);
+}
+
+@media (max-width: 40rem) {
+  .sheet .table--stack caption {
+    display: block;
+    inline-size: 100%;
+  }
+  /* on a phone the area name heads its row, so "Area" is not repeated beside every name */
+  .sheet .table--stack td:first-child {
+    display: block;
+    font-weight: var(--weight-bold);
+  }
+  .sheet .table--stack td:first-child::before {
+    content: none;
+  }
+}
+
+/* ---- print: A4, only the sheets, one sheet per page, in black on white */
+@page {
+  size: A4;
+  margin: 12mm;
+}
+@media print {
+  .dg-screen,
+  .toast-region,
+  .demo-strip .pop {
+    display: none !important;
+  }
+  .page {
+    padding: 0;
+    max-inline-size: none;
+  }
+  /* the frame's own DEMO strip repeats at the top of every printed page, so no sheet prints unmarked */
+  .demo-strip {
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline: 0;
+    padding-block: 1mm;
+  }
+  .sheets {
+    gap: 0;
+    display: block;
+  }
+  .sheet {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    max-inline-size: none;
+    break-after: page;
+  }
+  .sheet:last-child {
+    break-after: auto;
+  }
+  .sheet {
+    padding-block-start: 16mm;
+  }
+  .sheet tr {
+    break-inside: avoid;
+  }
+  /* one A4 page per language: tighter cells, smaller type */
+  .sheet {
+    font-size: 9.5pt;
+    gap: 3mm;
+    line-height: 1.4;
+  }
+  .sheet__title {
+    font-size: 16pt;
+  }
+  .sheet__val {
+    font-size: 12pt;
+  }
+  .sheet__share {
+    font-size: 11pt;
+  }
+  .sheet__figs {
+    gap: 1.5mm 8mm;
+  }
+  .sheet__fig {
+    padding-block-end: 1mm;
+  }
+  .sheet .table {
+    font-size: 9pt;
+  }
+  .sheet .table th,
+  .sheet .table td {
+    padding: 0.9mm 2mm;
+  }
+  .sheet .table caption {
+    padding: 1.5mm 2mm;
+  }
+  .sheet .table-wrap {
+    border-color: #6b7d89;
+  }
+}

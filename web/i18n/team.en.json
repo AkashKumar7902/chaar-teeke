@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "lang": "en",
+    "bundle": "team",
+    "note": "Coverage page and strings shared by the team pages."
+  },
+  "team": {
+    "title": "Coverage",
+    "window": "{from} to {to}",
+    "shareLine": "{pct}, interval {range}, n = {n}",
+    "couldNotSee": "Could not see: {n}",
+    "fewer50": "Fewer than 50 answers",
+    "areaGone": "Area not found",
+    "lookHere": {
+      "open": "Open area",
+      "strong": "Lower than the city by more than chance (n {n})",
+      "about": "Look here: an area is flagged when, over the last 4 weeks, its notched share is lower than the rest of the city's by more than chance explains, even after allowing for looking at all the areas at once. At most 3 are shown, in no order."
+    },
+    "about": {
+      "topic": "the notched share",
+      "p1": "Of the street-dog bites where the patient could tell, this is the share where the dog had the right-ear V-notch, the mark of a sterilised dog.",
+      "p2": "The notch is a stand-in. It tells us what patients saw on the dog that bit them, not how many street dogs are sterilised.",
+      "p3": "The claimed band fits what we see only if sterilised and unsterilised dogs bite equally often. They may not.",
+      "bounds": "If every could-not-see bite were notched, the share would be {high}. If none were, {low}.",
+      "interval": "The interval shows how far chance alone could move the figure."
+    },
+    "areas": {
+      "title": "Areas",
+      "topic": "the areas",
+      "about": "Analysis areas: groups of neighbouring wards made for this study. They are not Jammu Municipal Corporation zones."
+    },
+    "map": {
+      "about": "the map colours",
+      "pick": "Ward {no} {name} is in {area}.",
+      "pickNone": "Ward {no} {name} is in no analysis area."
+    },
+    "unplaced": "{n} bites could not be placed in a ward."
+  }
+}

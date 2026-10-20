@@ -1,0 +1,5203 @@
+{
+ "prompts_sha256": "a14a45e7e28c5b13bdd8039507fb71890107af822e0c51cf28cdd1fad9b04400",
+ "prompts_version": "0.4 draft",
+ "made_at": "2026-10-20T16:40:17Z",
+ "clinics": [
+  "cln_gmc",
+  "cln_demo2",
+  "cln_demo_visitor"
+ ],
+ "times": [
+  "0900",
+  "1000",
+  "1100"
+ ],
+ "ward_count": 75,
+ "items": [
+  {
+   "lang": "hi",
+   "path": "hi/SYS_LANG.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_LANG",
+   "text": "हिंदी के लिए 1 दबाएँ।",
+   "speak": "हिंदी के लिए एक दबाएँ।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/SYS_NOINPUT.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_NOINPUT",
+   "text": "हमें कोई बटन नहीं सुनाई दिया। कृपया दोबारा सुनिए।",
+   "speak": "हमें कोई बटन नहीं सुनाई दिया। कृपया दोबारा सुनिए।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/SYS_WRONGKEY.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_WRONGKEY",
+   "text": "यह बटन सूची में नहीं है। कृपया दोबारा सुनिए।",
+   "speak": "यह बटन सूची में नहीं है। कृपया दोबारा सुनिए।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/SYS_GIVEUP_FIRST.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_GIVEUP_FIRST",
+   "text": "हमें आपका जवाब नहीं मिला। हम आपको थोड़ी देर में फिर फ़ोन करेंगे। नमस्ते।",
+   "speak": "हमें आपका जवाब नहीं मिला। हम आपको थोड़ी देर में फिर फ़ोन करेंगे। नमस्ते।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/SYS_GIVEUP_MISS.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_GIVEUP_MISS",
+   "text": "हमें आपका जवाब नहीं मिला। अगर आपने टीका नहीं लगवाया है तो कृपया क्लिनिक जाइए। नमस्ते।",
+   "speak": "हमें आपका जवाब नहीं मिला। अगर आपने टीका नहीं लगवाया है तो कृपया क्लिनिक जाइए। नमस्ते।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/SYS_HEAR_AGAIN.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_HEAR_AGAIN",
+   "text": "इसे दोबारा सुनने के लिए स्टार दबाएँ।",
+   "speak": "इसे दोबारा सुनने के लिए स्टार दबाएँ।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/SYS_BYE.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_BYE",
+   "text": "धन्यवाद। नमस्ते।",
+   "speak": "धन्यवाद। नमस्ते।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_GATE.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_GATE",
+   "text": "नमस्ते। यह उस व्यक्ति के लिए रिकॉर्डेड फ़ोन है जिसने मिस्ड कॉल दी थी। अगर वह आप हैं तो 1 दबाएँ। अगर यह फ़ोन आपके लिए नहीं है तो 8 दबाएँ।",
+   "speak": "नमस्ते। यह उस व्यक्ति के लिए रिकॉर्डेड फ़ोन है जिसने मिस्ड कॉल दी थी। अगर वह आप हैं तो एक दबाएँ। अगर यह फ़ोन आपके लिए नहीं है तो आठ दबाएँ।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/ENR_DUP.wav",
+   "kind": "segment",
+   "source": "prompts.json ENR_DUP",
+   "text": "आप हर टीके से पहले आने वाले फ़ोन के लिए पहले से जुड़े हैं। मिस्ड कॉल से ये बंद नहीं होते। बंद करवाने के लिए अभी 9 दबाएँ।",
+   "speak": "आप हर टीके से पहले आने वाले फ़ोन के लिए पहले से जुड़े हैं। मिस्ड कॉल से ये बंद नहीं होते। बंद करवाने के लिए अभी नौ दबाएँ।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_HELLO.0.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_HELLO",
+   "text": "नमस्ते। यह ",
+   "speak": "नमस्ते। यह "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_HELLO.1.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_HELLO",
+   "text": " के रेबीज़ टीका केंद्र की ओर से रिकॉर्डेड फ़ोन है। आपने कुत्ते के काटने के टीके की याद दिलाने के लिए मिस्ड कॉल दी थी।",
+   "speak": " के रेबीज़ टीका केंद्र की ओर से रिकॉर्डेड फ़ोन है। आपने कुत्ते के काटने के टीके की याद दिलाने के लिए मिस्ड कॉल दी थी।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_GUARD_OK.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_GUARD_OK",
+   "text": "क्लिनिक ने माता-पिता या अभिभावक की सहमति दर्ज कर ली है। अगले सवालों के जवाब कृपया माता-पिता या अभिभावक दें।",
+   "speak": "क्लिनिक ने माता-पिता या अभिभावक की सहमति दर्ज कर ली है। अगले सवालों के जवाब कृपया माता-पिता या अभिभावक दें।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_NOTICE.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_NOTICE",
+   "text": "हम हर टीके से पहले इस नंबर पर फ़ोन करेंगे; आख़िरी टीके के 7 दिन बाद नंबर मिटा देंगे। पूछेंगे कि कुत्ते ने कहाँ काटा; आपकी आवाज़ रिकॉर्ड होगी और जगह मिलते ही मिट जाएगी। जवाब आपके नंबर से अलग रहते हैं। कभी भी रोकने के लिए 9, पूरी सूचना के लिए 0 दबाएँ।",
+   "speak": "हम हर टीके से पहले इस नंबर पर फ़ोन करेंगे; आख़िरी टीके के सात दिन बाद नंबर मिटा देंगे। पूछेंगे कि कुत्ते ने कहाँ काटा; आपकी आवाज़ रिकॉर्ड होगी और जगह मिलते ही मिट जाएगी। जवाब आपके नंबर से अलग रहते हैं। कभी भी रोकने के लिए नौ, पूरी सूचना के लिए शून्य दबाएँ।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_NOTICE_FULL.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_NOTICE_FULL",
+   "text": "हम हर टीके से पहले इस नंबर पर फ़ोन करेंगे। यह नंबर हमने आपकी मिस्ड कॉल से रखा है, सिर्फ़ इसी काम के लिए, और आख़िरी टीके के 7 दिन बाद मिटा दिया जाएगा। हम यह भी पूछेंगे कि कुत्ते ने कहाँ काटा और कुत्ता कैसा था। जगह बोलने पर आपकी आवाज़ रिकॉर्ड होगी। जगह तय होते ही, या 7 दिन बाद, रिकॉर्डिंग मिटा दी जाएगी। आपके जवाब आपके नंबर से अलग रखे जाते हैं, पर क्लिनिक के रजिस्टर में आपकी एंट्री से जुड़े रहते हैं। कुत्ता बीमार लगा हो तो क्लिनिक आपको फ़ोन कर सकता है। ये फ़ोन किसी भी समय बंद करवाने के लिए 9 दबाएँ। कोई शिकायत हो तो पहले क्लिनिक को बताएँ। हल न हो तो आप डेटा प्रोटेक्शन बोर्ड ऑफ़ इंडिया को लिख सकते हैं।",
+   "speak": "हम हर टीके से पहले इस नंबर पर फ़ोन करेंगे। यह नंबर हमने आपकी मिस्ड कॉल से रखा है, सिर्फ़ इसी काम के लिए, और आख़िरी टीके के सात दिन बाद मिटा दिया जाएगा। हम यह भी पूछेंगे कि कुत्ते ने कहाँ काटा और कुत्ता कैसा था। जगह बोलने पर आपकी आवाज़ रिकॉर्ड होगी। जगह तय होते ही, या सात दिन बाद, रिकॉर्डिंग मिटा दी जाएगी। आपके जवाब आपके नंबर से अलग रखे जाते हैं, पर क्लिनिक के रजिस्टर में आपकी एंट्री से जुड़े रहते हैं। कुत्ता बीमार लगा हो तो क्लिनिक आपको फ़ोन कर सकता है। ये फ़ोन किसी भी समय बंद करवाने के लिए नौ दबाएँ। कोई शिकायत हो तो पहले क्लिनिक को बताएँ। हल न हो तो आप डेटा प्रोटेक्शन बोर्ड ऑफ़ इंडिया को लिख सकते हैं।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_CONSENT_Q.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CONSENT_Q",
+   "text": "सहमत होने के लिए 1 दबाएँ। अगर आप याद दिलाने वाले फ़ोन नहीं चाहते तो 2 दबाएँ।",
+   "speak": "सहमत होने के लिए एक दबाएँ। अगर आप याद दिलाने वाले फ़ोन नहीं चाहते तो दो दबाएँ।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_CONSENT_Q_G.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CONSENT_Q_G",
+   "text": "माता-पिता या अभिभावक: सहमत होने के लिए 1 दबाएँ। अगर आप याद दिलाने वाले फ़ोन नहीं चाहते तो 2 दबाएँ।",
+   "speak": "माता-पिता या अभिभावक: सहमत होने के लिए एक दबाएँ। अगर आप याद दिलाने वाले फ़ोन नहीं चाहते तो दो दबाएँ।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_QCONSENT.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_QCONSENT",
+   "text": "हम कुत्ते के काटने के बारे में चार छोटे सवाल भी पूछना चाहेंगे। इनके जवाब आपके नंबर के बिना रखे जाते हैं। जवाब देने के लिए 1 दबाएँ। छोड़ने के लिए 2 दबाएँ।",
+   "speak": "हम कुत्ते के काटने के बारे में चार छोटे सवाल भी पूछना चाहेंगे। इनके जवाब आपके नंबर के बिना रखे जाते हैं। जवाब देने के लिए एक दबाएँ। छोड़ने के लिए दो दबाएँ।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_CONSENT_NO.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CONSENT_NO",
+   "text": "ठीक है। हम आपको दोबारा फ़ोन नहीं करेंगे और यह नंबर अभी मिटा रहे हैं। कृपया कार्ड पर लिखी तारीख़ को क्लिनिक आइए। नमस्ते।",
+   "speak": "ठीक है। हम आपको दोबारा फ़ोन नहीं करेंगे और यह नंबर अभी मिटा रहे हैं। कृपया कार्ड पर लिखी तारीख़ को क्लिनिक आइए। नमस्ते।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_PLACE.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_PLACE",
+   "text": "कुत्ते ने कहाँ काटा? घर या अस्पताल नहीं। आपकी आवाज़ रिकॉर्ड होगी। बीप के बाद मोहल्ले का नाम या पास की पहचान वाली जगह बोलिए।",
+   "speak": "कुत्ते ने कहाँ काटा? घर या अस्पताल नहीं। आपकी आवाज़ रिकॉर्ड होगी। बीप के बाद मोहल्ले का नाम या पास की पहचान वाली जगह बोलिए।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_PLACE_AGAIN.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_PLACE_AGAIN",
+   "text": "हमें आपकी आवाज़ नहीं सुनाई दी। बीप के बाद कृपया मोहल्ले का नाम या सबसे पास की जगह बोलिए।",
+   "speak": "हमें आपकी आवाज़ नहीं सुनाई दी। बीप के बाद कृपया मोहल्ले का नाम या सबसे पास की जगह बोलिए।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_PLACETYPE.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_PLACETYPE",
+   "text": "वह किस तरह की जगह थी? घर या गली-सड़क के लिए 1 दबाएँ। स्कूल के लिए 2। अस्पताल के लिए 3। बस अड्डे या बाज़ार के लिए 4। और कहीं भी हो तो 5 दबाएँ।",
+   "speak": "वह किस तरह की जगह थी? घर या गली-सड़क के लिए एक दबाएँ। स्कूल के लिए दो। अस्पताल के लिए तीन। बस अड्डे या बाज़ार के लिए चार। और कहीं भी हो तो पाँच दबाएँ।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_ANIMAL.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_ANIMAL",
+   "text": "किस जानवर ने काटा? गली के कुत्ते के लिए 1 दबाएँ। मालिक वाले कुत्ते के लिए 2। बंदर, बिल्ली या किसी और जानवर के लिए 3। पक्का न पता हो तो 4 दबाएँ।",
+   "speak": "किस जानवर ने काटा? गली के कुत्ते के लिए एक दबाएँ। मालिक वाले कुत्ते के लिए दो। बंदर, बिल्ली या किसी और जानवर के लिए तीन। पक्का न पता हो तो चार दबाएँ।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_NOTCH.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_NOTCH",
+   "text": "नगर निगम नसबंदी किए हुए कुत्तों के दाहिने कान में एक छोटा कट लगाता है, यानी कुत्ते का अपना दाहिना कान। अगर कुत्ता आपकी तरफ़ मुँह करके खड़ा हो तो वह कान आपके बाईं तरफ़ होगा। क्या इस कुत्ते के कान में कट था? हाँ के लिए 1, नहीं के लिए 2, देख नहीं पाए तो 3 दबाएँ।",
+   "speak": "नगर निगम नसबंदी किए हुए कुत्तों के दाहिने कान में एक छोटा कट लगाता है, यानी कुत्ते का अपना दाहिना कान। अगर कुत्ता आपकी तरफ़ मुँह करके खड़ा हो तो वह कान आपके बाईं तरफ़ होगा। क्या इस कुत्ते के कान में कट था? हाँ के लिए एक, नहीं के लिए दो, देख नहीं पाए तो तीन दबाएँ।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_SICK.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_SICK",
+   "text": "क्या कुत्ता बीमार दिखा या अजीब व्यवहार कर रहा था, दूसरे लोगों या जानवरों को काटा, या बाद में मर गया? हाँ के लिए 1, नहीं के लिए 2, पता न हो तो 3 दबाएँ।",
+   "speak": "क्या कुत्ता बीमार दिखा या अजीब व्यवहार कर रहा था, दूसरे लोगों या जानवरों को काटा, या बाद में मर गया? हाँ के लिए एक, नहीं के लिए दो, पता न हो तो तीन दबाएँ।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_SICK_YES.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_SICK_YES",
+   "text": "धन्यवाद। हम यह जानकारी पशु टीम तक पहुँचा रहे हैं। कृपया क्लिनिक के डॉक्टर को भी यह बताइए।",
+   "speak": "धन्यवाद। हम यह जानकारी पशु टीम तक पहुँचा रहे हैं। कृपया क्लिनिक के डॉक्टर को भी यह बताइए।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_CLOSE.0.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE",
+   "text": "धन्यवाद। आपका अगला टीका, कुल ",
+   "speak": "धन्यवाद। आपका अगला टीका, कुल "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_CLOSE.1.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE",
+   "text": " में से टीका नंबर ",
+   "speak": " में से टीका नंबर "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_CLOSE.2.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE",
+   "text": " को ",
+   "speak": " को "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_CLOSE.3.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE",
+   "text": " में है। हम एक शाम पहले आपको फ़ोन करने की कोशिश करेंगे। अगर कभी ये फ़ोन बंद करवाने हों तो फ़ोन आने पर 9 दबाइए।",
+   "speak": " में है। हम एक शाम पहले आपको फ़ोन करने की कोशिश करेंगे। अगर कभी ये फ़ोन बंद करवाने हों तो फ़ोन आने पर नौ दबाइए।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_CLOSE_COME.0.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE_COME",
+   "text": "धन्यवाद। आपके अगले टीके की तारीख़ निकल चुकी है। कृपया जितना जल्दी हो सके ",
+   "speak": "धन्यवाद। आपके अगले टीके की तारीख़ निकल चुकी है। कृपया जितना जल्दी हो सके "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_CLOSE_COME.1.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE_COME",
+   "text": " आइए, या क्लिनिक को ",
+   "speak": " आइए, या क्लिनिक को "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_CLOSE_COME.2.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE_COME",
+   "text": " पर फ़ोन कीजिए।",
+   "speak": " पर फ़ोन कीजिए।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FC_CLOSE_LAST.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE_LAST",
+   "text": "धन्यवाद। यह आपका आख़िरी तय टीका था। अब हमें फ़ोन करने की ज़रूरत नहीं पड़ेगी। आपका नंबर 7 दिन में मिटा दिया जाएगा।",
+   "speak": "धन्यवाद। यह आपका आख़िरी तय टीका था। अब हमें फ़ोन करने की ज़रूरत नहीं पड़ेगी। आपका नंबर सात दिन में मिटा दिया जाएगा।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_HELLO.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_HELLO",
+   "text": "धन्यवाद। यह ",
+   "speak": "धन्यवाद। यह "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_HELLO.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_HELLO",
+   "text": " के रेबीज़ टीका केंद्र की ओर से फ़ोन है।",
+   "speak": " के रेबीज़ टीका केंद्र की ओर से फ़ोन है।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_WHO.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_WHO",
+   "text": "यह याद दिलाने वाला फ़ोन रजिस्टर नंबर ",
+   "speak": "यह याद दिलाने वाला फ़ोन रजिस्टर नंबर "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_WHO.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_WHO",
+   "text": " वाले मरीज़ के लिए है।",
+   "speak": " वाले मरीज़ के लिए है।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_EVE_BODY.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY",
+   "text": "कल, ",
+   "speak": "कल, "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_EVE_BODY.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY",
+   "text": ", कुल ",
+   "speak": ", कुल "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_EVE_BODY.2.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY",
+   "text": " में से टीका नंबर ",
+   "speak": " में से टीका नंबर "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_EVE_BODY.3.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY",
+   "text": " लगना है। कृपया ",
+   "speak": " लगना है। कृपया "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_EVE_BODY.4.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY",
+   "text": " आइए। फ़ोन न आए तब भी कार्ड पर लिखी तारीख़ को आइए।",
+   "speak": " आइए। फ़ोन न आए तब भी कार्ड पर लिखी तारीख़ को आइए।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_EVE_BODY_OUT.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY_OUT",
+   "text": "कल, ",
+   "speak": "कल, "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_EVE_BODY_OUT.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY_OUT",
+   "text": ", कुल ",
+   "speak": ", कुल "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_EVE_BODY_OUT.2.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY_OUT",
+   "text": " में से टीका नंबर ",
+   "speak": " में से टीका नंबर "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_EVE_BODY_OUT.3.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY_OUT",
+   "text": " लगना है। क्लिनिक के अनुसार अभी टीका उपलब्ध नहीं है। आने से पहले कृपया क्लिनिक को ",
+   "speak": " लगना है। क्लिनिक के अनुसार अभी टीका उपलब्ध नहीं है। आने से पहले कृपया क्लिनिक को "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_EVE_BODY_OUT.4.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY_OUT",
+   "text": " पर फ़ोन कीजिए।",
+   "speak": " पर फ़ोन कीजिए।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_EVE_END.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_END",
+   "text": "इसे दोबारा सुनने के लिए स्टार दबाएँ। ये याद दिलाने वाले फ़ोन बंद करवाने के लिए 9 दबाएँ। धन्यवाद।",
+   "speak": "इसे दोबारा सुनने के लिए स्टार दबाएँ। ये याद दिलाने वाले फ़ोन बंद करवाने के लिए नौ दबाएँ। धन्यवाद।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_MISS_Q.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_Q",
+   "text": "बीते कल, ",
+   "speak": "बीते कल, "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_MISS_Q.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_Q",
+   "text": " को, ",
+   "speak": " को, "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_MISS_Q.2.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_Q",
+   "text": " में से टीका नंबर ",
+   "speak": " में से टीका नंबर "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_MISS_Q.3.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_Q",
+   "text": " लगना था। क्लिनिक में इसके लगने का कोई रिकॉर्ड नहीं है। अगर आपने लगवा लिया है तो 1 दबाएँ। अगर नहीं लगवाया तो 2 दबाएँ।",
+   "speak": " लगना था। क्लिनिक में इसके लगने का कोई रिकॉर्ड नहीं है। अगर आपने लगवा लिया है तो एक दबाएँ। अगर नहीं लगवाया तो दो दबाएँ।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_MISS_TAKEN.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_TAKEN",
+   "text": "धन्यवाद। हमने इसे दर्ज कर लिया है। आपका अगला टीका, कुल ",
+   "speak": "धन्यवाद। हमने इसे दर्ज कर लिया है। आपका अगला टीका, कुल "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_MISS_TAKEN.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_TAKEN",
+   "text": " में से टीका नंबर ",
+   "speak": " में से टीका नंबर "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_MISS_TAKEN.2.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_TAKEN",
+   "text": " को ",
+   "speak": " को "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_MISS_TAKEN.3.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_TAKEN",
+   "text": " है।",
+   "speak": " है।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_MISS_TAKEN_LAST.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_TAKEN_LAST",
+   "text": "धन्यवाद। हमने इसे दर्ज कर लिया है। यह आपका आख़िरी तय टीका था।",
+   "speak": "धन्यवाद। हमने इसे दर्ज कर लिया है। यह आपका आख़िरी तय टीका था।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_MISS_NOT.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_NOT",
+   "text": "कृपया आज ही, जितनी जल्दी हो सके, ",
+   "speak": "कृपया आज ही, जितनी जल्दी हो सके, "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/RM_MISS_NOT.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_NOT",
+   "text": " जाइए। अगली तारीख़ का इंतज़ार मत कीजिए। आगे क्या करना है, यह डॉक्टर बताएँगे।",
+   "speak": " जाइए। अगली तारीख़ का इंतज़ार मत कीजिए। आगे क्या करना है, यह डॉक्टर बताएँगे।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/VAX_OUT_NOTICE.0.wav",
+   "kind": "segment",
+   "source": "prompts.json VAX_OUT_NOTICE",
+   "text": "नमस्ते। ",
+   "speak": "नमस्ते। "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/VAX_OUT_NOTICE.1.wav",
+   "kind": "segment",
+   "source": "prompts.json VAX_OUT_NOTICE",
+   "text": " के रेबीज़ टीका केंद्र की ओर से संदेश। अभी टीका उपलब्ध नहीं है। आने से पहले कृपया क्लिनिक को ",
+   "speak": " के रेबीज़ टीका केंद्र की ओर से संदेश। अभी टीका उपलब्ध नहीं है। आने से पहले कृपया क्लिनिक को "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/VAX_OUT_NOTICE.2.wav",
+   "kind": "segment",
+   "source": "prompts.json VAX_OUT_NOTICE",
+   "text": " पर फ़ोन कीजिए।",
+   "speak": " पर फ़ोन कीजिए।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/VAX_BACK.0.wav",
+   "kind": "segment",
+   "source": "prompts.json VAX_BACK",
+   "text": "नमस्ते। ",
+   "speak": "नमस्ते। "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/VAX_BACK.1.wav",
+   "kind": "segment",
+   "source": "prompts.json VAX_BACK",
+   "text": " के रेबीज़ टीका केंद्र से अच्छी ख़बर। टीका फिर से उपलब्ध है। कृपया तय तारीख़ पर ही आइए।",
+   "speak": " के रेबीज़ टीका केंद्र से अच्छी ख़बर। टीका फिर से उपलब्ध है। कृपया तय तारीख़ पर ही आइए।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FIN_Q.0.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_Q",
+   "text": "हमारे रिकॉर्ड के अनुसार आपका आख़िरी टीका ",
+   "speak": "हमारे रिकॉर्ड के अनुसार आपका आख़िरी टीका "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FIN_Q.1.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_Q",
+   "text": " को था। अगर आपने सभी टीके लगवा लिए हैं तो 1 दबाएँ। अगर कोई टीका छूट गया है तो 2 दबाएँ।",
+   "speak": " को था। अगर आपने सभी टीके लगवा लिए हैं तो एक दबाएँ। अगर कोई टीका छूट गया है तो दो दबाएँ।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FIN_ALL.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_ALL",
+   "text": "सभी टीके पूरे करने के लिए धन्यवाद।",
+   "speak": "सभी टीके पूरे करने के लिए धन्यवाद।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FIN_MISSED.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_MISSED",
+   "text": "कृपया क्लिनिक जाकर डॉक्टर को अपना बाइट कार्ड दिखाइए। डॉक्टर आपको सलाह देंगे।",
+   "speak": "कृपया क्लिनिक जाकर डॉक्टर को अपना बाइट कार्ड दिखाइए। डॉक्टर आपको सलाह देंगे।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FIN_TEAM.0.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_TEAM",
+   "text": "एक बात और। आपने बताया था कि कुत्ते ने कहाँ काटा, उसके बाद से पशु जन्म नियंत्रण टीम ने ",
+   "speak": "एक बात और। आपने बताया था कि कुत्ते ने कहाँ काटा, उसके बाद से पशु जन्म नियंत्रण टीम ने "
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FIN_TEAM.1.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_TEAM",
+   "text": " में काम किया है। आपकी मदद के लिए धन्यवाद।",
+   "speak": " में काम किया है। आपकी मदद के लिए धन्यवाद।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/FIN_DELETE.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_DELETE",
+   "text": "आपका फ़ोन नंबर 7 दिन में मिटा दिया जाएगा। हम आपको फिर फ़ोन नहीं करेंगे। अपना ख़याल रखिए।",
+   "speak": "आपका फ़ोन नंबर सात दिन में मिटा दिया जाएगा। हम आपको फिर फ़ोन नहीं करेंगे। अपना ख़याल रखिए।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/WN_CONFIRM.wav",
+   "kind": "segment",
+   "source": "prompts.json WN_CONFIRM",
+   "text": "आपने बताया कि यह फ़ोन आपके लिए नहीं है। पक्का करने के लिए 8 दबाएँ। सुनते रहने के लिए 1 दबाएँ।",
+   "speak": "आपने बताया कि यह फ़ोन आपके लिए नहीं है। पक्का करने के लिए आठ दबाएँ। सुनते रहने के लिए एक दबाएँ।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/WN_DONE.wav",
+   "kind": "segment",
+   "source": "prompts.json WN_DONE",
+   "text": "असुविधा के लिए खेद है। हम इस नंबर पर दोबारा फ़ोन नहीं करेंगे। नमस्ते।",
+   "speak": "असुविधा के लिए खेद है। हम इस नंबर पर दोबारा फ़ोन नहीं करेंगे। नमस्ते।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/OPT_CONFIRM.wav",
+   "kind": "segment",
+   "source": "prompts.json OPT_CONFIRM",
+   "text": "आपने याद दिलाने वाले फ़ोन बंद करने के लिए बटन दबाया है। पक्का करने के लिए 9 दबाएँ। याद दिलाने वाले फ़ोन जारी रखने के लिए 1 दबाएँ।",
+   "speak": "आपने याद दिलाने वाले फ़ोन बंद करने के लिए बटन दबाया है। पक्का करने के लिए नौ दबाएँ। याद दिलाने वाले फ़ोन जारी रखने के लिए एक दबाएँ।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/OPT_DONE.wav",
+   "kind": "segment",
+   "source": "prompts.json OPT_DONE",
+   "text": "हमने याद दिलाने वाले फ़ोन बंद कर दिए हैं और आपका नंबर मिटा रहे हैं। फिर भी कृपया कार्ड पर लिखी तारीख़ को क्लिनिक आइए। नमस्ते।",
+   "speak": "हमने याद दिलाने वाले फ़ोन बंद कर दिए हैं और आपका नंबर मिटा रहे हैं। फिर भी कृपया कार्ड पर लिखी तारीख़ को क्लिनिक आइए। नमस्ते।"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/weekday_0.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "सोमवार",
+   "speak": "सोमवार"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/weekday_1.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "मंगलवार",
+   "speak": "मंगलवार"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/weekday_2.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "बुधवार",
+   "speak": "बुधवार"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/weekday_3.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "गुरुवार",
+   "speak": "गुरुवार"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/weekday_4.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "शुक्रवार",
+   "speak": "शुक्रवार"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/weekday_5.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "शनिवार",
+   "speak": "शनिवार"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/weekday_6.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "रविवार",
+   "speak": "रविवार"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_1.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "एक",
+   "speak": "एक"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_2.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "दो",
+   "speak": "दो"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_3.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "तीन",
+   "speak": "तीन"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_4.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "चार",
+   "speak": "चार"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_5.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "पाँच",
+   "speak": "पाँच"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_6.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "छह",
+   "speak": "छह"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_7.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "सात",
+   "speak": "सात"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_8.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "आठ",
+   "speak": "आठ"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_9.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "नौ",
+   "speak": "नौ"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_10.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "दस",
+   "speak": "दस"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_11.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "ग्यारह",
+   "speak": "ग्यारह"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_12.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "बारह",
+   "speak": "बारह"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_13.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "तेरह",
+   "speak": "तेरह"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_14.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "चौदह",
+   "speak": "चौदह"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_15.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "पंद्रह",
+   "speak": "पंद्रह"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_16.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "सोलह",
+   "speak": "सोलह"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_17.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "सत्रह",
+   "speak": "सत्रह"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_18.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "अठारह",
+   "speak": "अठारह"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_19.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "उन्नीस",
+   "speak": "उन्नीस"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_20.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "बीस",
+   "speak": "बीस"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_21.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "इक्कीस",
+   "speak": "इक्कीस"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_22.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "बाईस",
+   "speak": "बाईस"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_23.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "तेईस",
+   "speak": "तेईस"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_24.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "चौबीस",
+   "speak": "चौबीस"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_25.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "पच्चीस",
+   "speak": "पच्चीस"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_26.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "छब्बीस",
+   "speak": "छब्बीस"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_27.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "सत्ताईस",
+   "speak": "सत्ताईस"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_28.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "अट्ठाईस",
+   "speak": "अट्ठाईस"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_29.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "उनतीस",
+   "speak": "उनतीस"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_30.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "तीस",
+   "speak": "तीस"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/day_31.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "इकतीस",
+   "speak": "इकतीस"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/month_1.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "जनवरी",
+   "speak": "जनवरी"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/month_2.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "फ़रवरी",
+   "speak": "फ़रवरी"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/month_3.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "मार्च",
+   "speak": "मार्च"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/month_4.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "अप्रैल",
+   "speak": "अप्रैल"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/month_5.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "मई",
+   "speak": "मई"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/month_6.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "जून",
+   "speak": "जून"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/month_7.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "जुलाई",
+   "speak": "जुलाई"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/month_8.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "अगस्त",
+   "speak": "अगस्त"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/month_9.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "सितंबर",
+   "speak": "सितंबर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/month_10.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "अक्टूबर",
+   "speak": "अक्टूबर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/month_11.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "नवंबर",
+   "speak": "नवंबर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/month_12.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "दिसंबर",
+   "speak": "दिसंबर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/num_0.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "शून्य",
+   "speak": "शून्य"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/num_1.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "एक",
+   "speak": "एक"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/num_2.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "दो",
+   "speak": "दो"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/num_3.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "तीन",
+   "speak": "तीन"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/num_4.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "चार",
+   "speak": "चार"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/num_5.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "पाँच",
+   "speak": "पाँच"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/num_6.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "छह",
+   "speak": "छह"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/num_7.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "सात",
+   "speak": "सात"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/num_8.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "आठ",
+   "speak": "आठ"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/num_9.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "नौ",
+   "speak": "नौ"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/time_0900.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_times",
+   "text": "सुबह नौ बजे",
+   "speak": "सुबह नौ बजे"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/time_1000.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_times",
+   "text": "सुबह दस बजे",
+   "speak": "सुबह दस बजे"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/time_1100.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_times",
+   "text": "सुबह ग्यारह बजे",
+   "speak": "सुबह ग्यारह बजे"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/clinic_cln_gmc.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "सरकारी मेडिकल कॉलेज और अस्पताल जम्मू",
+   "speak": "सरकारी मेडिकल कॉलेज और अस्पताल जम्मू"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/clinic_cln_demo2.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "डेमो क्लिनिक",
+   "speak": "डेमो क्लिनिक"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/clinic_cln_demo_visitor.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "जम्मू डेमो क्लिनिक",
+   "speak": "जम्मू डेमो क्लिनिक"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_1.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00052 name_hi (dictionary)",
+   "text": "पंजतीर्थी",
+   "speak": "पंजतीर्थी"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_2.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00034 name_hi (dictionary)",
+   "text": "जुल्लका मोहल्ला",
+   "speak": "जुल्लका मोहल्ला"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_3.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00039 name_hi (dictionary)",
+   "text": "मस्त गढ़",
+   "speak": "मस्त गढ़"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_4.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00007 name_hi (dictionary)",
+   "text": "भबरियां",
+   "speak": "भबरियां"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_5.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00069 name_hi (dictionary)",
+   "text": "तालाब खटीकान",
+   "speak": "तालाब खटीकान"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_6.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00028 name_hi (dictionary)",
+   "text": "गुज्जर नगर",
+   "speak": "गुज्जर नगर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_7.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00035 name_hi (dictionary)",
+   "text": "कांजी हाउस",
+   "speak": "कांजी हाउस"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_8.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00021 name_hi (dictionary)",
+   "text": "डोगरा हॉल",
+   "speak": "डोगरा हॉल"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_9.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00041 name_hi (dictionary)",
+   "text": "मोहल्ला उस्ताद",
+   "speak": "मोहल्ला उस्ताद"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_10.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00048 name_hi (dictionary)",
+   "text": "पक्का दंगा",
+   "speak": "पक्का दंगा"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_11.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00040 name_hi (dictionary)",
+   "text": "मोहल्ला मल्होत्रियां",
+   "speak": "मोहल्ला मल्होत्रियां"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_12.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00037 name_hi (dictionary)",
+   "text": "कृष्णा नगर",
+   "speak": "कृष्णा नगर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_13.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00059 name_hi (dictionary)",
+   "text": "रेशम घर कॉलोनी",
+   "speak": "रेशम घर कॉलोनी"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_14.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00008 name_hi (dictionary)",
+   "text": "भगवती नगर",
+   "speak": "भगवती नगर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_15.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00053 name_hi (dictionary)",
+   "text": "प्रताप गढ़",
+   "speak": "प्रताप गढ़"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_16.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00047 name_hi (dictionary)",
+   "text": "नया प्लॉट",
+   "speak": "नया प्लॉट"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_17.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00002 name_hi (dictionary)",
+   "text": "अम्फला",
+   "speak": "अम्फला"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_18.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00063 name_hi (dictionary)",
+   "text": "सरवाल",
+   "speak": "सरवाल"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_19.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00012 name_hi (dictionary)",
+   "text": "चांद नगर",
+   "speak": "चांद नगर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_20.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00022 name_hi (dictionary)",
+   "text": "गांधी नगर उत्तर",
+   "speak": "गांधी नगर उत्तर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_21.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00023 name_hi (dictionary)",
+   "text": "गांधी नगर दक्षिण",
+   "speak": "गांधी नगर दक्षिण"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_22.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00064 name_hi (dictionary)",
+   "text": "शास्त्री नगर",
+   "speak": "शास्त्री नगर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_23.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00042 name_hi (dictionary)",
+   "text": "नई बस्ती",
+   "speak": "नई बस्ती"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_24.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00057 name_hi (dictionary)",
+   "text": "रेहाड़ी कॉलोनी उत्तर",
+   "speak": "रेहाड़ी कॉलोनी उत्तर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_25.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00058 name_hi (dictionary)",
+   "text": "रेहाड़ी कॉलोनी दक्षिण",
+   "speak": "रेहाड़ी कॉलोनी दक्षिण"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_26.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00067 name_hi (dictionary)",
+   "text": "सुभाष नगर",
+   "speak": "सुभाष नगर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_27.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00005 name_hi (dictionary)",
+   "text": "बख़्शी नगर",
+   "speak": "बख़्शी नगर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_28.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00029 name_hi (dictionary)",
+   "text": "गुड़ा बख़्शी नगर",
+   "speak": "गुड़ा बख़्शी नगर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_29.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00056 name_hi (dictionary)",
+   "text": "राजपुरा मंगोत्रियां",
+   "speak": "राजपुरा मंगोत्रियां"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_30.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00070 name_hi (dictionary)",
+   "text": "तालाब टिल्लो उत्तर",
+   "speak": "तालाब टिल्लो उत्तर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_31.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00071 name_hi (dictionary)",
+   "text": "तालाब टिल्लो दक्षिण नौआबाद",
+   "speak": "तालाब टिल्लो दक्षिण नौआबाद"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_32.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00026 name_hi (dictionary)",
+   "text": "गोल",
+   "speak": "गोल"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_33.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00066 name_hi (dictionary)",
+   "text": "शिव नगर",
+   "speak": "शिव नगर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_34.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00031 name_hi (dictionary)",
+   "text": "जानीपुर उत्तर",
+   "speak": "जानीपुर उत्तर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_35.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00032 name_hi (dictionary)",
+   "text": "जानीपुर दक्षिण",
+   "speak": "जानीपुर दक्षिण"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_36.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00030 name_hi (dictionary)",
+   "text": "जानीपुर मध्य",
+   "speak": "जानीपुर मध्य"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_37.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00033 name_hi (dictionary)",
+   "text": "जानीपुर पश्चिम",
+   "speak": "जानीपुर पश्चिम"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_38.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00049 name_hi (dictionary)",
+   "text": "पलौड़ा",
+   "speak": "पलौड़ा"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_39.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00073 name_hi (dictionary)",
+   "text": "तोप शेरखानिया",
+   "speak": "तोप शेरखानिया"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_40.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00055 name_hi (dictionary)",
+   "text": "पूंछ हाउस कबीर नगर",
+   "speak": "पूंछ हाउस कबीर नगर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_41.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00010 name_hi (dictionary)",
+   "text": "बोहड़ी",
+   "speak": "बोहड़ी"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_42.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00045 name_hi (dictionary)",
+   "text": "नानक नगर पश्चिम",
+   "speak": "नानक नगर पश्चिम"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_43.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00043 name_hi (dictionary)",
+   "text": "नानक नगर पूर्व",
+   "speak": "नानक नगर पूर्व"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_44.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00044 name_hi (dictionary)",
+   "text": "नानक नगर उत्तर",
+   "speak": "नानक नगर उत्तर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_45.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00019 name_hi (dictionary)",
+   "text": "दिगियाना",
+   "speak": "दिगियाना"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_46.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00062 name_hi (dictionary)",
+   "text": "संजय नगर",
+   "speak": "संजय नगर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_47.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00003 name_hi (dictionary)",
+   "text": "बाहू पूर्व",
+   "speak": "बाहू पूर्व"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_48.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00004 name_hi (dictionary)",
+   "text": "बाहू पश्चिम",
+   "speak": "बाहू पश्चिम"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_49.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00046 name_hi (dictionary)",
+   "text": "नरवाल बाला छन्नी रामा",
+   "speak": "नरवाल बाला छन्नी रामा"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_50.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00015 name_hi (dictionary)",
+   "text": "छन्नी हिम्मत हाउसिंग कॉलोनी",
+   "speak": "छन्नी हिम्मत हाउसिंग कॉलोनी"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_51.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00016 name_hi (dictionary)",
+   "text": "छन्नी हिम्मत थंगर",
+   "speak": "छन्नी हिम्मत थंगर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_52.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00014 name_hi (dictionary)",
+   "text": "छन्नी हिम्मत बीज़ा छन्नी कमला छन्नी बीजा",
+   "speak": "छन्नी हिम्मत बीज़ा छन्नी कमला छन्नी बीजा"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_53.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00013 name_hi (dictionary)",
+   "text": "छन्नी बीज़ा त्रिकुटा नगर",
+   "speak": "छन्नी बीज़ा त्रिकुटा नगर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_54.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00074 name_hi (dictionary)",
+   "text": "त्रिकुटा नगर छन्नी हिम्मत छन्नी रामा",
+   "speak": "त्रिकुटा नगर छन्नी हिम्मत छन्नी रामा"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_55.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00018 name_hi (dictionary)",
+   "text": "डीली",
+   "speak": "डीली"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_56.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00024 name_hi (dictionary)",
+   "text": "गंग्याल",
+   "speak": "गंग्याल"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_57.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00025 name_hi (dictionary)",
+   "text": "गंग्याल दो मॉडल टाउन",
+   "speak": "गंग्याल दो मॉडल टाउन"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_58.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00020 name_hi (dictionary)",
+   "text": "दिगियाना जीवन नगर",
+   "speak": "दिगियाना जीवन नगर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_59.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00051 name_hi (dictionary)",
+   "text": "पलौड़ा टॉप",
+   "speak": "पलौड़ा टॉप"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_60.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00050 name_hi (dictionary)",
+   "text": "पलौड़ा केंद्र",
+   "speak": "पलौड़ा केंद्र"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_61.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00054 name_hi (dictionary)",
+   "text": "पट्टा पलौड़ा",
+   "speak": "पट्टा पलौड़ा"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_62.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00017 name_hi (dictionary)",
+   "text": "चिनौर केरन रूप नगर",
+   "speak": "चिनौर केरन रूप नगर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_63.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00036 name_hi (dictionary)",
+   "text": "केरन बन तालाब",
+   "speak": "केरन बन तालाब"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_64.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00011 name_hi (dictionary)",
+   "text": "चक चंगरवां दुर्गा नगर",
+   "speak": "चक चंगरवां दुर्गा नगर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_65.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00006 name_hi (dictionary)",
+   "text": "बरनई अपर धरमाल",
+   "speak": "बरनई अपर धरमाल"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_66.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00075 name_hi (dictionary)",
+   "text": "अपर मुट्ठी",
+   "speak": "अपर मुट्ठी"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_67.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00038 name_hi (dictionary)",
+   "text": "लोअर मुट्ठी",
+   "speak": "लोअर मुट्ठी"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_68.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00027 name_hi (dictionary)",
+   "text": "ग्रेटर कैलाश",
+   "speak": "ग्रेटर कैलाश"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_69.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00060 name_hi (dictionary)",
+   "text": "सैनिक कॉलोनी एक",
+   "speak": "सैनिक कॉलोनी एक"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_70.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00061 name_hi (dictionary)",
+   "text": "सैनिक कॉलोनी दो",
+   "speak": "सैनिक कॉलोनी दो"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_71.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00072 name_hi (dictionary)",
+   "text": "तवी विहार सिद्धड़ा",
+   "speak": "तवी विहार सिद्धड़ा"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_72.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00065 name_hi (dictionary)",
+   "text": "शहज़ादपुर",
+   "speak": "शहज़ादपुर"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_73.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00009 name_hi (dictionary)",
+   "text": "भौर गाडीगढ़",
+   "speak": "भौर गाडीगढ़"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_74.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00068 name_hi (dictionary)",
+   "text": "सुंजवां",
+   "speak": "सुंजवां"
+  },
+  {
+   "lang": "hi",
+   "path": "hi/slot/ward_75.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00001 name_hi (dictionary)",
+   "text": "अकालपुर",
+   "speak": "अकालपुर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/SYS_LANG.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_LANG",
+   "text": "डोगरी लेई 2 दबाओ।",
+   "speak": "डोगरी लेई दो दबाओ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/SYS_NOINPUT.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_NOINPUT",
+   "text": "असेंगी कोई बटन नेईं सुनोआ। मेहरबानी करियै फही सुनो।",
+   "speak": "असेंगी कोई बटन नेईं सुनोआ। मेहरबानी करियै फही सुनो।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/SYS_WRONGKEY.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_WRONGKEY",
+   "text": "एह् बटन सूची च नेईं ऐ। मेहरबानी करियै फही सुनो।",
+   "speak": "एह् बटन सूची च नेईं ऐ। मेहरबानी करियै फही सुनो।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/SYS_GIVEUP_FIRST.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_GIVEUP_FIRST",
+   "text": "असेंगी तुंदा जवाब नेईं मिल्ले। असें थोह्ड़ी देर परैंत्त फही फोन करगे। नमस्ते।",
+   "speak": "असेंगी तुंदा जवाब नेईं मिल्ले। असें थोह्ड़ी देर परैंत्त फही फोन करगे। नमस्ते।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/SYS_GIVEUP_MISS.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_GIVEUP_MISS",
+   "text": "असेंगी तुंदा जवाब नेईं मिल्ले। जेकर तुसें टीका नेईं लुआए तां मेहरबानी करियै क्लिनिक जाओ। नमस्ते।",
+   "speak": "असेंगी तुंदा जवाब नेईं मिल्ले। जेकर तुसें टीका नेईं लुआए तां मेहरबानी करियै क्लिनिक जाओ। नमस्ते।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/SYS_HEAR_AGAIN.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_HEAR_AGAIN",
+   "text": "एह् फही सुनने लेई स्टार दबाओ।",
+   "speak": "एह् फही सुनने लेई स्टार दबाओ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/SYS_BYE.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_BYE",
+   "text": "मेहरबानी। नमस्ते।",
+   "speak": "मेहरबानी। नमस्ते।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_GATE.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_GATE",
+   "text": "नमस्ते। एह् उस माहनू लेई रिकॉर्ड कीता होआ फोन ऐ जिसने मिस्ड कॉल दित्ती ही। जेकर ओह् तुस ओ तां 1 दबाओ। जेकर एह् फोन तुंदे लेई नेईं ऐ तां 8 दबाओ।",
+   "speak": "नमस्ते। एह् उस माहनू लेई रिकॉर्ड कीता होआ फोन ऐ जिसने मिस्ड कॉल दित्ती ही। जेकर ओह् तुस ओ तां इक्क दबाओ। जेकर एह् फोन तुंदे लेई नेईं ऐ तां अट्ठ दबाओ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/ENR_DUP.wav",
+   "kind": "segment",
+   "source": "prompts.json ENR_DUP",
+   "text": "तुस हर टीके थमां पैह्लें औने आले फोनें लेई पैह्लें थमां जुड़े दे ओ। मिस्ड कॉल कन्नै एह् बंद नेईं होंदे। बंद करुआने लेई हुन 9 दबाओ।",
+   "speak": "तुस हर टीके थमां पैह्लें औने आले फोनें लेई पैह्लें थमां जुड़े दे ओ। मिस्ड कॉल कन्नै एह् बंद नेईं होंदे। बंद करुआने लेई हुन नौं दबाओ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_HELLO.0.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_HELLO",
+   "text": "नमस्ते। एह् ",
+   "speak": "नमस्ते। एह् "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_HELLO.1.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_HELLO",
+   "text": " दे रेबीज़ टीका केंदर दा रिकॉर्ड कीता होआ फोन ऐ। तुसें कुत्ते दे कट्टने दे टीके दी याद करुआने लेई मिस्ड कॉल दित्ती ही।",
+   "speak": " दे रेबीज़ टीका केंदर दा रिकॉर्ड कीता होआ फोन ऐ। तुसें कुत्ते दे कट्टने दे टीके दी याद करुआने लेई मिस्ड कॉल दित्ती ही।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_GUARD_OK.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_GUARD_OK",
+   "text": "क्लिनिक नै माता-पिता जां अभिभावक दी सहमति दर्ज करी लैती ऐ। अगले सुआलें दे जवाब मेहरबानी करियै माता-पिता जां अभिभावक देन।",
+   "speak": "क्लिनिक नै माता-पिता जां अभिभावक दी सहमति दर्ज करी लैती ऐ। अगले सुआलें दे जवाब मेहरबानी करियै माता-पिता जां अभिभावक देन।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_NOTICE.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_NOTICE",
+   "text": "असें हर टीके थमां पैह्लें इस नंबर उप्पर फोन करगे; आखरी टीके दे 7 दिनें परैंत्त नंबर मटाई दित्ता जाग। पुच्छगे के कुत्ते नै कुत्थें कट्टेआ; तुंदी अवाज़ रिकॉर्ड होग ते पता लग्गदे गै मटाई दित्ती जाग। जवाब तुंदे नंबर थमां बक्ख रौंदे न। कुसै बी बेल्लै बंद करुआने लेई 9, पूरा नोटिस सुनने लेई 0 दबाओ।",
+   "speak": "असें हर टीके थमां पैह्लें इस नंबर उप्पर फोन करगे; आखरी टीके दे सत्त दिनें परैंत्त नंबर मटाई दित्ता जाग। पुच्छगे के कुत्ते नै कुत्थें कट्टेआ; तुंदी अवाज़ रिकॉर्ड होग ते पता लग्गदे गै मटाई दित्ती जाग। जवाब तुंदे नंबर थमां बक्ख रौंदे न। कुसै बी बेल्लै बंद करुआने लेई नौं, पूरा नोटिस सुनने लेई जीरो दबाओ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_NOTICE_FULL.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_NOTICE_FULL",
+   "text": "असें हर टीके थमां पैह्लें इस नंबर उप्पर फोन करगे। एह् नंबर असें तुंदी मिस्ड कॉल थमां रक्खेआ ऐ, सिर्फ इस कम्म लेई, ते आखरी टीके दे 7 दिनें परैंत्त मटाई दित्ता जाग। असें एह् बी पुच्छगे के कुत्ते नै कुत्थें कट्टेआ ते कुत्ता किय्यां दा हा। जिसलै तुस दस्सगे के कुत्ते नै कुत्थें कट्टेआ, तुंदी अवाज़ रिकॉर्ड होग। पता लग्गदे गै, जां 7 दिनें परैंत्त, रिकॉर्डिंग मटाई दित्ती जाग। तुंदे जवाब तुंदे नंबर थमां बक्ख रक्खे जंदे न, पर क्लिनिक दे रजिस्टर च तुंदी एंट्री कन्नै जुड़े दे रौंदे न। जेकर कुत्ता बमार लग्गेआ होऐ तां क्लिनिक तुसेंगी फोन करी सकदा ऐ। एह् फोन कुसै बी बेल्लै बंद करुआने लेई 9 दबाओ। कोई शकैत होऐ तां पैह्लें क्लिनिक गी दस्सो। जेकर हल नेईं होऐ तां तुस डेटा प्रोटेक्शन बोर्ड ऑफ इंडिया गी लिखी सकदे ओ।",
+   "speak": "असें हर टीके थमां पैह्लें इस नंबर उप्पर फोन करगे। एह् नंबर असें तुंदी मिस्ड कॉल थमां रक्खेआ ऐ, सिर्फ इस कम्म लेई, ते आखरी टीके दे सत्त दिनें परैंत्त मटाई दित्ता जाग। असें एह् बी पुच्छगे के कुत्ते नै कुत्थें कट्टेआ ते कुत्ता किय्यां दा हा। जिसलै तुस दस्सगे के कुत्ते नै कुत्थें कट्टेआ, तुंदी अवाज़ रिकॉर्ड होग। पता लग्गदे गै, जां सत्त दिनें परैंत्त, रिकॉर्डिंग मटाई दित्ती जाग। तुंदे जवाब तुंदे नंबर थमां बक्ख रक्खे जंदे न, पर क्लिनिक दे रजिस्टर च तुंदी एंट्री कन्नै जुड़े दे रौंदे न। जेकर कुत्ता बमार लग्गेआ होऐ तां क्लिनिक तुसेंगी फोन करी सकदा ऐ। एह् फोन कुसै बी बेल्लै बंद करुआने लेई नौं दबाओ। कोई शकैत होऐ तां पैह्लें क्लिनिक गी दस्सो। जेकर हल नेईं होऐ तां तुस डेटा प्रोटेक्शन बोर्ड ऑफ इंडिया गी लिखी सकदे ओ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_CONSENT_Q.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CONSENT_Q",
+   "text": "सहमत होने लेई 1 दबाओ। जेकर तुसें याद करुआने आले फोन नेईं चांदे तां 2 दबाओ।",
+   "speak": "सहमत होने लेई इक्क दबाओ। जेकर तुसें याद करुआने आले फोन नेईं चांदे तां दो दबाओ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_CONSENT_Q_G.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CONSENT_Q_G",
+   "text": "माता-पिता जां अभिभावक: सहमत होने लेई 1 दबाओ। जेकर तुसें याद करुआने आले फोन नेईं चांदे तां 2 दबाओ।",
+   "speak": "माता-पिता जां अभिभावक: सहमत होने लेई इक्क दबाओ। जेकर तुसें याद करुआने आले फोन नेईं चांदे तां दो दबाओ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_QCONSENT.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_QCONSENT",
+   "text": "असें कुत्ते दे कट्टने बारै चार निक्के सुआल बी पुच्छना चांगे। इनें दे जवाब तुंदे नंबर दे बगैर रक्खे जंदे न। जवाब देने लेई 1 दबाओ। छड्डने लेई 2 दबाओ।",
+   "speak": "असें कुत्ते दे कट्टने बारै चार निक्के सुआल बी पुच्छना चांगे। इनें दे जवाब तुंदे नंबर दे बगैर रक्खे जंदे न। जवाब देने लेई इक्क दबाओ। छड्डने लेई दो दबाओ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_CONSENT_NO.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CONSENT_NO",
+   "text": "ठीक ऐ। असें तुसेंगी फही फोन नेईं करगे ते एह् नंबर हुनै मटाई ओड़दे आं। मेहरबानी करियै कार्ड उप्पर लिखी दी तरीख़ उप्पर क्लिनिक आओ। नमस्ते।",
+   "speak": "ठीक ऐ। असें तुसेंगी फही फोन नेईं करगे ते एह् नंबर हुनै मटाई ओड़दे आं। मेहरबानी करियै कार्ड उप्पर लिखी दी तरीख़ उप्पर क्लिनिक आओ। नमस्ते।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_PLACE.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_PLACE",
+   "text": "कुत्ते नै कुत्थें कट्टेआ? घर जां हस्पताल नेईं। तुंदी अवाज़ रिकॉर्ड होग। बीप दे बाद मुहल्ले दा नां जां नेड़ले दी पन्छान आली जगह्ज बोल्लो।",
+   "speak": "कुत्ते नै कुत्थें कट्टेआ? घर जां हस्पताल नेईं। तुंदी अवाज़ रिकॉर्ड होग। बीप दे बाद मुहल्ले दा नां जां नेड़ले दी पन्छान आली जगह्ज बोल्लो।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_PLACE_AGAIN.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_PLACE_AGAIN",
+   "text": "असेंगी तुंदी अवाज़ नेईं सुनोई। बीप दे बाद मेहरबानी करियै मुहल्ले दा नां जां सारें थमां नेड़ले दी जगह्ज बोल्लो।",
+   "speak": "असेंगी तुंदी अवाज़ नेईं सुनोई। बीप दे बाद मेहरबानी करियै मुहल्ले दा नां जां सारें थमां नेड़ले दी जगह्ज बोल्लो।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_PLACETYPE.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_PLACETYPE",
+   "text": "ओह् केह्ड़ी जगह्ज ही? घर जां गली-सड़क लेई 1 दबाओ। स्कूल लेई 2। हस्पताल लेई 3। बस अड्डे जां बजार लेई 4। होर कुत्थें बी होऐ तां 5 दबाओ।",
+   "speak": "ओह् केह्ड़ी जगह्ज ही? घर जां गली-सड़क लेई इक्क दबाओ। स्कूल लेई दो। हस्पताल लेई त्रै। बस अड्डे जां बजार लेई चार। होर कुत्थें बी होऐ तां पंज दबाओ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_ANIMAL.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_ANIMAL",
+   "text": "केह्ड़े जानवर नै कट्टेआ? गली दे कुत्ते लेई 1 दबाओ। मालक आले कुत्ते लेई 2। बांदर, बिल्ली जां कोई होर जानवर लेई 3। पक्का नेईं पता होऐ तां 4 दबाओ।",
+   "speak": "केह्ड़े जानवर नै कट्टेआ? गली दे कुत्ते लेई इक्क दबाओ। मालक आले कुत्ते लेई दो। बांदर, बिल्ली जां कोई होर जानवर लेई त्रै। पक्का नेईं पता होऐ तां चार दबाओ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_NOTCH.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_NOTCH",
+   "text": "नगर निगम नसबंदी कित्ते दे कुत्तें दे सज्जे कन्न च इक्क निक्का जेहा कट्ट लांदा ऐ, मतलब कुत्ते दा अपना सज्जा कन्न। जेकर कुत्ता तुंदे अग्गे मूंह करियै खड़ोता होऐ तां ओह् कन्न तुंदे खब्बे पास्से होग। के इस कुत्ते दे कन्न च कट्ट हा? हां लेई 1, नेईं लेई 2, दिक्खी नेईं सके तां 3 दबाओ।",
+   "speak": "नगर निगम नसबंदी कित्ते दे कुत्तें दे सज्जे कन्न च इक्क निक्का जेहा कट्ट लांदा ऐ, मतलब कुत्ते दा अपना सज्जा कन्न। जेकर कुत्ता तुंदे अग्गे मूंह करियै खड़ोता होऐ तां ओह् कन्न तुंदे खब्बे पास्से होग। के इस कुत्ते दे कन्न च कट्ट हा? हां लेई इक्क, नेईं लेई दो, दिक्खी नेईं सके तां त्रै दबाओ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_SICK.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_SICK",
+   "text": "के कुत्ता बमार लग्गा जां अजीब बर्ताव करा दा हा, होर लोकें जां जानवरें गी कट्टेआ, जां बाद च मरी गेआ? हां लेई 1, नेईं लेई 2, पता नेईं होऐ तां 3 दबाओ।",
+   "speak": "के कुत्ता बमार लग्गा जां अजीब बर्ताव करा दा हा, होर लोकें जां जानवरें गी कट्टेआ, जां बाद च मरी गेआ? हां लेई इक्क, नेईं लेई दो, पता नेईं होऐ तां त्रै दबाओ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_SICK_YES.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_SICK_YES",
+   "text": "मेहरबानी। असें एह् जानकारी पशु टीम तक पुजा दे आं। मेहरबानी करियै क्लिनिक दे डॉक्टर गी बी एह् दस्सो।",
+   "speak": "मेहरबानी। असें एह् जानकारी पशु टीम तक पुजा दे आं। मेहरबानी करियै क्लिनिक दे डॉक्टर गी बी एह् दस्सो।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_CLOSE.0.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE",
+   "text": "मेहरबानी। तुंदा अगला टीका, कुल ",
+   "speak": "मेहरबानी। तुंदा अगला टीका, कुल "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_CLOSE.1.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE",
+   "text": " टीकें विच्चों टीका नंबर ",
+   "speak": " टीकें विच्चों टीका नंबर "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_CLOSE.2.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE",
+   "text": " गी ",
+   "speak": " गी "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_CLOSE.3.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE",
+   "text": " च ऐ। असें इक्क संञ पैह्लें तुसेंगी फोन करने दी कोशश करगे। जेकर कदें एह् फोन बंद करुआने होन तां फोन आए पर 9 दबाओ।",
+   "speak": " च ऐ। असें इक्क संञ पैह्लें तुसेंगी फोन करने दी कोशश करगे। जेकर कदें एह् फोन बंद करुआने होन तां फोन आए पर नौं दबाओ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_CLOSE_COME.0.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE_COME",
+   "text": "मेहरबानी। तुंदे अगले टीके दी तरीख़ लंघी गेदी ऐ। मेहरबानी करियै जिन्नी छेती होई सकै ",
+   "speak": "मेहरबानी। तुंदे अगले टीके दी तरीख़ लंघी गेदी ऐ। मेहरबानी करियै जिन्नी छेती होई सकै "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_CLOSE_COME.1.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE_COME",
+   "text": " आओ, जां क्लिनिक गी ",
+   "speak": " आओ, जां क्लिनिक गी "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_CLOSE_COME.2.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE_COME",
+   "text": " उप्पर फोन करो।",
+   "speak": " उप्पर फोन करो।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FC_CLOSE_LAST.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE_LAST",
+   "text": "मेहरबानी। एह् तुंदा आखरी तैह् कीता होआ टीका हा। हुन असेंगी फोन करने दी लोड़ नेईं पौग। तुंदा नंबर 7 दिनें च मटाई दित्ता जाग।",
+   "speak": "मेहरबानी। एह् तुंदा आखरी तैह् कीता होआ टीका हा। हुन असेंगी फोन करने दी लोड़ नेईं पौग। तुंदा नंबर सत्त दिनें च मटाई दित्ता जाग।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_HELLO.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_HELLO",
+   "text": "मेहरबानी। एह् ",
+   "speak": "मेहरबानी। एह् "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_HELLO.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_HELLO",
+   "text": " दे रेबीज़ टीका केंदर दा फोन ऐ।",
+   "speak": " दे रेबीज़ टीका केंदर दा फोन ऐ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_WHO.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_WHO",
+   "text": "एह् याद करुआने आला फोन रजिस्टर नंबर ",
+   "speak": "एह् याद करुआने आला फोन रजिस्टर नंबर "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_WHO.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_WHO",
+   "text": " आले मरीज़ लेई ऐ।",
+   "speak": " आले मरीज़ लेई ऐ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_EVE_BODY.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY",
+   "text": "कल्ल, ",
+   "speak": "कल्ल, "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_EVE_BODY.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY",
+   "text": ", कुल ",
+   "speak": ", कुल "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_EVE_BODY.2.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY",
+   "text": " टीकें विच्चों टीका नंबर ",
+   "speak": " टीकें विच्चों टीका नंबर "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_EVE_BODY.3.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY",
+   "text": " लगना ऐ। मेहरबानी करियै ",
+   "speak": " लगना ऐ। मेहरबानी करियै "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_EVE_BODY.4.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY",
+   "text": " आओ। फोन नेईं बी औऐ तां बी कार्ड उप्पर लिखी दी तरीख़ उप्पर आओ।",
+   "speak": " आओ। फोन नेईं बी औऐ तां बी कार्ड उप्पर लिखी दी तरीख़ उप्पर आओ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_EVE_BODY_OUT.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY_OUT",
+   "text": "कल्ल, ",
+   "speak": "कल्ल, "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_EVE_BODY_OUT.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY_OUT",
+   "text": ", कुल ",
+   "speak": ", कुल "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_EVE_BODY_OUT.2.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY_OUT",
+   "text": " टीकें विच्चों टीका नंबर ",
+   "speak": " टीकें विच्चों टीका नंबर "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_EVE_BODY_OUT.3.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY_OUT",
+   "text": " लगना ऐ। क्लिनिक दे मताबक हुन टीका नेईं उपलब्ध ऐ। औने थमां पैह्लें मेहरबानी करियै क्लिनिक गी ",
+   "speak": " लगना ऐ। क्लिनिक दे मताबक हुन टीका नेईं उपलब्ध ऐ। औने थमां पैह्लें मेहरबानी करियै क्लिनिक गी "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_EVE_BODY_OUT.4.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY_OUT",
+   "text": " उप्पर फोन करो।",
+   "speak": " उप्पर फोन करो।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_EVE_END.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_END",
+   "text": "एह् फही सुनने लेई स्टार दबाओ। एह् याद करुआने आले फोन बंद करुआने लेई 9 दबाओ। मेहरबानी।",
+   "speak": "एह् फही सुनने लेई स्टार दबाओ। एह् याद करुआने आले फोन बंद करुआने लेई नौं दबाओ। मेहरबानी।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_MISS_Q.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_Q",
+   "text": "बीते कल्ल, ",
+   "speak": "बीते कल्ल, "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_MISS_Q.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_Q",
+   "text": " गी, ",
+   "speak": " गी, "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_MISS_Q.2.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_Q",
+   "text": " टीकें विच्चों टीका नंबर ",
+   "speak": " टीकें विच्चों टीका नंबर "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_MISS_Q.3.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_Q",
+   "text": " लगना हा। क्लिनिक च इसदे लगने दा कोई रिकॉर्ड नेईं ऐ। जेकर तुसें लुआई लेआ ऐ तां 1 दबाओ। जेकर नेईं लुआया तां 2 दबाओ।",
+   "speak": " लगना हा। क्लिनिक च इसदे लगने दा कोई रिकॉर्ड नेईं ऐ। जेकर तुसें लुआई लेआ ऐ तां इक्क दबाओ। जेकर नेईं लुआया तां दो दबाओ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_MISS_TAKEN.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_TAKEN",
+   "text": "मेहरबानी। असें इसी दर्ज करी लेआ ऐ। तुंदा अगला टीका, कुल ",
+   "speak": "मेहरबानी। असें इसी दर्ज करी लेआ ऐ। तुंदा अगला टीका, कुल "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_MISS_TAKEN.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_TAKEN",
+   "text": " टीकें विच्चों टीका नंबर ",
+   "speak": " टीकें विच्चों टीका नंबर "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_MISS_TAKEN.2.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_TAKEN",
+   "text": " गी ",
+   "speak": " गी "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_MISS_TAKEN.3.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_TAKEN",
+   "text": " ऐ।",
+   "speak": " ऐ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_MISS_TAKEN_LAST.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_TAKEN_LAST",
+   "text": "मेहरबानी। असें इसी दर्ज करी लेआ ऐ। एह् तुंदा आखरी तैह् कीता होआ टीका हा।",
+   "speak": "मेहरबानी। असें इसी दर्ज करी लेआ ऐ। एह् तुंदा आखरी तैह् कीता होआ टीका हा।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_MISS_NOT.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_NOT",
+   "text": "मेहरबानी करियै अज्जै गै, जित्नी छेती होई सकै, ",
+   "speak": "मेहरबानी करियै अज्जै गै, जित्नी छेती होई सकै, "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/RM_MISS_NOT.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_NOT",
+   "text": " जाओ। अगली तरीख दा इंतजार नेईं करो। अग्गें केह् करना ऐ, एह् डॉक्टर दसङन।",
+   "speak": " जाओ। अगली तरीख दा इंतजार नेईं करो। अग्गें केह् करना ऐ, एह् डॉक्टर दसङन।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/VAX_OUT_NOTICE.0.wav",
+   "kind": "segment",
+   "source": "prompts.json VAX_OUT_NOTICE",
+   "text": "नमस्ते। ",
+   "speak": "नमस्ते। "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/VAX_OUT_NOTICE.1.wav",
+   "kind": "segment",
+   "source": "prompts.json VAX_OUT_NOTICE",
+   "text": " दे रेबीज़ टीका केंदर दा संदेश। हुन टीका नेईं उपलब्ध ऐ। औने थमां पैह्लें मेहरबानी करियै क्लिनिक गी ",
+   "speak": " दे रेबीज़ टीका केंदर दा संदेश। हुन टीका नेईं उपलब्ध ऐ। औने थमां पैह्लें मेहरबानी करियै क्लिनिक गी "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/VAX_OUT_NOTICE.2.wav",
+   "kind": "segment",
+   "source": "prompts.json VAX_OUT_NOTICE",
+   "text": " उप्पर फोन करो।",
+   "speak": " उप्पर फोन करो।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/VAX_BACK.0.wav",
+   "kind": "segment",
+   "source": "prompts.json VAX_BACK",
+   "text": "नमस्ते। ",
+   "speak": "नमस्ते। "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/VAX_BACK.1.wav",
+   "kind": "segment",
+   "source": "prompts.json VAX_BACK",
+   "text": " दे रेबीज़ टीका केंदर थमां चंगी खबर। टीका फही उपलब्ध ऐ। मेहरबानी करियै तैह् कीती दी तरीख उप्पर गै आओ।",
+   "speak": " दे रेबीज़ टीका केंदर थमां चंगी खबर। टीका फही उपलब्ध ऐ। मेहरबानी करियै तैह् कीती दी तरीख उप्पर गै आओ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FIN_Q.0.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_Q",
+   "text": "साढ़े रिकॉर्ड मताबक तुंदा आखरी टीका ",
+   "speak": "साढ़े रिकॉर्ड मताबक तुंदा आखरी टीका "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FIN_Q.1.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_Q",
+   "text": " गी हा। जेकर तुसें सारे टीके लुआई लैते न तां 1 दबाओ। जेकर कोई टीका रेहा दा ऐ तां 2 दबाओ।",
+   "speak": " गी हा। जेकर तुसें सारे टीके लुआई लैते न तां इक्क दबाओ। जेकर कोई टीका रेहा दा ऐ तां दो दबाओ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FIN_ALL.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_ALL",
+   "text": "सारे टीके पूरे करने लेई मेहरबानी।",
+   "speak": "सारे टीके पूरे करने लेई मेहरबानी।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FIN_MISSED.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_MISSED",
+   "text": "मेहरबानी करियै क्लिनिक च जाइयै डॉक्टर गी अपना बाइट कार्ड दस्सो। डॉक्टर तुसेंगी सलाह देङन।",
+   "speak": "मेहरबानी करियै क्लिनिक च जाइयै डॉक्टर गी अपना बाइट कार्ड दस्सो। डॉक्टर तुसेंगी सलाह देङन।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FIN_TEAM.0.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_TEAM",
+   "text": "इक्क गल्ल होर। तुसें दस्सेआ हा के कुत्ते नै कुत्थें कट्टेआ, उसदे बाद थमां पशु जन्म नियंत्रण टीम नै ",
+   "speak": "इक्क गल्ल होर। तुसें दस्सेआ हा के कुत्ते नै कुत्थें कट्टेआ, उसदे बाद थमां पशु जन्म नियंत्रण टीम नै "
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FIN_TEAM.1.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_TEAM",
+   "text": " च कम्म कीता ऐ। तुंदी मदद लेई मेहरबानी।",
+   "speak": " च कम्म कीता ऐ। तुंदी मदद लेई मेहरबानी।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/FIN_DELETE.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_DELETE",
+   "text": "तुंदा फोन नंबर 7 दिनें च मटाई दित्ता जाग। असें तुसेंगी फही फोन नेईं करगे। अपना ख्याल रक्खो।",
+   "speak": "तुंदा फोन नंबर सत्त दिनें च मटाई दित्ता जाग। असें तुसेंगी फही फोन नेईं करगे। अपना ख्याल रक्खो।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/WN_CONFIRM.wav",
+   "kind": "segment",
+   "source": "prompts.json WN_CONFIRM",
+   "text": "तुसें दस्सेआ के एह् फोन तुंदे लेई नेईं ऐ। पक्का करने लेई 8 दबाओ। सुनदे रौहने लेई 1 दबाओ।",
+   "speak": "तुसें दस्सेआ के एह् फोन तुंदे लेई नेईं ऐ। पक्का करने लेई अट्ठ दबाओ। सुनदे रौहने लेई इक्क दबाओ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/WN_DONE.wav",
+   "kind": "segment",
+   "source": "prompts.json WN_DONE",
+   "text": "तकलीफ लेई माफी। असें इस नंबर उप्पर फही फोन नेईं करगे। नमस्ते।",
+   "speak": "तकलीफ लेई माफी। असें इस नंबर उप्पर फही फोन नेईं करगे। नमस्ते।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/OPT_CONFIRM.wav",
+   "kind": "segment",
+   "source": "prompts.json OPT_CONFIRM",
+   "text": "तुसें याद करुआने आले फोन बंद करने लेई बटन दबाया ऐ। पक्का करने लेई 9 दबाओ। याद करुआने आले फोन जारी रक्खने लेई 1 दबाओ।",
+   "speak": "तुसें याद करुआने आले फोन बंद करने लेई बटन दबाया ऐ। पक्का करने लेई नौं दबाओ। याद करुआने आले फोन जारी रक्खने लेई इक्क दबाओ।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/OPT_DONE.wav",
+   "kind": "segment",
+   "source": "prompts.json OPT_DONE",
+   "text": "असें याद करुआने आले फोन बंद करी ओड़े न ते तुंदा नंबर मटाई ओड़दे आं। फी बी मेहरबानी करियै कार्ड उप्पर लिखी दी तरीख़ उप्पर क्लिनिक आओ। नमस्ते।",
+   "speak": "असें याद करुआने आले फोन बंद करी ओड़े न ते तुंदा नंबर मटाई ओड़दे आं। फी बी मेहरबानी करियै कार्ड उप्पर लिखी दी तरीख़ उप्पर क्लिनिक आओ। नमस्ते।"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/weekday_0.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "सोमबार",
+   "speak": "सोमबार"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/weekday_1.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "मंगलबार",
+   "speak": "मंगलबार"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/weekday_2.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "बुधबार",
+   "speak": "बुधबार"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/weekday_3.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "बीरबार",
+   "speak": "बीरबार"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/weekday_4.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "शुक्करबार",
+   "speak": "शुक्करबार"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/weekday_5.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "शनिच्चरबार",
+   "speak": "शनिच्चरबार"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/weekday_6.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "ऐतबार",
+   "speak": "ऐतबार"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_1.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "इक्क",
+   "speak": "इक्क"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_2.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "दो",
+   "speak": "दो"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_3.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "त्रै",
+   "speak": "त्रै"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_4.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "चार",
+   "speak": "चार"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_5.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "पंज",
+   "speak": "पंज"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_6.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "छे",
+   "speak": "छे"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_7.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "सत्त",
+   "speak": "सत्त"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_8.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "अट्ठ",
+   "speak": "अट्ठ"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_9.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "नौं",
+   "speak": "नौं"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_10.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "दस",
+   "speak": "दस"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_11.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "ग्यारां",
+   "speak": "ग्यारां"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_12.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "बारां",
+   "speak": "बारां"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_13.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "तेरां",
+   "speak": "तेरां"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_14.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "चौदां",
+   "speak": "चौदां"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_15.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "पंदरां",
+   "speak": "पंदरां"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_16.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "सोलां",
+   "speak": "सोलां"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_17.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "सतारां",
+   "speak": "सतारां"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_18.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "अट्ठारां",
+   "speak": "अट्ठारां"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_19.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "उन्नी",
+   "speak": "उन्नी"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_20.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "बीह्",
+   "speak": "बीह्"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_21.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "इक्कीह्",
+   "speak": "इक्कीह्"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_22.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "बाईं",
+   "speak": "बाईं"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_23.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "तेईं",
+   "speak": "तेईं"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_24.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "चौबीह्",
+   "speak": "चौबीह्"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_25.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "पंजीह्",
+   "speak": "पंजीह्"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_26.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "छब्बीह्",
+   "speak": "छब्बीह्"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_27.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "सत्ताईं",
+   "speak": "सत्ताईं"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_28.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "अट्ठाईं",
+   "speak": "अट्ठाईं"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_29.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "उनत्तीह्",
+   "speak": "उनत्तीह्"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_30.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "तीह्",
+   "speak": "तीह्"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/day_31.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "इकत्तीह्",
+   "speak": "इकत्तीह्"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/month_1.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "जनवरी",
+   "speak": "जनवरी"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/month_2.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "फरवरी",
+   "speak": "फरवरी"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/month_3.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "मार्च",
+   "speak": "मार्च"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/month_4.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "अप्रैल",
+   "speak": "अप्रैल"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/month_5.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "मई",
+   "speak": "मई"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/month_6.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "जून",
+   "speak": "जून"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/month_7.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "जुलाई",
+   "speak": "जुलाई"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/month_8.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "अगस्त",
+   "speak": "अगस्त"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/month_9.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "सितंबर",
+   "speak": "सितंबर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/month_10.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "अक्टूबर",
+   "speak": "अक्टूबर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/month_11.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "नवंबर",
+   "speak": "नवंबर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/month_12.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "दिसंबर",
+   "speak": "दिसंबर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/num_0.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "जीरो",
+   "speak": "जीरो"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/num_1.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "इक्क",
+   "speak": "इक्क"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/num_2.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "दो",
+   "speak": "दो"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/num_3.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "त्रै",
+   "speak": "त्रै"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/num_4.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "चार",
+   "speak": "चार"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/num_5.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "पंज",
+   "speak": "पंज"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/num_6.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "छे",
+   "speak": "छे"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/num_7.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "सत्त",
+   "speak": "सत्त"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/num_8.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "अट्ठ",
+   "speak": "अट्ठ"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/num_9.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "नौं",
+   "speak": "नौं"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/time_0900.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_times",
+   "text": "भ्यागा नौं बजे",
+   "speak": "भ्यागा नौं बजे"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/time_1000.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_times",
+   "text": "भ्यागा दस बजे",
+   "speak": "भ्यागा दस बजे"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/time_1100.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_times",
+   "text": "भ्यागा ग्यारां बजे",
+   "speak": "भ्यागा ग्यारां बजे"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/clinic_cln_gmc.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "सरकारी मेडिकल कॉलेज और अस्पताल जम्मू",
+   "speak": "सरकारी मेडिकल कॉलेज और अस्पताल जम्मू"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/clinic_cln_demo2.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "डेमो क्लिनिक",
+   "speak": "डेमो क्लिनिक"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/clinic_cln_demo_visitor.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "जम्मू डेमो क्लिनिक",
+   "speak": "जम्मू डेमो क्लिनिक"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_1.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00052 name_hi (dictionary)",
+   "text": "पंजतीर्थी",
+   "speak": "पंजतीर्थी"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_2.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00034 name_hi (dictionary)",
+   "text": "जुल्लका मोहल्ला",
+   "speak": "जुल्लका मोहल्ला"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_3.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00039 name_hi (dictionary)",
+   "text": "मस्त गढ़",
+   "speak": "मस्त गढ़"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_4.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00007 name_hi (dictionary)",
+   "text": "भबरियां",
+   "speak": "भबरियां"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_5.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00069 name_hi (dictionary)",
+   "text": "तालाब खटीकान",
+   "speak": "तालाब खटीकान"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_6.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00028 name_hi (dictionary)",
+   "text": "गुज्जर नगर",
+   "speak": "गुज्जर नगर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_7.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00035 name_hi (dictionary)",
+   "text": "कांजी हाउस",
+   "speak": "कांजी हाउस"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_8.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00021 name_hi (dictionary)",
+   "text": "डोगरा हॉल",
+   "speak": "डोगरा हॉल"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_9.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00041 name_hi (dictionary)",
+   "text": "मोहल्ला उस्ताद",
+   "speak": "मोहल्ला उस्ताद"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_10.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00048 name_hi (dictionary)",
+   "text": "पक्का दंगा",
+   "speak": "पक्का दंगा"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_11.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00040 name_hi (dictionary)",
+   "text": "मोहल्ला मल्होत्रियां",
+   "speak": "मोहल्ला मल्होत्रियां"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_12.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00037 name_hi (dictionary)",
+   "text": "कृष्णा नगर",
+   "speak": "कृष्णा नगर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_13.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00059 name_hi (dictionary)",
+   "text": "रेशम घर कॉलोनी",
+   "speak": "रेशम घर कॉलोनी"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_14.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00008 name_hi (dictionary)",
+   "text": "भगवती नगर",
+   "speak": "भगवती नगर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_15.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00053 name_hi (dictionary)",
+   "text": "प्रताप गढ़",
+   "speak": "प्रताप गढ़"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_16.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00047 name_hi (dictionary)",
+   "text": "नया प्लॉट",
+   "speak": "नया प्लॉट"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_17.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00002 name_hi (dictionary)",
+   "text": "अम्फला",
+   "speak": "अम्फला"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_18.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00063 name_hi (dictionary)",
+   "text": "सरवाल",
+   "speak": "सरवाल"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_19.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00012 name_hi (dictionary)",
+   "text": "चांद नगर",
+   "speak": "चांद नगर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_20.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00022 name_hi (dictionary)",
+   "text": "गांधी नगर उत्तर",
+   "speak": "गांधी नगर उत्तर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_21.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00023 name_hi (dictionary)",
+   "text": "गांधी नगर दक्षिण",
+   "speak": "गांधी नगर दक्षिण"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_22.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00064 name_hi (dictionary)",
+   "text": "शास्त्री नगर",
+   "speak": "शास्त्री नगर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_23.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00042 name_hi (dictionary)",
+   "text": "नई बस्ती",
+   "speak": "नई बस्ती"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_24.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00057 name_hi (dictionary)",
+   "text": "रेहाड़ी कॉलोनी उत्तर",
+   "speak": "रेहाड़ी कॉलोनी उत्तर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_25.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00058 name_hi (dictionary)",
+   "text": "रेहाड़ी कॉलोनी दक्षिण",
+   "speak": "रेहाड़ी कॉलोनी दक्षिण"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_26.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00067 name_hi (dictionary)",
+   "text": "सुभाष नगर",
+   "speak": "सुभाष नगर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_27.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00005 name_hi (dictionary)",
+   "text": "बख़्शी नगर",
+   "speak": "बख़्शी नगर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_28.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00029 name_hi (dictionary)",
+   "text": "गुड़ा बख़्शी नगर",
+   "speak": "गुड़ा बख़्शी नगर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_29.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00056 name_hi (dictionary)",
+   "text": "राजपुरा मंगोत्रियां",
+   "speak": "राजपुरा मंगोत्रियां"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_30.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00070 name_hi (dictionary)",
+   "text": "तालाब टिल्लो उत्तर",
+   "speak": "तालाब टिल्लो उत्तर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_31.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00071 name_hi (dictionary)",
+   "text": "तालाब टिल्लो दक्षिण नौआबाद",
+   "speak": "तालाब टिल्लो दक्षिण नौआबाद"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_32.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00026 name_hi (dictionary)",
+   "text": "गोल",
+   "speak": "गोल"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_33.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00066 name_hi (dictionary)",
+   "text": "शिव नगर",
+   "speak": "शिव नगर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_34.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00031 name_hi (dictionary)",
+   "text": "जानीपुर उत्तर",
+   "speak": "जानीपुर उत्तर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_35.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00032 name_hi (dictionary)",
+   "text": "जानीपुर दक्षिण",
+   "speak": "जानीपुर दक्षिण"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_36.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00030 name_hi (dictionary)",
+   "text": "जानीपुर मध्य",
+   "speak": "जानीपुर मध्य"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_37.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00033 name_hi (dictionary)",
+   "text": "जानीपुर पश्चिम",
+   "speak": "जानीपुर पश्चिम"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_38.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00049 name_hi (dictionary)",
+   "text": "पलौड़ा",
+   "speak": "पलौड़ा"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_39.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00073 name_hi (dictionary)",
+   "text": "तोप शेरखानिया",
+   "speak": "तोप शेरखानिया"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_40.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00055 name_hi (dictionary)",
+   "text": "पूंछ हाउस कबीर नगर",
+   "speak": "पूंछ हाउस कबीर नगर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_41.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00010 name_hi (dictionary)",
+   "text": "बोहड़ी",
+   "speak": "बोहड़ी"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_42.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00045 name_hi (dictionary)",
+   "text": "नानक नगर पश्चिम",
+   "speak": "नानक नगर पश्चिम"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_43.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00043 name_hi (dictionary)",
+   "text": "नानक नगर पूर्व",
+   "speak": "नानक नगर पूर्व"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_44.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00044 name_hi (dictionary)",
+   "text": "नानक नगर उत्तर",
+   "speak": "नानक नगर उत्तर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_45.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00019 name_hi (dictionary)",
+   "text": "दिगियाना",
+   "speak": "दिगियाना"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_46.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00062 name_hi (dictionary)",
+   "text": "संजय नगर",
+   "speak": "संजय नगर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_47.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00003 name_hi (dictionary)",
+   "text": "बाहू पूर्व",
+   "speak": "बाहू पूर्व"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_48.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00004 name_hi (dictionary)",
+   "text": "बाहू पश्चिम",
+   "speak": "बाहू पश्चिम"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_49.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00046 name_hi (dictionary)",
+   "text": "नरवाल बाला छन्नी रामा",
+   "speak": "नरवाल बाला छन्नी रामा"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_50.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00015 name_hi (dictionary)",
+   "text": "छन्नी हिम्मत हाउसिंग कॉलोनी",
+   "speak": "छन्नी हिम्मत हाउसिंग कॉलोनी"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_51.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00016 name_hi (dictionary)",
+   "text": "छन्नी हिम्मत थंगर",
+   "speak": "छन्नी हिम्मत थंगर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_52.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00014 name_hi (dictionary)",
+   "text": "छन्नी हिम्मत बीज़ा छन्नी कमला छन्नी बीजा",
+   "speak": "छन्नी हिम्मत बीज़ा छन्नी कमला छन्नी बीजा"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_53.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00013 name_hi (dictionary)",
+   "text": "छन्नी बीज़ा त्रिकुटा नगर",
+   "speak": "छन्नी बीज़ा त्रिकुटा नगर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_54.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00074 name_hi (dictionary)",
+   "text": "त्रिकुटा नगर छन्नी हिम्मत छन्नी रामा",
+   "speak": "त्रिकुटा नगर छन्नी हिम्मत छन्नी रामा"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_55.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00018 name_hi (dictionary)",
+   "text": "डीली",
+   "speak": "डीली"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_56.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00024 name_hi (dictionary)",
+   "text": "गंग्याल",
+   "speak": "गंग्याल"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_57.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00025 name_hi (dictionary)",
+   "text": "गंग्याल दो मॉडल टाउन",
+   "speak": "गंग्याल दो मॉडल टाउन"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_58.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00020 name_hi (dictionary)",
+   "text": "दिगियाना जीवन नगर",
+   "speak": "दिगियाना जीवन नगर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_59.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00051 name_hi (dictionary)",
+   "text": "पलौड़ा टॉप",
+   "speak": "पलौड़ा टॉप"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_60.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00050 name_hi (dictionary)",
+   "text": "पलौड़ा केंद्र",
+   "speak": "पलौड़ा केंद्र"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_61.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00054 name_hi (dictionary)",
+   "text": "पट्टा पलौड़ा",
+   "speak": "पट्टा पलौड़ा"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_62.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00017 name_hi (dictionary)",
+   "text": "चिनौर केरन रूप नगर",
+   "speak": "चिनौर केरन रूप नगर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_63.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00036 name_hi (dictionary)",
+   "text": "केरन बन तालाब",
+   "speak": "केरन बन तालाब"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_64.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00011 name_hi (dictionary)",
+   "text": "चक चंगरवां दुर्गा नगर",
+   "speak": "चक चंगरवां दुर्गा नगर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_65.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00006 name_hi (dictionary)",
+   "text": "बरनई अपर धरमाल",
+   "speak": "बरनई अपर धरमाल"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_66.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00075 name_hi (dictionary)",
+   "text": "अपर मुट्ठी",
+   "speak": "अपर मुट्ठी"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_67.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00038 name_hi (dictionary)",
+   "text": "लोअर मुट्ठी",
+   "speak": "लोअर मुट्ठी"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_68.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00027 name_hi (dictionary)",
+   "text": "ग्रेटर कैलाश",
+   "speak": "ग्रेटर कैलाश"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_69.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00060 name_hi (dictionary)",
+   "text": "सैनिक कॉलोनी एक",
+   "speak": "सैनिक कॉलोनी एक"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_70.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00061 name_hi (dictionary)",
+   "text": "सैनिक कॉलोनी दो",
+   "speak": "सैनिक कॉलोनी दो"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_71.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00072 name_hi (dictionary)",
+   "text": "तवी विहार सिद्धड़ा",
+   "speak": "तवी विहार सिद्धड़ा"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_72.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00065 name_hi (dictionary)",
+   "text": "शहज़ादपुर",
+   "speak": "शहज़ादपुर"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_73.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00009 name_hi (dictionary)",
+   "text": "भौर गाडीगढ़",
+   "speak": "भौर गाडीगढ़"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_74.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00068 name_hi (dictionary)",
+   "text": "सुंजवां",
+   "speak": "सुंजवां"
+  },
+  {
+   "lang": "doi",
+   "path": "doi/slot/ward_75.wav",
+   "kind": "slot",
+   "source": "data/gazetteer.json g00001 name_hi (dictionary)",
+   "text": "अकालपुर",
+   "speak": "अकालपुर"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/SYS_LANG.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_LANG",
+   "text": "اردو کے لیے 3 دبائیں۔",
+   "speak": "اردو کے لیے تین دبائیں۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/SYS_NOINPUT.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_NOINPUT",
+   "text": "ہمیں کوئی بٹن سنائی نہیں دیا۔ براہِ کرم دوبارہ سنیے۔",
+   "speak": "ہمیں کوئی بٹن سنائی نہیں دیا۔ براہِ کرم دوبارہ سنیے۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/SYS_WRONGKEY.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_WRONGKEY",
+   "text": "یہ بٹن فہرست میں نہیں ہے۔ براہِ کرم دوبارہ سنیے۔",
+   "speak": "یہ بٹن فہرست میں نہیں ہے۔ براہِ کرم دوبارہ سنیے۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/SYS_GIVEUP_FIRST.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_GIVEUP_FIRST",
+   "text": "ہمیں آپ کا جواب نہیں ملا۔ ہم تھوڑی دیر میں آپ کو دوبارہ فون کریں گے۔ خدا حافظ۔",
+   "speak": "ہمیں آپ کا جواب نہیں ملا۔ ہم تھوڑی دیر میں آپ کو دوبارہ فون کریں گے۔ خدا حافظ۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/SYS_GIVEUP_MISS.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_GIVEUP_MISS",
+   "text": "ہمیں آپ کا جواب نہیں ملا۔ اگر آپ نے ٹیکہ نہیں لگوایا ہے تو براہِ کرم کلینک جائیے۔ خدا حافظ۔",
+   "speak": "ہمیں آپ کا جواب نہیں ملا۔ اگر آپ نے ٹیکہ نہیں لگوایا ہے تو براہِ کرم کلینک جائیے۔ خدا حافظ۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/SYS_HEAR_AGAIN.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_HEAR_AGAIN",
+   "text": "اسے دوبارہ سننے کے لیے اسٹار دبائیں۔",
+   "speak": "اسے دوبارہ سننے کے لیے اسٹار دبائیں۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/SYS_BYE.wav",
+   "kind": "segment",
+   "source": "prompts.json SYS_BYE",
+   "text": "شکریہ۔ خدا حافظ۔",
+   "speak": "شکریہ۔ خدا حافظ۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_GATE.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_GATE",
+   "text": "السلام علیکم۔ یہ اس شخص کے لیے ریکارڈ شدہ فون ہے جس نے مسڈ کال دی تھی۔ اگر وہ آپ ہیں تو 1 دبائیں۔ اگر یہ فون آپ کے لیے نہیں ہے تو 8 دبائیں۔",
+   "speak": "السلام علیکم۔ یہ اس شخص کے لیے ریکارڈ شدہ فون ہے جس نے مسڈ کال دی تھی۔ اگر وہ آپ ہیں تو ایک دبائیں۔ اگر یہ فون آپ کے لیے نہیں ہے تو آٹھ دبائیں۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/ENR_DUP.wav",
+   "kind": "segment",
+   "source": "prompts.json ENR_DUP",
+   "text": "آپ ہر ٹیکے سے پہلے آنے والے فون کے لیے پہلے سے شامل ہیں۔ مسڈ کال سے یہ بند نہیں ہوتے۔ بند کروانے کے لیے ابھی 9 دبائیں۔",
+   "speak": "آپ ہر ٹیکے سے پہلے آنے والے فون کے لیے پہلے سے شامل ہیں۔ مسڈ کال سے یہ بند نہیں ہوتے۔ بند کروانے کے لیے ابھی نو دبائیں۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_HELLO.0.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_HELLO",
+   "text": "السلام علیکم۔ یہ ",
+   "speak": "السلام علیکم۔ یہ "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_HELLO.1.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_HELLO",
+   "text": " کے ریبیز ٹیکہ مرکز کی طرف سے ریکارڈ شدہ کال ہے۔ آپ نے کتے کے کاٹنے کے ٹیکے کی یاد دہانی کے لیے مسڈ کال دی تھی۔",
+   "speak": " کے ریبیز ٹیکہ مرکز کی طرف سے ریکارڈ شدہ کال ہے۔ آپ نے کتے کے کاٹنے کے ٹیکے کی یاد دہانی کے لیے مسڈ کال دی تھی۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_GUARD_OK.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_GUARD_OK",
+   "text": "کلینک نے والدین یا سرپرست کی رضامندی درج کر لی ہے۔ اگلے سوالوں کے جواب براہِ کرم والدین یا سرپرست دیں۔",
+   "speak": "کلینک نے والدین یا سرپرست کی رضامندی درج کر لی ہے۔ اگلے سوالوں کے جواب براہِ کرم والدین یا سرپرست دیں۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_NOTICE.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_NOTICE",
+   "text": "ہم ہر ٹیکے سے پہلے اس نمبر پر فون کریں گے، آخری ٹیکے کے 7 دن بعد نمبر مٹا دیں گے۔ پوچھیں گے کہ کتے نے کہاں کاٹا، آپ کی آواز ریکارڈ ہوگی اور جگہ ملتے ہی مٹ جائے گی۔ جوابات آپ کے نمبر سے الگ رہتے ہیں۔ کسی بھی وقت روکنے کے لیے 9، پوری اطلاع کے لیے 0 دبائیں۔",
+   "speak": "ہم ہر ٹیکے سے پہلے اس نمبر پر فون کریں گے، آخری ٹیکے کے سات دن بعد نمبر مٹا دیں گے۔ پوچھیں گے کہ کتے نے کہاں کاٹا، آپ کی آواز ریکارڈ ہوگی اور جگہ ملتے ہی مٹ جائے گی۔ جوابات آپ کے نمبر سے الگ رہتے ہیں۔ کسی بھی وقت روکنے کے لیے نو، پوری اطلاع کے لیے صفر دبائیں۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_NOTICE_FULL.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_NOTICE_FULL",
+   "text": "ہم ہر ٹیکے سے پہلے اس نمبر پر فون کریں گے۔ یہ نمبر ہم نے آپ کی مسڈ کال سے رکھا ہے، صرف اسی کام کے لیے، اور آخری ٹیکے کے 7 دن بعد مٹا دیا جائے گا۔ ہم یہ بھی پوچھیں گے کہ کتے نے کہاں کاٹا اور کتا کیسا تھا۔ جگہ بتانے پر آپ کی آواز ریکارڈ ہوگی۔ جگہ طے ہوتے ہی، یا 7 دن بعد، ریکارڈنگ مٹا دی جائے گی۔ آپ کے جوابات آپ کے نمبر سے الگ رکھے جاتے ہیں، مگر کلینک کے رجسٹر میں آپ کے اندراج سے جڑے رہتے ہیں۔ کتا بیمار لگا ہو تو کلینک آپ کو فون کر سکتا ہے۔ یہ فون کسی بھی وقت بند کروانے کے لیے 9 دبائیں۔ کوئی شکایت ہو تو پہلے کلینک کو بتائیں۔ حل نہ ہو تو آپ ڈیٹا پروٹیکشن بورڈ آف انڈیا کو لکھ سکتے ہیں۔",
+   "speak": "ہم ہر ٹیکے سے پہلے اس نمبر پر فون کریں گے۔ یہ نمبر ہم نے آپ کی مسڈ کال سے رکھا ہے، صرف اسی کام کے لیے، اور آخری ٹیکے کے سات دن بعد مٹا دیا جائے گا۔ ہم یہ بھی پوچھیں گے کہ کتے نے کہاں کاٹا اور کتا کیسا تھا۔ جگہ بتانے پر آپ کی آواز ریکارڈ ہوگی۔ جگہ طے ہوتے ہی، یا سات دن بعد، ریکارڈنگ مٹا دی جائے گی۔ آپ کے جوابات آپ کے نمبر سے الگ رکھے جاتے ہیں، مگر کلینک کے رجسٹر میں آپ کے اندراج سے جڑے رہتے ہیں۔ کتا بیمار لگا ہو تو کلینک آپ کو فون کر سکتا ہے۔ یہ فون کسی بھی وقت بند کروانے کے لیے نو دبائیں۔ کوئی شکایت ہو تو پہلے کلینک کو بتائیں۔ حل نہ ہو تو آپ ڈیٹا پروٹیکشن بورڈ آف انڈیا کو لکھ سکتے ہیں۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_CONSENT_Q.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CONSENT_Q",
+   "text": "رضامند ہونے کے لیے 1 دبائیں۔ اگر آپ یاد دہانی کے فون نہیں چاہتے تو 2 دبائیں۔",
+   "speak": "رضامند ہونے کے لیے ایک دبائیں۔ اگر آپ یاد دہانی کے فون نہیں چاہتے تو دو دبائیں۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_CONSENT_Q_G.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CONSENT_Q_G",
+   "text": "والدین یا سرپرست: رضامند ہونے کے لیے 1 دبائیں۔ اگر آپ یاد دہانی کے فون نہیں چاہتے تو 2 دبائیں۔",
+   "speak": "والدین یا سرپرست: رضامند ہونے کے لیے ایک دبائیں۔ اگر آپ یاد دہانی کے فون نہیں چاہتے تو دو دبائیں۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_QCONSENT.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_QCONSENT",
+   "text": "ہم کتے کے کاٹنے کے بارے میں چار چھوٹے سوال بھی پوچھنا چاہیں گے۔ ان کے جواب آپ کے نمبر کے بغیر رکھے جاتے ہیں۔ جواب دینے کے لیے 1 دبائیں۔ چھوڑنے کے لیے 2 دبائیں۔",
+   "speak": "ہم کتے کے کاٹنے کے بارے میں چار چھوٹے سوال بھی پوچھنا چاہیں گے۔ ان کے جواب آپ کے نمبر کے بغیر رکھے جاتے ہیں۔ جواب دینے کے لیے ایک دبائیں۔ چھوڑنے کے لیے دو دبائیں۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_CONSENT_NO.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CONSENT_NO",
+   "text": "ٹھیک ہے۔ ہم آپ کو دوبارہ فون نہیں کریں گے اور یہ نمبر ابھی مٹا رہے ہیں۔ براہِ کرم کارڈ پر لکھی تاریخ پر کلینک آئیے۔ خدا حافظ۔",
+   "speak": "ٹھیک ہے۔ ہم آپ کو دوبارہ فون نہیں کریں گے اور یہ نمبر ابھی مٹا رہے ہیں۔ براہِ کرم کارڈ پر لکھی تاریخ پر کلینک آئیے۔ خدا حافظ۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_PLACE.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_PLACE",
+   "text": "کتے نے کہاں کاٹا؟ گھر یا ہسپتال نہیں۔ آپ کی آواز ریکارڈ ہوگی۔ بیپ کے بعد محلے کا نام یا قریب کی پہچان والی جگہ بولیے۔",
+   "speak": "کتے نے کہاں کاٹا؟ گھر یا ہسپتال نہیں۔ آپ کی آواز ریکارڈ ہوگی۔ بیپ کے بعد محلے کا نام یا قریب کی پہچان والی جگہ بولیے۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_PLACE_AGAIN.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_PLACE_AGAIN",
+   "text": "ہمیں آپ کی آواز سنائی نہیں دی۔ بیپ کے بعد براہِ کرم محلے کا نام یا سب سے قریب کی جگہ بولیے۔",
+   "speak": "ہمیں آپ کی آواز سنائی نہیں دی۔ بیپ کے بعد براہِ کرم محلے کا نام یا سب سے قریب کی جگہ بولیے۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_PLACETYPE.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_PLACETYPE",
+   "text": "وہ کس طرح کی جگہ تھی؟ گھر یا گلی سڑک کے لیے 1 دبائیں۔ اسکول کے لیے 2۔ ہسپتال کے لیے 3۔ بس اڈے یا بازار کے لیے 4۔ کہیں اور ہو تو 5 دبائیں۔",
+   "speak": "وہ کس طرح کی جگہ تھی؟ گھر یا گلی سڑک کے لیے ایک دبائیں۔ اسکول کے لیے دو۔ ہسپتال کے لیے تین۔ بس اڈے یا بازار کے لیے چار۔ کہیں اور ہو تو پانچ دبائیں۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_ANIMAL.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_ANIMAL",
+   "text": "کس جانور نے کاٹا؟ گلی کے کتے کے لیے 1 دبائیں۔ مالک والے کتے کے لیے 2۔ بندر، بلی یا کسی اور جانور کے لیے 3۔ پکا پتہ نہ ہو تو 4 دبائیں۔",
+   "speak": "کس جانور نے کاٹا؟ گلی کے کتے کے لیے ایک دبائیں۔ مالک والے کتے کے لیے دو۔ بندر، بلی یا کسی اور جانور کے لیے تین۔ پکا پتہ نہ ہو تو چار دبائیں۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_NOTCH.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_NOTCH",
+   "text": "بلدیہ نس بندی کیے ہوئے کتوں کے دائیں کان میں ایک چھوٹا سا کٹ لگاتی ہے، یعنی کتے کا اپنا دایاں کان۔ اگر کتا آپ کی طرف منہ کر کے کھڑا ہو تو وہ کان آپ کی بائیں طرف ہوگا۔ کیا اس کتے کے کان میں کٹ تھا؟ ہاں کے لیے 1، نہیں کے لیے 2، دیکھ نہیں پائے تو 3 دبائیں۔",
+   "speak": "بلدیہ نس بندی کیے ہوئے کتوں کے دائیں کان میں ایک چھوٹا سا کٹ لگاتی ہے، یعنی کتے کا اپنا دایاں کان۔ اگر کتا آپ کی طرف منہ کر کے کھڑا ہو تو وہ کان آپ کی بائیں طرف ہوگا۔ کیا اس کتے کے کان میں کٹ تھا؟ ہاں کے لیے ایک، نہیں کے لیے دو، دیکھ نہیں پائے تو تین دبائیں۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_SICK.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_SICK",
+   "text": "کیا کتا بیمار لگا یا عجیب برتاؤ کر رہا تھا، دوسرے لوگوں یا جانوروں کو کاٹا، یا بعد میں مر گیا؟ ہاں کے لیے 1، نہیں کے لیے 2، پتہ نہ ہو تو 3 دبائیں۔",
+   "speak": "کیا کتا بیمار لگا یا عجیب برتاؤ کر رہا تھا، دوسرے لوگوں یا جانوروں کو کاٹا، یا بعد میں مر گیا؟ ہاں کے لیے ایک، نہیں کے لیے دو، پتہ نہ ہو تو تین دبائیں۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_SICK_YES.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_SICK_YES",
+   "text": "شکریہ۔ ہم یہ معلومات جانوروں کی ٹیم تک پہنچا رہے ہیں۔ براہِ کرم کلینک کے ڈاکٹر کو بھی یہ بتائیے۔",
+   "speak": "شکریہ۔ ہم یہ معلومات جانوروں کی ٹیم تک پہنچا رہے ہیں۔ براہِ کرم کلینک کے ڈاکٹر کو بھی یہ بتائیے۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_CLOSE.0.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE",
+   "text": "شکریہ۔ آپ کا اگلا ٹیکہ، کل ",
+   "speak": "شکریہ۔ آپ کا اگلا ٹیکہ، کل "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_CLOSE.1.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE",
+   "text": " میں سے ٹیکہ نمبر ",
+   "speak": " میں سے ٹیکہ نمبر "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_CLOSE.2.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE",
+   "text": " کو ",
+   "speak": " کو "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_CLOSE.3.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE",
+   "text": " میں ہے۔ ہم ایک شام پہلے آپ کو فون کرنے کی کوشش کریں گے۔ اگر کبھی یہ فون بند کروانے ہوں تو فون آنے پر 9 دبائیں۔",
+   "speak": " میں ہے۔ ہم ایک شام پہلے آپ کو فون کرنے کی کوشش کریں گے۔ اگر کبھی یہ فون بند کروانے ہوں تو فون آنے پر نو دبائیں۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_CLOSE_COME.0.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE_COME",
+   "text": "شکریہ۔ آپ کے اگلے ٹیکے کی تاریخ گزر چکی ہے۔ براہِ کرم جتنی جلدی ہو سکے ",
+   "speak": "شکریہ۔ آپ کے اگلے ٹیکے کی تاریخ گزر چکی ہے۔ براہِ کرم جتنی جلدی ہو سکے "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_CLOSE_COME.1.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE_COME",
+   "text": " آئیے، یا کلینک کو ",
+   "speak": " آئیے، یا کلینک کو "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_CLOSE_COME.2.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE_COME",
+   "text": " پر فون کیجیے۔",
+   "speak": " پر فون کیجیے۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FC_CLOSE_LAST.wav",
+   "kind": "segment",
+   "source": "prompts.json FC_CLOSE_LAST",
+   "text": "شکریہ۔ یہ آپ کا آخری طے شدہ ٹیکہ تھا۔ اب ہمیں فون کرنے کی ضرورت نہیں پڑے گی۔ آپ کا نمبر 7 دن میں مٹا دیا جائے گا۔",
+   "speak": "شکریہ۔ یہ آپ کا آخری طے شدہ ٹیکہ تھا۔ اب ہمیں فون کرنے کی ضرورت نہیں پڑے گی۔ آپ کا نمبر سات دن میں مٹا دیا جائے گا۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_HELLO.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_HELLO",
+   "text": "شکریہ۔ یہ ",
+   "speak": "شکریہ۔ یہ "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_HELLO.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_HELLO",
+   "text": " کے ریبیز ٹیکہ مرکز کی طرف سے فون ہے۔",
+   "speak": " کے ریبیز ٹیکہ مرکز کی طرف سے فون ہے۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_WHO.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_WHO",
+   "text": "یہ یاد دہانی رجسٹر نمبر ",
+   "speak": "یہ یاد دہانی رجسٹر نمبر "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_WHO.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_WHO",
+   "text": " والے مریض کے لیے ہے۔",
+   "speak": " والے مریض کے لیے ہے۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_EVE_BODY.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY",
+   "text": "کل، ",
+   "speak": "کل، "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_EVE_BODY.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY",
+   "text": "، کل ",
+   "speak": "، کل "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_EVE_BODY.2.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY",
+   "text": " میں سے ٹیکہ نمبر ",
+   "speak": " میں سے ٹیکہ نمبر "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_EVE_BODY.3.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY",
+   "text": " لگنا ہے۔ براہِ کرم ",
+   "speak": " لگنا ہے۔ براہِ کرم "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_EVE_BODY.4.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY",
+   "text": " آئیے۔ فون نہ آئے تب بھی کارڈ پر لکھی تاریخ پر آئیے۔",
+   "speak": " آئیے۔ فون نہ آئے تب بھی کارڈ پر لکھی تاریخ پر آئیے۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_EVE_BODY_OUT.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY_OUT",
+   "text": "کل، ",
+   "speak": "کل، "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_EVE_BODY_OUT.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY_OUT",
+   "text": "، کل ",
+   "speak": "، کل "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_EVE_BODY_OUT.2.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY_OUT",
+   "text": " میں سے ٹیکہ نمبر ",
+   "speak": " میں سے ٹیکہ نمبر "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_EVE_BODY_OUT.3.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY_OUT",
+   "text": " لگنا ہے۔ کلینک کے مطابق ابھی ٹیکہ دستیاب نہیں ہے۔ آنے سے پہلے براہِ کرم کلینک کو ",
+   "speak": " لگنا ہے۔ کلینک کے مطابق ابھی ٹیکہ دستیاب نہیں ہے۔ آنے سے پہلے براہِ کرم کلینک کو "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_EVE_BODY_OUT.4.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_BODY_OUT",
+   "text": " پر فون کیجیے۔",
+   "speak": " پر فون کیجیے۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_EVE_END.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_EVE_END",
+   "text": "اسے دوبارہ سننے کے لیے اسٹار دبائیں۔ یہ یاد دہانی کے فون بند کروانے کے لیے 9 دبائیں۔ شکریہ۔",
+   "speak": "اسے دوبارہ سننے کے لیے اسٹار دبائیں۔ یہ یاد دہانی کے فون بند کروانے کے لیے نو دبائیں۔ شکریہ۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_MISS_Q.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_Q",
+   "text": "گزشتہ کل، ",
+   "speak": "گزشتہ کل، "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_MISS_Q.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_Q",
+   "text": " کو، ",
+   "speak": " کو، "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_MISS_Q.2.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_Q",
+   "text": " میں سے ٹیکہ نمبر ",
+   "speak": " میں سے ٹیکہ نمبر "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_MISS_Q.3.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_Q",
+   "text": " لگنا تھا۔ کلینک میں اس کے لگنے کا کوئی ریکارڈ نہیں ہے۔ اگر آپ نے لگوا لیا ہے تو 1 دبائیں۔ اگر نہیں لگوایا تو 2 دبائیں۔",
+   "speak": " لگنا تھا۔ کلینک میں اس کے لگنے کا کوئی ریکارڈ نہیں ہے۔ اگر آپ نے لگوا لیا ہے تو ایک دبائیں۔ اگر نہیں لگوایا تو دو دبائیں۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_MISS_TAKEN.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_TAKEN",
+   "text": "شکریہ۔ ہم نے اسے درج کر لیا ہے۔ آپ کا اگلا ٹیکہ، کل ",
+   "speak": "شکریہ۔ ہم نے اسے درج کر لیا ہے۔ آپ کا اگلا ٹیکہ، کل "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_MISS_TAKEN.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_TAKEN",
+   "text": " میں سے ٹیکہ نمبر ",
+   "speak": " میں سے ٹیکہ نمبر "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_MISS_TAKEN.2.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_TAKEN",
+   "text": " کو ",
+   "speak": " کو "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_MISS_TAKEN.3.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_TAKEN",
+   "text": " ہے۔",
+   "speak": " ہے۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_MISS_TAKEN_LAST.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_TAKEN_LAST",
+   "text": "شکریہ۔ ہم نے اسے درج کر لیا ہے۔ یہ آپ کا آخری طے شدہ ٹیکہ تھا۔",
+   "speak": "شکریہ۔ ہم نے اسے درج کر لیا ہے۔ یہ آپ کا آخری طے شدہ ٹیکہ تھا۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_MISS_NOT.0.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_NOT",
+   "text": "براہِ کرم آج ہی، جتنی جلدی ہو سکے، ",
+   "speak": "براہِ کرم آج ہی، جتنی جلدی ہو سکے، "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/RM_MISS_NOT.1.wav",
+   "kind": "segment",
+   "source": "prompts.json RM_MISS_NOT",
+   "text": " جائیے۔ اگلی تاریخ کا انتظار مت کیجیے۔ آگے کیا کرنا ہے، یہ ڈاکٹر بتائیں گے۔",
+   "speak": " جائیے۔ اگلی تاریخ کا انتظار مت کیجیے۔ آگے کیا کرنا ہے، یہ ڈاکٹر بتائیں گے۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/VAX_OUT_NOTICE.0.wav",
+   "kind": "segment",
+   "source": "prompts.json VAX_OUT_NOTICE",
+   "text": "السلام علیکم۔ ",
+   "speak": "السلام علیکم۔ "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/VAX_OUT_NOTICE.1.wav",
+   "kind": "segment",
+   "source": "prompts.json VAX_OUT_NOTICE",
+   "text": " کے ریبیز ٹیکہ مرکز کی طرف سے پیغام۔ ابھی ٹیکہ دستیاب نہیں ہے۔ آنے سے پہلے براہِ کرم کلینک کو ",
+   "speak": " کے ریبیز ٹیکہ مرکز کی طرف سے پیغام۔ ابھی ٹیکہ دستیاب نہیں ہے۔ آنے سے پہلے براہِ کرم کلینک کو "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/VAX_OUT_NOTICE.2.wav",
+   "kind": "segment",
+   "source": "prompts.json VAX_OUT_NOTICE",
+   "text": " پر فون کیجیے۔",
+   "speak": " پر فون کیجیے۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/VAX_BACK.0.wav",
+   "kind": "segment",
+   "source": "prompts.json VAX_BACK",
+   "text": "السلام علیکم۔ ",
+   "speak": "السلام علیکم۔ "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/VAX_BACK.1.wav",
+   "kind": "segment",
+   "source": "prompts.json VAX_BACK",
+   "text": " کے ریبیز ٹیکہ مرکز سے اچھی خبر۔ ٹیکہ دوبارہ دستیاب ہے۔ براہِ کرم طے شدہ تاریخ پر ہی آئیے۔",
+   "speak": " کے ریبیز ٹیکہ مرکز سے اچھی خبر۔ ٹیکہ دوبارہ دستیاب ہے۔ براہِ کرم طے شدہ تاریخ پر ہی آئیے۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FIN_Q.0.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_Q",
+   "text": "ہمارے ریکارڈ کے مطابق آپ کا آخری ٹیکہ ",
+   "speak": "ہمارے ریکارڈ کے مطابق آپ کا آخری ٹیکہ "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FIN_Q.1.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_Q",
+   "text": " کو تھا۔ اگر آپ نے تمام ٹیکے لگوا لیے ہیں تو 1 دبائیں۔ اگر کوئی ٹیکہ رہ گیا ہے تو 2 دبائیں۔",
+   "speak": " کو تھا۔ اگر آپ نے تمام ٹیکے لگوا لیے ہیں تو ایک دبائیں۔ اگر کوئی ٹیکہ رہ گیا ہے تو دو دبائیں۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FIN_ALL.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_ALL",
+   "text": "تمام ٹیکے مکمل کرنے کا شکریہ۔",
+   "speak": "تمام ٹیکے مکمل کرنے کا شکریہ۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FIN_MISSED.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_MISSED",
+   "text": "براہِ کرم کلینک جا کر ڈاکٹر کو اپنا بائٹ کارڈ دکھائیے۔ ڈاکٹر آپ کو مشورہ دیں گے۔",
+   "speak": "براہِ کرم کلینک جا کر ڈاکٹر کو اپنا بائٹ کارڈ دکھائیے۔ ڈاکٹر آپ کو مشورہ دیں گے۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FIN_TEAM.0.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_TEAM",
+   "text": "ایک بات اور۔ آپ نے بتایا تھا کہ کتے نے کہاں کاٹا، اس کے بعد سے جانوروں کی پیدائش پر کنٹرول کی ٹیم نے ",
+   "speak": "ایک بات اور۔ آپ نے بتایا تھا کہ کتے نے کہاں کاٹا، اس کے بعد سے جانوروں کی پیدائش پر کنٹرول کی ٹیم نے "
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FIN_TEAM.1.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_TEAM",
+   "text": " میں کام کیا ہے۔ آپ کی مدد کا شکریہ۔",
+   "speak": " میں کام کیا ہے۔ آپ کی مدد کا شکریہ۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/FIN_DELETE.wav",
+   "kind": "segment",
+   "source": "prompts.json FIN_DELETE",
+   "text": "آپ کا فون نمبر 7 دن میں مٹا دیا جائے گا۔ ہم آپ کو دوبارہ فون نہیں کریں گے۔ اپنا خیال رکھیے۔",
+   "speak": "آپ کا فون نمبر سات دن میں مٹا دیا جائے گا۔ ہم آپ کو دوبارہ فون نہیں کریں گے۔ اپنا خیال رکھیے۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/WN_CONFIRM.wav",
+   "kind": "segment",
+   "source": "prompts.json WN_CONFIRM",
+   "text": "آپ نے بتایا کہ یہ فون آپ کے لیے نہیں ہے۔ پکا کرنے کے لیے 8 دبائیں۔ سنتے رہنے کے لیے 1 دبائیں۔",
+   "speak": "آپ نے بتایا کہ یہ فون آپ کے لیے نہیں ہے۔ پکا کرنے کے لیے آٹھ دبائیں۔ سنتے رہنے کے لیے ایک دبائیں۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/WN_DONE.wav",
+   "kind": "segment",
+   "source": "prompts.json WN_DONE",
+   "text": "تکلیف کے لیے معذرت۔ ہم اس نمبر پر دوبارہ فون نہیں کریں گے۔ خدا حافظ۔",
+   "speak": "تکلیف کے لیے معذرت۔ ہم اس نمبر پر دوبارہ فون نہیں کریں گے۔ خدا حافظ۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/OPT_CONFIRM.wav",
+   "kind": "segment",
+   "source": "prompts.json OPT_CONFIRM",
+   "text": "آپ نے یاد دہانی کے فون بند کرنے کے لیے بٹن دبایا ہے۔ پکا کرنے کے لیے 9 دبائیں۔ یاد دہانی کے فون جاری رکھنے کے لیے 1 دبائیں۔",
+   "speak": "آپ نے یاد دہانی کے فون بند کرنے کے لیے بٹن دبایا ہے۔ پکا کرنے کے لیے نو دبائیں۔ یاد دہانی کے فون جاری رکھنے کے لیے ایک دبائیں۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/OPT_DONE.wav",
+   "kind": "segment",
+   "source": "prompts.json OPT_DONE",
+   "text": "ہم نے یاد دہانی کے فون بند کر دیے ہیں اور آپ کا نمبر مٹا رہے ہیں۔ پھر بھی براہِ کرم کارڈ پر لکھی تاریخ پر کلینک آئیے۔ خدا حافظ۔",
+   "speak": "ہم نے یاد دہانی کے فون بند کر دیے ہیں اور آپ کا نمبر مٹا رہے ہیں۔ پھر بھی براہِ کرم کارڈ پر لکھی تاریخ پر کلینک آئیے۔ خدا حافظ۔"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/weekday_0.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "پیر",
+   "speak": "پیر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/weekday_1.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "منگل",
+   "speak": "منگل"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/weekday_2.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "بدھ",
+   "speak": "بدھ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/weekday_3.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "جمعرات",
+   "speak": "جمعرات"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/weekday_4.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "جمعہ",
+   "speak": "جمعہ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/weekday_5.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "ہفتہ",
+   "speak": "ہفتہ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/weekday_6.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.weekdays",
+   "text": "اتوار",
+   "speak": "اتوار"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_1.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "ایک",
+   "speak": "ایک"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_2.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "دو",
+   "speak": "دو"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_3.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "تین",
+   "speak": "تین"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_4.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "چار",
+   "speak": "چار"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_5.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "پانچ",
+   "speak": "پانچ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_6.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "چھ",
+   "speak": "چھ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_7.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "سات",
+   "speak": "سات"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_8.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "آٹھ",
+   "speak": "آٹھ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_9.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "نو",
+   "speak": "نو"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_10.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "دس",
+   "speak": "دس"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_11.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "گیارہ",
+   "speak": "گیارہ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_12.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "بارہ",
+   "speak": "بارہ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_13.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "تیرہ",
+   "speak": "تیرہ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_14.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "چودہ",
+   "speak": "چودہ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_15.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "پندرہ",
+   "speak": "پندرہ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_16.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "سولہ",
+   "speak": "سولہ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_17.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "سترہ",
+   "speak": "سترہ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_18.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "اٹھارہ",
+   "speak": "اٹھارہ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_19.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "انیس",
+   "speak": "انیس"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_20.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "بیس",
+   "speak": "بیس"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_21.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "اکیس",
+   "speak": "اکیس"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_22.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "بائیس",
+   "speak": "بائیس"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_23.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "تئیس",
+   "speak": "تئیس"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_24.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "چوبیس",
+   "speak": "چوبیس"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_25.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "پچیس",
+   "speak": "پچیس"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_26.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "چھبیس",
+   "speak": "چھبیس"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_27.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "ستائیس",
+   "speak": "ستائیس"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_28.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "اٹھائیس",
+   "speak": "اٹھائیس"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_29.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "انتیس",
+   "speak": "انتیس"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_30.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "تیس",
+   "speak": "تیس"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/day_31.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.days",
+   "text": "اکتیس",
+   "speak": "اکتیس"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/month_1.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "جنوری",
+   "speak": "جنوری"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/month_2.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "فروری",
+   "speak": "فروری"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/month_3.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "مارچ",
+   "speak": "مارچ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/month_4.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "اپریل",
+   "speak": "اپریل"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/month_5.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "مئی",
+   "speak": "مئی"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/month_6.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "جون",
+   "speak": "جون"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/month_7.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "جولائی",
+   "speak": "جولائی"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/month_8.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "اگست",
+   "speak": "اگست"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/month_9.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "ستمبر",
+   "speak": "ستمبر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/month_10.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "اکتوبر",
+   "speak": "اکتوبر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/month_11.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "نومبر",
+   "speak": "نومبر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/month_12.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_dates.months",
+   "text": "دسمبر",
+   "speak": "دسمبر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/num_0.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "صفر",
+   "speak": "صفر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/num_1.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "ایک",
+   "speak": "ایک"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/num_2.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "دو",
+   "speak": "دو"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/num_3.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "تین",
+   "speak": "تین"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/num_4.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "چار",
+   "speak": "چار"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/num_5.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "پانچ",
+   "speak": "پانچ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/num_6.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "چھ",
+   "speak": "چھ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/num_7.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "سات",
+   "speak": "سات"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/num_8.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "آٹھ",
+   "speak": "آٹھ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/num_9.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_numbers",
+   "text": "نو",
+   "speak": "نو"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/time_0900.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_times",
+   "text": "صبح نو بجے",
+   "speak": "صبح نو بجے"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/time_1000.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_times",
+   "text": "صبح دس بجے",
+   "speak": "صبح دس بجے"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/time_1100.wav",
+   "kind": "slot",
+   "source": "prompts.json meta.spoken_times",
+   "text": "صبح گیارہ بجے",
+   "speak": "صبح گیارہ بجے"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/clinic_cln_gmc.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "گورنمنٹ میڈیکل کالج اور ہسپتال جموں",
+   "speak": "گورنمنٹ میڈیکل کالج اور ہسپتال جموں"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/clinic_cln_demo2.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "ڈیمو کلینک",
+   "speak": "ڈیمو کلینک"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/clinic_cln_demo_visitor.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "جموں ڈیمو کلینک",
+   "speak": "جموں ڈیمو کلینک"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_1.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "پنج تیرتھی",
+   "speak": "پنج تیرتھی"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_2.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "جلّکا محلہ",
+   "speak": "جلّکا محلہ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_3.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "مست گڑھ",
+   "speak": "مست گڑھ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_4.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "بھبریاں",
+   "speak": "بھبریاں"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_5.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "تالاب کھٹیکاں",
+   "speak": "تالاب کھٹیکاں"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_6.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "گجر نگر",
+   "speak": "گجر نگر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_7.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "کانجی ہاؤس",
+   "speak": "کانجی ہاؤس"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_8.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "ڈوگرا ہال",
+   "speak": "ڈوگرا ہال"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_9.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "محلہ استاد",
+   "speak": "محلہ استاد"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_10.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "پکا ڈنگا",
+   "speak": "پکا ڈنگا"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_11.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "محلہ ملہوتریاں",
+   "speak": "محلہ ملہوتریاں"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_12.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "کرشنا نگر",
+   "speak": "کرشنا نگر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_13.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "ریشم گھر کالونی",
+   "speak": "ریشم گھر کالونی"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_14.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "بھگوتی نگر",
+   "speak": "بھگوتی نگر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_15.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "پرتاپ گڑھ",
+   "speak": "پرتاپ گڑھ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_16.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "نیا پلاٹ",
+   "speak": "نیا پلاٹ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_17.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "امپھلا",
+   "speak": "امپھلا"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_18.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "سروال",
+   "speak": "سروال"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_19.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "چاند نگر",
+   "speak": "چاند نگر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_20.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "گاندھی نگر شمال",
+   "speak": "گاندھی نگر شمال"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_21.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "گاندھی نگر جنوب",
+   "speak": "گاندھی نگر جنوب"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_22.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "شاستری نگر",
+   "speak": "شاستری نگر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_23.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "نئی بستی",
+   "speak": "نئی بستی"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_24.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "ریہاڑی کالونی شمال",
+   "speak": "ریہاڑی کالونی شمال"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_25.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "ریہاڑی کالونی جنوب",
+   "speak": "ریہاڑی کالونی جنوب"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_26.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "سبھاش نگر",
+   "speak": "سبھاش نگر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_27.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "بخشی نگر",
+   "speak": "بخشی نگر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_28.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "گڑا بخشی نگر",
+   "speak": "گڑا بخشی نگر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_29.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "راجپورہ منگوتریاں",
+   "speak": "راجپورہ منگوتریاں"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_30.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "تالاب ٹلو شمال",
+   "speak": "تالاب ٹلو شمال"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_31.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "تالاب ٹلو جنوب نوآباد",
+   "speak": "تالاب ٹلو جنوب نوآباد"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_32.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "گول",
+   "speak": "گول"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_33.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "شیو نگر",
+   "speak": "شیو نگر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_34.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "جانی پور شمال",
+   "speak": "جانی پور شمال"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_35.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "جانی پور جنوب",
+   "speak": "جانی پور جنوب"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_36.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "جانی پور وسطی",
+   "speak": "جانی پور وسطی"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_37.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "جانی پور مغرب",
+   "speak": "جانی پور مغرب"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_38.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "پلوڑا",
+   "speak": "پلوڑا"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_39.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "توپ شیرخانیہ",
+   "speak": "توپ شیرخانیہ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_40.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "پونچھ ہاؤس کبیر نگر",
+   "speak": "پونچھ ہاؤس کبیر نگر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_41.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "بوہڑی",
+   "speak": "بوہڑی"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_42.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "نانک نگر مغرب",
+   "speak": "نانک نگر مغرب"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_43.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "نانک نگر مشرق",
+   "speak": "نانک نگر مشرق"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_44.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "نانک نگر شمال",
+   "speak": "نانک نگر شمال"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_45.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "دگیانہ",
+   "speak": "دگیانہ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_46.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "سنجے نگر",
+   "speak": "سنجے نگر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_47.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "باہو مشرق",
+   "speak": "باہو مشرق"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_48.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "باہو مغرب",
+   "speak": "باہو مغرب"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_49.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "نروال بالا چھنی راما",
+   "speak": "نروال بالا چھنی راما"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_50.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "چھنی ہمت ہاؤسنگ کالونی",
+   "speak": "چھنی ہمت ہاؤسنگ کالونی"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_51.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "چھنی ہمت تھنگر",
+   "speak": "چھنی ہمت تھنگر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_52.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "چھنی ہمت بیزا چھنی کملا چھنی بیجا",
+   "speak": "چھنی ہمت بیزا چھنی کملا چھنی بیجا"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_53.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "چھنی بیزا ترکوٹا نگر",
+   "speak": "چھنی بیزا ترکوٹا نگر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_54.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "ترکوٹا نگر چھنی ہمت چھنی راما",
+   "speak": "ترکوٹا نگر چھنی ہمت چھنی راما"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_55.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "ڈیلی",
+   "speak": "ڈیلی"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_56.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "گنگیال",
+   "speak": "گنگیال"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_57.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "گنگیال دو ماڈل ٹاؤن",
+   "speak": "گنگیال دو ماڈل ٹاؤن"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_58.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "دگیانہ جیون نگر",
+   "speak": "دگیانہ جیون نگر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_59.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "پلوڑا ٹاپ",
+   "speak": "پلوڑا ٹاپ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_60.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "پلوڑا مرکز",
+   "speak": "پلوڑا مرکز"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_61.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "پٹا پلوڑا",
+   "speak": "پٹا پلوڑا"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_62.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "چنور کیرن روپ نگر",
+   "speak": "چنور کیرن روپ نگر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_63.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "کیرن بن تالاب",
+   "speak": "کیرن بن تالاب"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_64.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "چک چنگرواں درگا نگر",
+   "speak": "چک چنگرواں درگا نگر"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_65.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "برنائی اپر دھرمال",
+   "speak": "برنائی اپر دھرمال"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_66.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "اپر مٹھی",
+   "speak": "اپر مٹھی"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_67.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "لوئر مٹھی",
+   "speak": "لوئر مٹھی"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_68.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "گریٹر کیلاش",
+   "speak": "گریٹر کیلاش"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_69.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "سینک کالونی ایک",
+   "speak": "سینک کالونی ایک"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_70.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "سینک کالونی دو",
+   "speak": "سینک کالونی دو"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_71.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "توی وہار سدھڑا",
+   "speak": "توی وہار سدھڑا"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_72.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "شہزادپور",
+   "speak": "شہزادپور"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_73.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "بھور گاڑی گڑھ",
+   "speak": "بھور گاڑی گڑھ"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_74.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "سنجواں",
+   "speak": "سنجواں"
+  },
+  {
+   "lang": "ur",
+   "path": "ur/slot/ward_75.wav",
+   "kind": "slot",
+   "source": "data/prompts/slot_sources.json texts",
+   "text": "اکال پور",
+   "speak": "اکال پور"
+  }
+ ],
+ "unavailable": []
+}

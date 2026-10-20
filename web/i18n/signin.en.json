@@ -1,0 +1,18 @@
+{
+  "_meta": { "lang": "en", "bundle": "signin" },
+  "signin": {
+    "title": "Sign in",
+    "page": "Sign in · Chaar Teeke",
+    "username": "Username",
+    "password": "Password",
+    "submit": "Sign in",
+    "required": "Required",
+    "needBoth": "Enter your username and password.",
+    "wrong": "Wrong username or password.",
+    "look": {
+      "title": "Look around without signing in",
+      "note": "Read-only: you can look, not change.",
+      "failed": "Could not open that view."
+    }
+  }
+}

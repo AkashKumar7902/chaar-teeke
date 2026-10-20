@@ -1,0 +1,149 @@
+/* Enrol: the register number and age, then a check of the defaults, then done. */
+
+.enrol__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+}
+.enrol__nav .btn {
+  flex: 1 1 6rem;
+}
+.enrol__nav .btn--primary {
+  flex: 2 1 10rem;
+}
+.enrol__problems:empty {
+  display: none;
+}
+@media (max-width: 47.99rem) {
+  .enrol__nav--done .btn {
+    flex: 1 1 100%;
+  }
+}
+@media (min-width: 48rem) {
+  .enrol__nav {
+    justify-content: flex-end;
+  }
+  .enrol__nav .btn {
+    flex: 0 0 auto;
+  }
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+.progress__text {
+  color: var(--ink-2);
+  font-weight: var(--weight-medium);
+}
+.progress__track {
+  block-size: 0.5rem;
+  background: var(--surface-2);
+  border: var(--border) solid var(--line);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+.progress__bar {
+  block-size: 100%;
+  background: var(--primary);
+}
+
+.step {
+  margin: 0;
+  padding: 0;
+  min-inline-size: 0;
+}
+.step__head {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+.step__legend {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  line-height: 1.3;
+  padding: 0;
+}
+.step__head > .pop {
+  flex: none;
+}
+@media (min-width: 48rem) {
+  .step__legend {
+    font-size: var(--text-lg);
+  }
+}
+.step--check h2 {
+  font-size: var(--text-lg);
+}
+.step .field__error {
+  margin-block-start: var(--s-1);
+}
+
+/* the check screen: what will be used, one line each, and "Change" opens the control right there */
+.checks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: var(--surface);
+  border: var(--border) solid var(--line);
+  border-radius: var(--radius-m);
+}
+.check__row {
+  padding: var(--s-2) var(--s-4);
+}
+.check__row + .check__row {
+  border-block-start: var(--border) solid var(--line);
+}
+.check__line {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "k change"
+    "v change";
+  align-items: center;
+  gap: 0 var(--s-3);
+  min-block-size: var(--target);
+}
+.check__k {
+  grid-area: k;
+  color: var(--ink-2);
+  font-size: var(--text-sm);
+}
+.check__v {
+  grid-area: v;
+  font-weight: var(--weight-medium);
+  overflow-wrap: anywhere;
+}
+.check__line .btn {
+  grid-area: change;
+}
+.check__edit {
+  padding-block: var(--s-2) var(--s-3);
+}
+@media (min-width: 48rem) {
+  .check__line {
+    grid-template-columns: 12rem minmax(0, 1fr) auto;
+    grid-template-areas: "k v change";
+  }
+  .check__k {
+    font-size: var(--text-base);
+  }
+}
+
+.number {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+}
+
+.unsent {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-2);
+  color: var(--attention);
+  font-weight: var(--weight-medium);
+}
+.unsent .icon {
+  flex: none;
+  margin-block-start: 0.2em;
+}

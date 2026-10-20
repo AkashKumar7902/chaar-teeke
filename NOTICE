@@ -1,0 +1,27 @@
+Chaar Teeke is MIT-licensed (see LICENSE). The MIT licence covers the code and the documentation
+written for this project only. It does not cover third-party data, fonts, models, libraries or voices
+shipped in data/, web/fonts/, web/vendor/ or data/prompts/; each of those keeps its own terms, listed
+in docs/DATA-LICENCES.md, which also says what to do before a public release.
+
+Third-party material in this repository:
+
+- OpenStreetMap data: Contains data (c) OpenStreetMap contributors, available under the Open
+  Database Licence (ODbL) 1.0. The place, landmark and road entries of data/gazetteer.json are
+  derived from it. https://www.openstreetmap.org/copyright
+- Jammu ward boundaries come from Jammu Municipal Corporation's public GIS page (MyJammu) and ward
+  names from the Chief Electoral Officer, J&K, 2018 ward list. Neither states a licence. Population
+  figures come from the JMC City Sanitation Plan (2017). Anti-rabies clinic details come from the
+  National Rabies Control Programme list and JMC's hospital list. All are public government
+  documents used as information; they are not offered here as open data.
+- India Post pincode directory, via data.gov.in, under the Government Open Data License - India
+  (GODL-India). 59 post-office entries in data/gazetteer.json.
+- MapLibre GL JS 4.7.1, (c) 2023 MapLibre contributors, BSD 3-Clause, in web/vendor/maplibre-gl-4.7.1/
+  with its LICENSE.txt.
+- Fonts in web/fonts/: Atkinson Hyperlegible Next, Noto Sans Devanagari and Noto Nastaliq Urdu, under
+  the SIL Open Font License 1.1 (web/fonts/OFL.txt).
+- Prompt audio in data/prompts/audio/ and the example clips in data/demo/clips/ are machine voices
+  made with Meta's MMS-TTS models (mms-tts-hin, mms-tts-dgo, mms-tts-urd-script_arabic), licensed
+  CC BY-NC 4.0. They are for prototype use only (non-commercial) and are to be replaced by human
+  recordings before any pilot with real patients.
+- The speech model, AI4Bharat IndicConformer 600M multilingual, is not part of this repository. It is
+  downloaded separately and keeps its own licence (MIT on its model card).

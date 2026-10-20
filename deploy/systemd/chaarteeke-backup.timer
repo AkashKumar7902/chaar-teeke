@@ -1,0 +1,14 @@
+# Daily database backup. The time is the machine's local time: set the machine to Asia/Kolkata
+# (timedatectl set-timezone Asia/Kolkata) and it runs shortly after the app's purge at 00:00.
+[Unit]
+Description=Daily Chaar Teeke database backup
+
+[Timer]
+OnCalendar=*-*-* 01:15:00
+RandomizedDelaySec=300
+# If the box was off at 01:15, run once when it is next up.
+Persistent=true
+Unit=chaarteeke-backup.service
+
+[Install]
+WantedBy=timers.target

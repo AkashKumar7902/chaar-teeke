@@ -1,0 +1,373 @@
+/* Admin: five tabs. Logical properties only; tokens from tokens.css. */
+
+.admin .tablist {
+  flex-wrap: wrap;
+}
+.admin .tabpanel {
+  padding-block-start: var(--s-5);
+}
+.admin .list-head {
+  margin-block-end: 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.admin .list-head > p {
+  flex: 1 1 auto;
+  margin: 0;
+  max-inline-size: none;
+  text-align: start;
+}
+.admin .table-wrap {
+  overflow-x: auto;
+}
+
+/* a table on a phone: pills and buttons keep their own width, the action row has no label */
+.adm-nowrap {
+  white-space: nowrap;
+}
+@media (max-width: 40rem) {
+  .admin .table--stack td > .pill,
+  .admin .table--stack td > .btn {
+    justify-self: start;
+  }
+  .admin .table--stack td:last-child {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .admin .table--stack td:last-child::before {
+    content: none;
+  }
+}
+
+/* name over a small second line */
+.adm-name {
+  display: flex;
+  flex-direction: column;
+  min-inline-size: 0;
+}
+.adm-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+}
+
+/* a form in a dialog: two columns when there is room */
+.adm-form {
+  display: grid;
+  gap: var(--s-4);
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 40rem) {
+  .adm-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.dialog.adm-dialog--wide {
+  inline-size: min(44rem, calc(100vw - 2 * var(--gutter)));
+}
+/* a long form scrolls inside the dialog, so Save and Cancel are always in view */
+.dialog form {
+  display: flex;
+  flex-direction: column;
+  max-block-size: calc(100vh - 2 * var(--s-4) - 4px);
+  max-block-size: calc(100dvh - 2 * var(--s-4) - 4px);
+}
+.dialog form .dialog__body {
+  overflow-y: auto;
+}
+.dialog form .dialog__foot {
+  flex: none;
+}
+.inline-error {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-2);
+  padding: var(--s-3);
+  background: var(--attention-tint);
+  border: var(--border) solid var(--attention-line);
+  border-radius: var(--radius-m);
+  color: var(--attention);
+  font-weight: var(--weight-medium);
+}
+.inline-error .icon {
+  flex: none;
+  margin-block-start: 0.2em;
+}
+.adm-secret-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+}
+.adm-secret {
+  flex: 1 1 12rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  letter-spacing: 0.04em;
+  min-inline-size: 0;
+}
+
+/* ------------------------------------------------------------------ prompts */
+.adm-langs {
+  display: grid;
+  gap: var(--s-3);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 6.5rem), 1fr));
+}
+.adm-lang {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s-2);
+  min-block-size: var(--target);
+  padding: var(--s-3) var(--s-4);
+  background: var(--surface);
+  border: var(--border-strong) solid var(--line-strong);
+  border-radius: var(--radius-m);
+  color: var(--ink);
+  text-align: start;
+}
+.adm-lang:hover {
+  background: var(--surface-2);
+}
+.adm-lang[aria-pressed="true"] {
+  border-color: var(--primary);
+  background: var(--primary-tint);
+  box-shadow: inset 0 -4px 0 var(--primary);
+}
+.adm-lang__name {
+  font-weight: var(--weight-bold);
+  font-size: var(--text-lg);
+}
+.adm-toolbar {
+  display: grid;
+  gap: var(--s-3);
+  grid-template-columns: minmax(0, 1fr);
+  align-items: end;
+}
+.adm-toolbar .chip {
+  justify-self: start;
+}
+@media (min-width: 48rem) {
+  .adm-toolbar {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) auto;
+  }
+}
+
+.pgrid {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: var(--border) solid var(--line);
+  border-radius: var(--radius-l);
+  overflow: hidden;
+}
+.pitem {
+  padding: var(--s-3) var(--s-4);
+}
+.pitem + .pitem,
+.pgrid > .pfile + .pfile {
+  border-block-start: var(--border) solid var(--line);
+}
+.pitem__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-1) var(--s-3);
+}
+.pitem__id {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+.pitem__files {
+  display: flex;
+  flex-direction: column;
+}
+.pfile {
+  display: grid;
+  gap: var(--s-2) var(--s-4);
+  grid-template-columns: minmax(0, 1fr);
+  padding-block: var(--s-2);
+}
+.pitem__files > .pfile + .pfile {
+  border-block-start: var(--border) dashed var(--line);
+}
+.pgrid > .pfile {
+  padding-inline: var(--s-4);
+}
+.pfile__text {
+  min-inline-size: 0;
+  max-inline-size: none;
+}
+.pfile__part {
+  font-weight: var(--weight-bold);
+  color: var(--ink-2);
+  font-size: var(--text-sm);
+}
+.pfile__side {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2);
+}
+.pfile__status {
+  min-block-size: 1px;
+  color: var(--ink-2);
+}
+.pfile__status--bad {
+  color: var(--attention);
+  font-weight: var(--weight-medium);
+}
+.pfile__status:empty {
+  display: none;
+}
+@media (min-width: 64rem) {
+  .pfile {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+  }
+  .pfile__status {
+    grid-column: 1 / -1;
+  }
+  .pfile__side {
+    justify-content: flex-end;
+    min-inline-size: 20rem;
+  }
+}
+.adm-clips {
+  background: var(--surface);
+  border: var(--border) solid var(--line);
+  border-radius: var(--radius-l);
+  padding: var(--s-3) 0 0;
+}
+.adm-clips > summary {
+  min-block-size: var(--target);
+  padding: var(--s-2) var(--s-4);
+  font-weight: var(--weight-bold);
+  cursor: pointer;
+}
+.adm-clips > p {
+  padding-inline: var(--s-4);
+}
+.adm-clips .pgrid {
+  border: 0;
+  border-block-start: var(--border) solid var(--line);
+  border-radius: 0;
+  margin-block-start: var(--s-2);
+}
+
+/* ---------------------------------------------------------------- retention */
+.adm-lastrun {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-weight: var(--weight-medium);
+}
+.adm-kinds {
+  display: grid;
+  gap: var(--s-4);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+}
+.adm-kind {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+.adm-counts {
+  display: grid;
+  gap: var(--s-2);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-block-start: auto;
+}
+.adm-count {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: var(--s-1);
+  padding: var(--s-2) var(--s-3);
+  background: var(--surface-2);
+  border-radius: var(--radius-m);
+}
+.adm-count dt {
+  color: var(--ink-2);
+  font-size: var(--text-xs);
+  line-height: 1.3;
+}
+.adm-count dd {
+  margin: 0;
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+}
+.adm-count--attention {
+  background: var(--attention-tint);
+}
+.adm-count--attention dt,
+.adm-count--attention dd {
+  color: var(--attention);
+}
+
+/* ------------------------------------------------------------------- system */
+.adm-summary {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+}
+.adm-facts {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
+}
+.adm-fact {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  overflow-wrap: anywhere;
+}
+.adm-checks {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: var(--border) solid var(--line);
+  border-radius: var(--radius-l);
+  overflow: hidden;
+}
+.adm-check {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-2) var(--s-4);
+  padding: var(--s-3) var(--s-4);
+}
+.adm-check + .adm-check {
+  border-block-start: var(--border) solid var(--line);
+}
+.adm-check__main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 18rem;
+  min-inline-size: 0;
+}
+.adm-check__detail {
+  color: var(--ink-2);
+  font-size: var(--text-sm);
+}
+.adm-check__side {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2);
+}
+.adm-check--fault {
+  background: var(--alarm-tint);
+  box-shadow: inset 6px 0 0 var(--alarm-line);
+}
+.adm-check--fault .adm-check__detail {
+  color: var(--alarm);
+  font-weight: var(--weight-medium);
+}
+.adm-demo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s-3);
+}
+
+/* the fault banner sits inside the page, not under the header */
+.admin .banner {
+  border: var(--border) solid var(--alarm-line);
+  border-radius: var(--radius-m);
+}

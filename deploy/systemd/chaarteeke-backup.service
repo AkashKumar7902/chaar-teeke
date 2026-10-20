@@ -1,0 +1,38 @@
+# One consistent copy of the database with sqlite3 ".backup", into var/backups.
+# Started by chaarteeke-backup.timer. Installed by deploy/install.sh (@@USER@@ is filled in then).
+[Unit]
+Description=Chaar Teeke database backup
+Documentation=file:///opt/chaarteeke/docs/DEPLOY.md
+ConditionPathExists=/etc/chaarteeke/env
+
+[Service]
+Type=oneshot
+User=@@USER@@
+Group=@@GROUP@@
+WorkingDirectory=/opt/chaarteeke
+EnvironmentFile=/etc/chaarteeke/env
+ExecStart=/opt/chaarteeke/deploy/backup.sh
+UMask=0077
+Nice=10
+IOSchedulingClass=idle
+
+NoNewPrivileges=yes
+ProtectSystem=strict
+ReadWritePaths=/var/lib/chaarteeke
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+ProtectControlGroups=yes
+ProtectClock=yes
+ProtectHostname=yes
+LockPersonality=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+RestrictNamespaces=yes
+RestrictAddressFamilies=AF_UNIX
+CapabilityBoundingSet=
+AmbientCapabilities=
+SystemCallArchitectures=native

@@ -1,0 +1,126 @@
+/* Patient page. */
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-1);
+  min-block-size: var(--target);
+  inline-size: fit-content;
+  font-weight: var(--weight-medium);
+}
+.back__icon {
+  transform: rotate(90deg);
+}
+:dir(rtl) .back__icon {
+  transform: rotate(-90deg);
+}
+
+.course .timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  gap: 0;
+  background: var(--surface);
+  border: var(--border) solid var(--line);
+  border-radius: var(--radius-m);
+}
+.course .timeline__step {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-1) var(--s-3);
+  min-inline-size: 0;
+  padding: var(--s-3) var(--s-4);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.course .timeline__step + .timeline__step {
+  border-block-start: var(--border) solid var(--line);
+}
+.timeline__when {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+  min-inline-size: 0;
+}
+.timeline__step .pill {
+  flex: none;
+}
+
+.date-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.facts {
+  padding: var(--s-4);
+  background: var(--surface);
+  border: var(--border) solid var(--line);
+  border-radius: var(--radius-m);
+}
+@media (max-width: 30rem) {
+  .facts {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .facts dd {
+    margin-block-end: var(--s-2);
+  }
+}
+.phone {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2) var(--s-3);
+}
+.phone__number {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+}
+.phone__note {
+  flex: 1 1 100%;
+}
+
+.calls__row {
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-block: var(--s-3);
+}
+.calls .list__side {
+  flex: none;
+}
+.call__error {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-2);
+  color: var(--attention);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+}
+.call__error .icon {
+  flex: none;
+  margin-block-start: 0.15em;
+}
+.course .table td {
+  vertical-align: top;
+}
+
+@media (min-width: 64rem) {
+  .course__grid {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    align-items: start;
+  }
+}
+
+@media (max-width: 40rem) {
+  .course .table--stack td {
+    padding-block: 0.125rem;
+  }
+}
+
+.course .card.stack {
+  gap: var(--s-3);
+}

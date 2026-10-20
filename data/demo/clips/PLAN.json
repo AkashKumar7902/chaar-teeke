@@ -1,0 +1,115 @@
+{
+ "prompts_sha256": "c2e856be57b2783f197497428bf87596ea299fbb9d6b6ca4fd561677177eff81",
+ "made_at": "2026-10-19T09:36:42Z",
+ "items": [
+  {
+   "lang": "hi",
+   "path": "1.wav",
+   "kind": "clip",
+   "source": "demo seed transcript for place-1 on the test clock (2026-10-19 10:00 IST)",
+   "text": "mera ghar Gujjar Nagar mein hai",
+   "speak": "मेरा घर गुज्जर नगर में है",
+   "ward_no": 6
+  },
+  {
+   "lang": "hi",
+   "path": "2.wav",
+   "kind": "clip",
+   "source": "demo seed transcript for place-2 on the test clock (2026-10-19 10:00 IST)",
+   "text": "अपर मुट्ठी में",
+   "speak": "अपर मुट्ठी में",
+   "ward_no": 66
+  },
+  {
+   "lang": "hi",
+   "path": "3.wav",
+   "kind": "clip",
+   "source": "demo seed transcript for place-3 on the test clock (2026-10-19 10:00 IST)",
+   "text": "bus adde ke paas",
+   "speak": "बस अड्डे के पास",
+   "ward_no": null
+  },
+  {
+   "lang": "hi",
+   "path": "4.wav",
+   "kind": "clip",
+   "source": "demo seed transcript for place-4 on the test clock (2026-10-19 10:00 IST)",
+   "text": "चक चंगरवां दुर्गा नगर के पास",
+   "speak": "चक चंगरवां दुर्गा नगर के पास",
+   "ward_no": 64
+  },
+  {
+   "lang": "hi",
+   "path": "5.wav",
+   "kind": "clip",
+   "source": "demo seed transcript for place-5 on the test clock (2026-10-19 10:00 IST)",
+   "text": "Gole chowk par",
+   "speak": "गोल चौक पर",
+   "ward_no": 32
+  },
+  {
+   "lang": "hi",
+   "path": "6.wav",
+   "kind": "clip",
+   "source": "demo seed transcript for place-6 on the test clock (2026-10-19 10:00 IST)",
+   "text": "wahan school ke saamne",
+   "speak": "वहाँ स्कूल के सामने",
+   "ward_no": null
+  },
+  {
+   "lang": "hi",
+   "path": "7.wav",
+   "kind": "clip",
+   "source": "demo seed transcript for place-7 on the test clock (2026-10-19 10:00 IST)",
+   "text": "Upper Muthi ke paas",
+   "speak": "अपर मुट्ठी के पास",
+   "ward_no": 66
+  },
+  {
+   "lang": "hi",
+   "path": "8.wav",
+   "kind": "clip",
+   "source": "demo seed transcript for place-8 on the test clock (2026-10-19 10:00 IST)",
+   "text": "नानक नगर पश्चिम में",
+   "speak": "नानक नगर पश्चिम में",
+   "ward_no": 42
+  },
+  {
+   "lang": "hi",
+   "path": "9.wav",
+   "kind": "clip",
+   "source": "demo seed transcript for place-9 on the test clock (2026-10-19 10:00 IST)",
+   "text": "hospital ke bahar",
+   "speak": "अस्पताल के बाहर",
+   "ward_no": null
+  },
+  {
+   "lang": "hi",
+   "path": "10.wav",
+   "kind": "clip",
+   "source": "demo seed transcript for place-10 on the test clock (2026-10-19 10:00 IST)",
+   "text": "नानक नगर उत्तर में",
+   "speak": "नानक नगर उत्तर में",
+   "ward_no": 44
+  },
+  {
+   "lang": "hi",
+   "path": "11.wav",
+   "kind": "clip",
+   "source": "demo seed transcript for place-11 on the test clock (2026-10-19 10:00 IST)",
+   "text": "mera ghar Channi Biza mein hai",
+   "speak": "मेरा घर छन्नी बीज़ा त्रिकुटा नगर में है",
+   "ward_no": 53
+  },
+  {
+   "lang": "hi",
+   "path": "12.wav",
+   "kind": "clip",
+   "source": "demo seed transcript for place-12 on the test clock (2026-10-19 10:00 IST)",
+   "text": "wahan school ke saamne",
+   "speak": "वहाँ स्कूल के सामने",
+   "ward_no": null
+  }
+ ],
+ "unavailable": []
+}

@@ -1,0 +1,62 @@
+{
+  "_meta": {
+    "lang": "en",
+    "bundle": "landing"
+  },
+  "landing": {
+    "page": {
+      "title": "Chaar Teeke"
+    },
+    "head": {
+      "title": "Notched share among street-dog bites",
+      "how": "Where bitten people saw the sterilisation notch, by area. Helps the ABC team choose where to work next."
+    },
+    "share": {
+      "label": "Whole city",
+      "window": "{from} to {to}"
+    },
+    "map": {
+      "title": "Areas",
+      "about": "the map colours",
+      "lookHere": "Look here",
+      "loading": "Drawing the map",
+      "legend": {
+        "darker": "Darker = higher notched share",
+        "look": "Orange outline = Look here",
+        "sim": "Dashed = simulated"
+      }
+    },
+    "call": {
+      "title": "Try the call",
+      "body": "Be the patient on your own phone.",
+      "open": "Open the phone here",
+      "newTab": "opens in a new tab"
+    },
+    "see": {
+      "title": "See it as",
+      "topic": "the views",
+      "about": "ABC (animal birth control) is the team that sterilises street dogs.",
+      "failed": "Could not switch the view."
+    },
+    "feed": {
+      "title": "Latest",
+      "report": "Bite report",
+      "alert": "Alert",
+      "call": "Call",
+      "missedCall": "Missed call",
+      "noPlace": "Place not known",
+      "placeWaiting": "Place waiting for a reviewer",
+      "ward": "Ward {no}",
+      "animal": {
+        "notched": "Notch seen",
+        "unnotched": "No notch seen",
+        "unsure": "Could not see",
+        "pet": "Pet dog",
+        "other": "Other animal",
+        "animal_unknown": "Animal not known",
+        "no_answer": "No answer"
+      },
+      "empty": "No reports or alerts yet"
+    }
+  }
+}

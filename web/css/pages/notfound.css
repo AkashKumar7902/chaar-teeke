@@ -1,0 +1,14 @@
+/* Page not found: a heading, a line and one button. */
+
+.notfound {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s-4);
+  padding-block-start: var(--s-7);
+}
+
+/* base.css gives body its own line height, which beats the one set on html[lang=ur]: Nastaliq needs 2 */
+html[lang="ur"] main {
+  line-height: var(--leading-urdu);
+}

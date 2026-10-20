@@ -1,0 +1,73 @@
+/* Sterilisation-team pages: coverage and the pieces the other team pages share. Logical properties only. */
+
+.page-title__window {
+  font-size: var(--text-sm);
+}
+
+/* ---- coverage */
+.cov-split {
+  display: grid;
+  gap: var(--s-5);
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+}
+@media (min-width: 64rem) {
+  .cov-split {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  }
+}
+.cov-hero .share__pct {
+  font-size: var(--text-3xl);
+}
+
+.area-list {
+  container-type: inline-size;
+}
+.area-row {
+  padding-block: var(--s-3);
+}
+.area-row__why {
+  color: var(--attention);
+}
+.area-row__chip {
+  flex: none;
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+}
+.area-row[aria-current="true"] {
+  background: var(--primary-tint);
+  box-shadow: inset 4px 0 0 var(--primary);
+}
+.cov-map__note {
+  min-block-size: 1.5em;
+}
+@media (max-width: 47.99rem) {
+  .area-row {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    column-gap: var(--s-3);
+  }
+  .area-row__chip {
+    margin-block-start: 0.25rem;
+  }
+  .area-row .list__side {
+    grid-column: 2;
+    justify-content: flex-start;
+  }
+}
+
+/* an empty status line takes no room */
+[role="status"]:empty {
+  display: none;
+}
+
+/* a fact that stays whole when its line wraps */
+.nw {
+  white-space: nowrap;
+}
+/* the two column headings share one height, with or without an (i) button */
+.cov-areas .list-head,
+.cov-map .list-head {
+  min-block-size: var(--target);
+}

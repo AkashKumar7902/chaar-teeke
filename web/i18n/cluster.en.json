@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "lang": "en",
+    "bundle": "cluster",
+    "note": "Area detail page."
+  },
+  "cluster": {
+    "back": "Coverage",
+    "window": "Bites in the last 12 weeks: {from} to {to}",
+    "bites": "Bites",
+    "perTenK": "Bites per 10,000 residents",
+    "popMissing": {
+      "one": "Population is missing for 1 ward.",
+      "other": "Population is missing for {count} wards."
+    },
+    "places": {
+      "title": "Where the bites happened",
+      "about": "Place types from what patients said. A count under 5 shows as <5.",
+      "unknown": "Place not said"
+    },
+    "rounds": {
+      "title": "Seen on rounds",
+      "topic": "rounds",
+      "about": "Dogs the team counted on its own rounds in these wards. They are counted separately from the bite-based share and are not mixed with it.",
+      "none": "No rounds recorded yet",
+      "notched": "Notch seen",
+      "unnotched": "No notch seen",
+      "unsure": "Could not see",
+      "wards": {
+        "one": "1 round, last 12 weeks",
+        "other": "{count} rounds, last 12 weeks"
+      }
+    },
+    "wards": {
+      "title": "Wards in this area",
+      "caption": "Wards in this area, counts only",
+      "ward": "Ward",
+      "bites": "Bites",
+      "alerts": "Alerts",
+      "worked": "Last worked",
+      "never": "Not recorded",
+      "countsOnly": "Counts only"
+    },
+    "worked": {
+      "title": "Wards the team covered",
+      "topic": "wards the team covered",
+      "about": "Bites in the weeks before and after the team covered a ward. Too early and too few to say the work caused a change.",
+      "caption": "Wards the team covered, bites before and after",
+      "signal": "Early signal",
+      "on": "Covered on",
+      "before": "Before",
+      "after": "After",
+      "weeks": {
+        "one": "1 week",
+        "other": "{count} weeks"
+      },
+      "tooEarly": "Too early",
+      "none": "No wards the team covered are recorded in this area"
+    },
+    "weekly": {
+      "title": "Bites each week",
+      "about": "Counts only. A week under 5 reads <5 and a week held back so that it cannot be worked out from the others reads hidden: both are hatched, never drawn as a length. The newest week is not over yet, so it reads low.",
+      "legend": "Hatched: under 5 or hidden. Dashed: the week is not over.",
+      "soFar": "{n} so far"
+    }
+  }
+}

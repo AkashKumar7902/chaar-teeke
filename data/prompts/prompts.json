@@ -1,0 +1,1257 @@
+{
+ "meta": {
+  "project": "Chaar Teeke",
+  "version": "0.4 draft",
+  "date": "2026-10-19",
+  "languages": {
+   "en": "English (team and demo)",
+   "hi": "Hindi (Devanagari)",
+   "doi": "Dogri (Devanagari)",
+   "ur": "Urdu (Nastaliq)"
+  },
+  "review_status_by_language": {
+   "en": "source-language",
+   "hi": "model-drafted, needs quick native check",
+   "doi": "MACHINE-DRAFTED, needs native Dogri review",
+   "ur": "MACHINE-DRAFTED, needs native Urdu review"
+  },
+  "warning": "Dogri and Urdu are machine-drafted. Hindi is model-drafted. None of this has been read by a native speaker. Do not record or print before review.",
+  "slots": {
+   "clinic": "Clinic name as spoken audio, e.g. GMC Jammu (one recorded clip per clinic per language)",
+   "date": "Spoken date: weekday + day number 1-31 + month (fragment clips)",
+   "time": "Spoken time of day, e.g. morning 9 o'clock (fragment clips)",
+   "n": "Dose number 1-5 (cardinal clips)",
+   "total": "Doses in this patient's regimen, 4 or 5 (cardinal clips)",
+   "clinic_phone": "Clinic phone number read digit by digit (digit clips 0-9)",
+   "ward": "Ward name (recorded per ward, 75 clips x 3 languages; or only wards that have been worked)"
+  },
+  "spoken_numbers": {
+   "hi": {
+    "0": "शून्य",
+    "1": "एक",
+    "2": "दो",
+    "3": "तीन",
+    "4": "चार",
+    "5": "पाँच",
+    "6": "छह",
+    "7": "सात",
+    "8": "आठ",
+    "9": "नौ",
+    "18": "अठारह"
+   },
+   "doi": {
+    "0": "जीरो",
+    "1": "इक्क",
+    "2": "दो",
+    "3": "त्रै",
+    "4": "चार",
+    "5": "पंज",
+    "6": "छे",
+    "7": "सत्त",
+    "8": "अट्ठ",
+    "9": "नौं",
+    "18": "अट्ठारां"
+   },
+   "ur": {
+    "0": "صفر",
+    "1": "ایک",
+    "2": "دو",
+    "3": "تین",
+    "4": "چار",
+    "5": "پانچ",
+    "6": "چھ",
+    "7": "سات",
+    "8": "آٹھ",
+    "9": "نو",
+    "18": "اٹھارہ"
+   },
+   "en": {
+    "0": "zero",
+    "1": "one",
+    "2": "two",
+    "3": "three",
+    "4": "four",
+    "5": "five",
+    "6": "six",
+    "7": "seven",
+    "8": "eight",
+    "9": "nine",
+    "18": "eighteen"
+   }
+  },
+  "key_map": {
+   "1 / 2 / 3...": "answers in menus (yes is always 1, no is always 2 where there are only two options)",
+   "0": "hear the full notice, at the first call's consent question (at most twice; a third press is a wrong key)",
+   "*": "hear this again",
+   "8": "this call is not for me (wrong number), at the first line of a reminder or morning call",
+   "9": "stop the reminder calls, on reminder calls and in the first call's notice"
+  },
+  "flows": {
+   "Missed call received": "(no audio) Hang up without answering so the caller pays nothing. Call back within the hour. If the number is already enrolled and the patient has agreed to reminders, call back with ENR_DUP only (9 stops the calls). If the first call was never completed, the first call is placed again instead.",
+   "First call": "SYS_LANG (first call only) > FC_HELLO > FC_NOTICE (short) > FC_CONSENT_Q [0: FC_NOTICE_FULL, then FC_CONSENT_Q again, twice at most] (FC_CONSENT_Q_G when the clinic marked a guardian's agreement) [consent 2: FC_CONSENT_NO, delete number, end] > [guardian: FC_GUARD_OK] > FC_QCONSENT (2: skip the four questions) > FC_PLACE (record) > FC_PLACETYPE > FC_ANIMAL > [1 street dog: FC_NOTCH] > FC_SICK > [1: FC_SICK_YES] > FC_CLOSE with the next dose from the dose table (FC_CLOSE_COME if its date has passed, FC_CLOSE_LAST if none is left). Nothing the patient presses chooses the date.",
+   "Evening-before reminder": "RM_GATE (1: that is me, 8: not for me; silence ends with SYS_BYE) > RM_HELLO > [RM_WHO when the phone is shared] > RM_EVE_BODY (or RM_EVE_BODY_OUT when the vaccine-out switch is on) > RM_EVE_END. Key 9 stops the calls (with a confirm), * repeats.",
+   "Missed-dose morning call": "RM_GATE > RM_HELLO > [RM_WHO] > RM_MISS_Q > [1: RM_MISS_TAKEN or RM_MISS_TAKEN_LAST; the clinic still has to confirm it] [2: RM_MISS_NOT]",
+   "Vaccine-out notice": "VAX_OUT_NOTICE > RM_EVE_END; later VAX_BACK when the switch is cleared.",
+   "Final call": "RM_HELLO > FIN_Q > [1: FIN_ALL] [2: FIN_MISSED] > FIN_TEAM (only if the ward was worked) > FIN_DELETE",
+   "Wrong number / opt-out": "Key 8 at RM_GATE: WN_CONFIRM > WN_DONE (the number is deleted and the clinic is told it needs a new one). Key 9: OPT_CONFIRM > OPT_DONE. After the stop the number is deleted at once.",
+   "No input": "6 s of silence > SYS_NOINPUT > repeat the question (up to 3 times in total) > SYS_GIVEUP_*. The unanswered question is stored as 'no answer'. The system never fills in a default."
+  },
+  "spoken_dates": {
+   "note": "Words for the date slot clips: weekday (Monday first), day 1-31, month. Machine-drafted, needs native review (Dogri day numbers above 10 and weekday names most of all).",
+   "review_status": "machine_draft_needs_native_review",
+   "weekdays": {
+    "hi": [
+     "सोमवार",
+     "मंगलवार",
+     "बुधवार",
+     "गुरुवार",
+     "शुक्रवार",
+     "शनिवार",
+     "रविवार"
+    ],
+    "doi": [
+     "सोमबार",
+     "मंगलबार",
+     "बुधबार",
+     "बीरबार",
+     "शुक्करबार",
+     "शनिच्चरबार",
+     "ऐतबार"
+    ],
+    "ur": [
+     "پیر",
+     "منگل",
+     "بدھ",
+     "جمعرات",
+     "جمعہ",
+     "ہفتہ",
+     "اتوار"
+    ]
+   },
+   "days": {
+    "hi": {
+     "1": "एक",
+     "2": "दो",
+     "3": "तीन",
+     "4": "चार",
+     "5": "पाँच",
+     "6": "छह",
+     "7": "सात",
+     "8": "आठ",
+     "9": "नौ",
+     "10": "दस",
+     "11": "ग्यारह",
+     "12": "बारह",
+     "13": "तेरह",
+     "14": "चौदह",
+     "15": "पंद्रह",
+     "16": "सोलह",
+     "17": "सत्रह",
+     "18": "अठारह",
+     "19": "उन्नीस",
+     "20": "बीस",
+     "21": "इक्कीस",
+     "22": "बाईस",
+     "23": "तेईस",
+     "24": "चौबीस",
+     "25": "पच्चीस",
+     "26": "छब्बीस",
+     "27": "सत्ताईस",
+     "28": "अट्ठाईस",
+     "29": "उनतीस",
+     "30": "तीस",
+     "31": "इकतीस"
+    },
+    "doi": {
+     "1": "इक्क",
+     "2": "दो",
+     "3": "त्रै",
+     "4": "चार",
+     "5": "पंज",
+     "6": "छे",
+     "7": "सत्त",
+     "8": "अट्ठ",
+     "9": "नौं",
+     "10": "दस",
+     "11": "ग्यारां",
+     "12": "बारां",
+     "13": "तेरां",
+     "14": "चौदां",
+     "15": "पंदरां",
+     "16": "सोलां",
+     "17": "सतारां",
+     "18": "अट्ठारां",
+     "19": "उन्नी",
+     "20": "बीह्",
+     "21": "इक्कीह्",
+     "22": "बाईं",
+     "23": "तेईं",
+     "24": "चौबीह्",
+     "25": "पंजीह्",
+     "26": "छब्बीह्",
+     "27": "सत्ताईं",
+     "28": "अट्ठाईं",
+     "29": "उनत्तीह्",
+     "30": "तीह्",
+     "31": "इकत्तीह्"
+    },
+    "ur": {
+     "1": "ایک",
+     "2": "دو",
+     "3": "تین",
+     "4": "چار",
+     "5": "پانچ",
+     "6": "چھ",
+     "7": "سات",
+     "8": "آٹھ",
+     "9": "نو",
+     "10": "دس",
+     "11": "گیارہ",
+     "12": "بارہ",
+     "13": "تیرہ",
+     "14": "چودہ",
+     "15": "پندرہ",
+     "16": "سولہ",
+     "17": "سترہ",
+     "18": "اٹھارہ",
+     "19": "انیس",
+     "20": "بیس",
+     "21": "اکیس",
+     "22": "بائیس",
+     "23": "تئیس",
+     "24": "چوبیس",
+     "25": "پچیس",
+     "26": "چھبیس",
+     "27": "ستائیس",
+     "28": "اٹھائیس",
+     "29": "انتیس",
+     "30": "تیس",
+     "31": "اکتیس"
+    }
+   },
+   "months": {
+    "hi": {
+     "1": "जनवरी",
+     "2": "फ़रवरी",
+     "3": "मार्च",
+     "4": "अप्रैल",
+     "5": "मई",
+     "6": "जून",
+     "7": "जुलाई",
+     "8": "अगस्त",
+     "9": "सितंबर",
+     "10": "अक्टूबर",
+     "11": "नवंबर",
+     "12": "दिसंबर"
+    },
+    "doi": {
+     "1": "जनवरी",
+     "2": "फरवरी",
+     "3": "मार्च",
+     "4": "अप्रैल",
+     "5": "मई",
+     "6": "जून",
+     "7": "जुलाई",
+     "8": "अगस्त",
+     "9": "सितंबर",
+     "10": "अक्टूबर",
+     "11": "नवंबर",
+     "12": "दिसंबर"
+    },
+    "ur": {
+     "1": "جنوری",
+     "2": "فروری",
+     "3": "مارچ",
+     "4": "اپریل",
+     "5": "مئی",
+     "6": "جون",
+     "7": "جولائی",
+     "8": "اگست",
+     "9": "ستمبر",
+     "10": "اکتوبر",
+     "11": "نومبر",
+     "12": "دسمبر"
+    }
+   }
+  },
+  "spoken_times": {
+   "note": "Words for the time slot clips, by HHMM (the clinic's visit time). Only on-the-hour mornings are drafted; a clinic with another time needs its words added here. Machine-drafted, needs native review.",
+   "review_status": "machine_draft_needs_native_review",
+   "hi": {
+    "0900": "सुबह नौ बजे",
+    "1000": "सुबह दस बजे",
+    "1100": "सुबह ग्यारह बजे"
+   },
+   "doi": {
+    "0900": "भ्यागा नौं बजे",
+    "1000": "भ्यागा दस बजे",
+    "1100": "भ्यागा ग्यारां बजे"
+   },
+   "ur": {
+    "0900": "صبح نو بجے",
+    "1000": "صبح دس بجے",
+    "1100": "صبح گیارہ بجے"
+   }
+  }
+ },
+ "prompts": [
+  {
+   "id": "SYS_LANG",
+   "call": "all",
+   "purpose": "Language choice on the very first call (the played audio is the three language lines one after another)",
+   "keys": {
+    "1": "Hindi",
+    "2": "Dogri",
+    "3": "Urdu"
+   },
+   "text": {
+    "en": "For Hindi, press 1. For Dogri, press 2. For Urdu, press 3.",
+    "hi": "हिंदी के लिए 1 दबाएँ।",
+    "doi": "डोगरी लेई 2 दबाओ।",
+    "ur": "اردو کے لیے 3 دبائیں۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Played as hi + doi + ur lines in a row, in that order. English is not offered to patients (English column is for the team and for visitors). Open question: language per clinic number instead."
+  },
+  {
+   "id": "SYS_NOINPUT",
+   "call": "all",
+   "purpose": "No key pressed in time: played once, then the question repeats",
+   "keys": {},
+   "text": {
+    "en": "We did not hear a key. Please listen again.",
+    "hi": "हमें कोई बटन नहीं सुनाई दिया। कृपया दोबारा सुनिए।",
+    "doi": "असेंगी कोई बटन नेईं सुनोआ। मेहरबानी करियै फही सुनो।",
+    "ur": "ہمیں کوئی بٹن سنائی نہیں دیا۔ براہِ کرم دوبارہ سنیے۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Rule: wait 6 s after the question. 1st silence: this prompt + repeat. 2nd silence: this prompt + repeat. 3rd silence: SYS_GIVEUP. The unanswered question is stored as 'no answer', never as a default value."
+  },
+  {
+   "id": "SYS_WRONGKEY",
+   "call": "all",
+   "purpose": "A key that is not on the menu was pressed",
+   "keys": {},
+   "text": {
+    "en": "That key is not on the list. Please listen again.",
+    "hi": "यह बटन सूची में नहीं है। कृपया दोबारा सुनिए।",
+    "doi": "एह् बटन सूची च नेईं ऐ। मेहरबानी करियै फही सुनो।",
+    "ur": "یہ بٹن فہرست میں نہیں ہے۔ براہِ کرم دوبارہ سنیے۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Counts as one of the 3 tries."
+  },
+  {
+   "id": "SYS_GIVEUP_FIRST",
+   "call": "first call",
+   "purpose": "Three silences on the first call: end politely, call again later",
+   "keys": {},
+   "text": {
+    "en": "We could not get your answer. We will call you again soon. Goodbye.",
+    "hi": "हमें आपका जवाब नहीं मिला। हम आपको थोड़ी देर में फिर फ़ोन करेंगे। नमस्ते।",
+    "doi": "असेंगी तुंदा जवाब नेईं मिल्ले। असें थोह्ड़ी देर परैंत्त फही फोन करगे। नमस्ते।",
+    "ur": "ہمیں آپ کا جواب نہیں ملا۔ ہم تھوڑی دیر میں آپ کو دوبارہ فون کریں گے۔ خدا حافظ۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Retry schedule for unanswered calls is an open question (Kilkari used 3 tries on day 1; see VOICE.md)."
+  },
+  {
+   "id": "SYS_GIVEUP_MISS",
+   "call": "missed-dose call",
+   "purpose": "Three silences on the missed-dose call",
+   "keys": {},
+   "text": {
+    "en": "We could not get your answer. Please go to the clinic if you have not taken the injection. Goodbye.",
+    "hi": "हमें आपका जवाब नहीं मिला। अगर आपने टीका नहीं लगवाया है तो कृपया क्लिनिक जाइए। नमस्ते।",
+    "doi": "असेंगी तुंदा जवाब नेईं मिल्ले। जेकर तुसें टीका नेईं लुआए तां मेहरबानी करियै क्लिनिक जाओ। नमस्ते।",
+    "ur": "ہمیں آپ کا جواب نہیں ملا۔ اگر آپ نے ٹیکہ نہیں لگوایا ہے تو براہِ کرم کلینک جائیے۔ خدا حافظ۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": ""
+  },
+  {
+   "id": "SYS_HEAR_AGAIN",
+   "call": "all",
+   "purpose": "Hint at the end of reminder calls",
+   "keys": {
+    "*": "hear again"
+   },
+   "text": {
+    "en": "To hear this again, press star.",
+    "hi": "इसे दोबारा सुनने के लिए स्टार दबाएँ।",
+    "doi": "एह् फही सुनने लेई स्टार दबाओ।",
+    "ur": "اسے دوبارہ سننے کے لیے اسٹار دبائیں۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": ""
+  },
+  {
+   "id": "SYS_BYE",
+   "call": "all",
+   "purpose": "Plain thank-you and goodbye",
+   "keys": {},
+   "text": {
+    "en": "Thank you. Goodbye.",
+    "hi": "धन्यवाद। नमस्ते।",
+    "doi": "मेहरबानी। नमस्ते।",
+    "ur": "شکریہ۔ خدا حافظ۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": ""
+  },
+  {
+   "id": "RM_GATE",
+   "call": "reminders (first line)",
+   "purpose": "Neutral opening: nothing about health, the clinic, a dose or a ward until the listener presses 1 (they are the person who gave the missed call)",
+   "keys": {
+    "1": "that is me",
+    "8": "not for me"
+   },
+   "text": {
+    "en": "Hello. This is a recorded call for the person who gave a missed call. If that is you, press 1. If this call is not for you, press 8.",
+    "hi": "नमस्ते। यह उस व्यक्ति के लिए रिकॉर्डेड फ़ोन है जिसने मिस्ड कॉल दी थी। अगर वह आप हैं तो 1 दबाएँ। अगर यह फ़ोन आपके लिए नहीं है तो 8 दबाएँ।",
+    "doi": "नमस्ते। एह् उस माहनू लेई रिकॉर्ड कीता होआ फोन ऐ जिसने मिस्ड कॉल दित्ती ही। जेकर ओह् तुस ओ तां 1 दबाओ। जेकर एह् फोन तुंदे लेई नेईं ऐ तां 8 दबाओ।",
+    "ur": "السلام علیکم۔ یہ اس شخص کے لیے ریکارڈ شدہ فون ہے جس نے مسڈ کال دی تھی۔ اگر وہ آپ ہیں تو 1 دبائیں۔ اگر یہ فون آپ کے لیے نہیں ہے تو 8 دبائیں۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Played before RM_HELLO on every evening-before and morning-after call. Key 9 does nothing here: nobody has said who they are. Silence or any other key ends the call with SYS_BYE and the call is tried again later."
+  },
+  {
+   "id": "ENR_DUP",
+   "call": "missed call (repeat)",
+   "purpose": "Same number gives another missed call while already enrolled: one short call, no questions; says what a missed call does and offers 9 to stop",
+   "keys": {
+    "9": "stop these calls"
+   },
+   "text": {
+    "en": "You are already signed up for calls before each injection. A missed call does not stop them. To stop, press 9 now.",
+    "hi": "आप हर टीके से पहले आने वाले फ़ोन के लिए पहले से जुड़े हैं। मिस्ड कॉल से ये बंद नहीं होते। बंद करवाने के लिए अभी 9 दबाएँ।",
+    "doi": "तुस हर टीके थमां पैह्लें औने आले फोनें लेई पैह्लें थमां जुड़े दे ओ। मिस्ड कॉल कन्नै एह् बंद नेईं होंदे। बंद करुआने लेई हुन 9 दबाओ।",
+    "ur": "آپ ہر ٹیکے سے پہلے آنے والے فون کے لیے پہلے سے شامل ہیں۔ مسڈ کال سے یہ بند نہیں ہوتے۔ بند کروانے کے لیے ابھی 9 دبائیں۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "machine_draft_needs_native_review",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "A missed call never stops the calls by itself. 9 here asks OPT_CONFIRM, and only a second 9 stops them. Trimmed 2026-10-19 from about 16 s to about 10 s: the closing 'Goodbye' and 'you do not need to call again' went; 'already signed up', the call before each injection, 'a missed call does not stop them' and 'press 9 now to stop' stay."
+  },
+  {
+   "id": "FC_HELLO",
+   "call": "first call",
+   "purpose": "ENROLMENT CONFIRMATION: tells the person why the phone is ringing (the callback IS the confirmation; no SMS is sent)",
+   "keys": {},
+   "text": {
+    "en": "Hello. This is a recorded call from the anti-rabies clinic at {clinic}. You gave a missed call for dog-bite injection reminders.",
+    "hi": "नमस्ते। यह {clinic} के रेबीज़ टीका केंद्र की ओर से रिकॉर्डेड फ़ोन है। आपने कुत्ते के काटने के टीके की याद दिलाने के लिए मिस्ड कॉल दी थी।",
+    "doi": "नमस्ते। एह् {clinic} दे रेबीज़ टीका केंदर दा रिकॉर्ड कीता होआ फोन ऐ। तुसें कुत्ते दे कट्टने दे टीके दी याद करुआने लेई मिस्ड कॉल दित्ती ही।",
+    "ur": "السلام علیکم۔ یہ {clinic} کے ریبیز ٹیکہ مرکز کی طرف سے ریکارڈ شدہ کال ہے۔ آپ نے کتے کے کاٹنے کے ٹیکے کی یاد دہانی کے لیے مسڈ کال دی تھی۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Name of the sponsoring body (clinic only, or clinic + Jammu Smart City) is an open question. Urdu greeting could be Adaab; owner/native speaker to choose."
+  },
+  {
+   "id": "FC_GUARD_OK",
+   "call": "first call (under 18)",
+   "purpose": "Clinic has ticked the guardian box: ask a parent/guardian to take the call",
+   "keys": {},
+   "text": {
+    "en": "The clinic has marked a parent or guardian's agreement. Please let the parent or guardian answer the next questions.",
+    "hi": "क्लिनिक ने माता-पिता या अभिभावक की सहमति दर्ज कर ली है। अगले सवालों के जवाब कृपया माता-पिता या अभिभावक दें।",
+    "doi": "क्लिनिक नै माता-पिता जां अभिभावक दी सहमति दर्ज करी लैती ऐ। अगले सुआलें दे जवाब मेहरबानी करियै माता-पिता जां अभिभावक देन।",
+    "ur": "کلینک نے والدین یا سرپرست کی رضامندی درج کر لی ہے۔ اگلے سوالوں کے جواب براہِ کرم والدین یا سرپرست دیں۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": ""
+  },
+  {
+   "id": "FC_NOTICE",
+   "call": "first call",
+   "purpose": "CONSENT NOTICE, SHORT (about 20 s): every item in a line each, before the key; 0 plays the full notice",
+   "keys": {
+    "9": "stop these calls (works at any point)",
+    "0": "hear the full notice (FC_NOTICE_FULL), at most twice"
+   },
+   "text": {
+    "en": "We call this number before each injection, and delete it 7 days after the last. We ask where the dog bit; your voice is recorded for the place and deleted once it is found. Answers are kept apart from your number. Press 9 at any time to stop, or press 0 for the full notice.",
+    "hi": "हम हर टीके से पहले इस नंबर पर फ़ोन करेंगे; आख़िरी टीके के 7 दिन बाद नंबर मिटा देंगे। पूछेंगे कि कुत्ते ने कहाँ काटा; आपकी आवाज़ रिकॉर्ड होगी और जगह मिलते ही मिट जाएगी। जवाब आपके नंबर से अलग रहते हैं। कभी भी रोकने के लिए 9, पूरी सूचना के लिए 0 दबाएँ।",
+    "doi": "असें हर टीके थमां पैह्लें इस नंबर उप्पर फोन करगे; आखरी टीके दे 7 दिनें परैंत्त नंबर मटाई दित्ता जाग। पुच्छगे के कुत्ते नै कुत्थें कट्टेआ; तुंदी अवाज़ रिकॉर्ड होग ते पता लग्गदे गै मटाई दित्ती जाग। जवाब तुंदे नंबर थमां बक्ख रौंदे न। कुसै बी बेल्लै बंद करुआने लेई 9, पूरा नोटिस सुनने लेई 0 दबाओ।",
+    "ur": "ہم ہر ٹیکے سے پہلے اس نمبر پر فون کریں گے، آخری ٹیکے کے 7 دن بعد نمبر مٹا دیں گے۔ پوچھیں گے کہ کتے نے کہاں کاٹا، آپ کی آواز ریکارڈ ہوگی اور جگہ ملتے ہی مٹ جائے گی۔ جوابات آپ کے نمبر سے الگ رہتے ہیں۔ کسی بھی وقت روکنے کے لیے 9، پوری اطلاع کے لیے 0 دبائیں۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "machine_draft_needs_native_review",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Layered notice, 2026-10-19: this short notice names every item (the call before each injection, the number's deletion 7 days after the last injection, the place question and the voice recording and its deletion, answers kept apart from the number, key 9, key 0) and FC_NOTICE_FULL holds the full text. It replaces a 127-word notice (52 s) that was the main reason the first call took over two minutes. Wording must match the printed sticker and the /privacy page. Dogri and Urdu are machine drafts."
+  },
+  {
+   "id": "FC_NOTICE_FULL",
+   "call": "first call (key 0 at the consent question)",
+   "purpose": "CONSENT NOTICE, FULL: every item, purpose, withdrawal and complaint route; heard only when the listener presses 0 after the short notice",
+   "keys": {
+    "9": "stop these calls (works at any point)"
+   },
+   "text": {
+    "en": "We will call this number before each injection. We kept this number from your missed call, only for this, and will delete it 7 days after the last injection. We will also ask where the dog bit and what the dog was like. When you say the place, your voice is recorded. The recording is deleted once the place is found, or after 7 days. Your answers are kept apart from your number, but they are tied to your entry in the clinic's register. If the dog looked sick, the clinic may call you. To stop these calls at any time, press 9. If you have a complaint, tell the clinic first. If it is not solved, you can write to the Data Protection Board of India.",
+    "hi": "हम हर टीके से पहले इस नंबर पर फ़ोन करेंगे। यह नंबर हमने आपकी मिस्ड कॉल से रखा है, सिर्फ़ इसी काम के लिए, और आख़िरी टीके के 7 दिन बाद मिटा दिया जाएगा। हम यह भी पूछेंगे कि कुत्ते ने कहाँ काटा और कुत्ता कैसा था। जगह बोलने पर आपकी आवाज़ रिकॉर्ड होगी। जगह तय होते ही, या 7 दिन बाद, रिकॉर्डिंग मिटा दी जाएगी। आपके जवाब आपके नंबर से अलग रखे जाते हैं, पर क्लिनिक के रजिस्टर में आपकी एंट्री से जुड़े रहते हैं। कुत्ता बीमार लगा हो तो क्लिनिक आपको फ़ोन कर सकता है। ये फ़ोन किसी भी समय बंद करवाने के लिए 9 दबाएँ। कोई शिकायत हो तो पहले क्लिनिक को बताएँ। हल न हो तो आप डेटा प्रोटेक्शन बोर्ड ऑफ़ इंडिया को लिख सकते हैं।",
+    "doi": "असें हर टीके थमां पैह्लें इस नंबर उप्पर फोन करगे। एह् नंबर असें तुंदी मिस्ड कॉल थमां रक्खेआ ऐ, सिर्फ इस कम्म लेई, ते आखरी टीके दे 7 दिनें परैंत्त मटाई दित्ता जाग। असें एह् बी पुच्छगे के कुत्ते नै कुत्थें कट्टेआ ते कुत्ता किय्यां दा हा। जिसलै तुस दस्सगे के कुत्ते नै कुत्थें कट्टेआ, तुंदी अवाज़ रिकॉर्ड होग। पता लग्गदे गै, जां 7 दिनें परैंत्त, रिकॉर्डिंग मटाई दित्ती जाग। तुंदे जवाब तुंदे नंबर थमां बक्ख रक्खे जंदे न, पर क्लिनिक दे रजिस्टर च तुंदी एंट्री कन्नै जुड़े दे रौंदे न। जेकर कुत्ता बमार लग्गेआ होऐ तां क्लिनिक तुसेंगी फोन करी सकदा ऐ। एह् फोन कुसै बी बेल्लै बंद करुआने लेई 9 दबाओ। कोई शकैत होऐ तां पैह्लें क्लिनिक गी दस्सो। जेकर हल नेईं होऐ तां तुस डेटा प्रोटेक्शन बोर्ड ऑफ इंडिया गी लिखी सकदे ओ।",
+    "ur": "ہم ہر ٹیکے سے پہلے اس نمبر پر فون کریں گے۔ یہ نمبر ہم نے آپ کی مسڈ کال سے رکھا ہے، صرف اسی کام کے لیے، اور آخری ٹیکے کے 7 دن بعد مٹا دیا جائے گا۔ ہم یہ بھی پوچھیں گے کہ کتے نے کہاں کاٹا اور کتا کیسا تھا۔ جگہ بتانے پر آپ کی آواز ریکارڈ ہوگی۔ جگہ طے ہوتے ہی، یا 7 دن بعد، ریکارڈنگ مٹا دی جائے گی۔ آپ کے جوابات آپ کے نمبر سے الگ رکھے جاتے ہیں، مگر کلینک کے رجسٹر میں آپ کے اندراج سے جڑے رہتے ہیں۔ کتا بیمار لگا ہو تو کلینک آپ کو فون کر سکتا ہے۔ یہ فون کسی بھی وقت بند کروانے کے لیے 9 دبائیں۔ کوئی شکایت ہو تو پہلے کلینک کو بتائیں۔ حل نہ ہو تو آپ ڈیٹا پروٹیکشن بورڈ آف انڈیا کو لکھ سکتے ہیں۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "machine_draft_needs_native_review",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "The full notice (DPDP rule 3: itemised, purpose, how to withdraw, how to complain). Played after FC_NOTICE only when the listener presses 0 at the consent question, at most twice a call; then the consent question is asked again. The notice version stored with the consent says whether this was heard. Wording must match the printed sticker and the /privacy page. Dogri and Urdu are machine drafts, as is every other changed non-English line. Complaint route: the clinic first, then the Data Protection Board of India."
+  },
+  {
+   "id": "FC_CONSENT_Q",
+   "call": "first call (adult)",
+   "purpose": "CONSENT KEY",
+   "keys": {
+    "1": "agree",
+    "2": "no reminders"
+   },
+   "text": {
+    "en": "To agree, press 1. If you do not want reminders, press 2.",
+    "hi": "सहमत होने के लिए 1 दबाएँ। अगर आप याद दिलाने वाले फ़ोन नहीं चाहते तो 2 दबाएँ।",
+    "doi": "सहमत होने लेई 1 दबाओ। जेकर तुसें याद करुआने आले फोन नेईं चांदे तां 2 दबाओ।",
+    "ur": "رضامند ہونے کے لیے 1 دبائیں۔ اگر آپ یاد دہانی کے فون نہیں چاہتے تو 2 دبائیں۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": ""
+  },
+  {
+   "id": "FC_CONSENT_Q_G",
+   "call": "first call (under 18)",
+   "purpose": "CONSENT KEY, parent or guardian version",
+   "keys": {
+    "1": "agree",
+    "2": "no reminders"
+   },
+   "text": {
+    "en": "Parent or guardian: to agree, press 1. If you do not want reminders, press 2.",
+    "hi": "माता-पिता या अभिभावक: सहमत होने के लिए 1 दबाएँ। अगर आप याद दिलाने वाले फ़ोन नहीं चाहते तो 2 दबाएँ।",
+    "doi": "माता-पिता जां अभिभावक: सहमत होने लेई 1 दबाओ। जेकर तुसें याद करुआने आले फोन नेईं चांदे तां 2 दबाओ।",
+    "ur": "والدین یا سرپرست: رضامند ہونے کے لیے 1 دبائیں۔ اگر آپ یاد دہانی کے فون نہیں چاہتے تو 2 دبائیں۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Played instead of FC_CONSENT_Q when the clinic has marked a guardian's agreement. Pressing 1 here is willingness only; the in-person tick on the bite card is the consent record."
+  },
+  {
+   "id": "FC_QCONSENT",
+   "call": "first call",
+   "purpose": "QUESTIONS CONSENT: the four bite questions are optional; asked after reminders consent, before the dose question",
+   "keys": {
+    "1": "answer the four questions",
+    "2": "skip them"
+   },
+   "text": {
+    "en": "We would also like to ask four short questions about the bite. They are kept without your number. To answer, press 1. To skip, press 2.",
+    "hi": "हम कुत्ते के काटने के बारे में चार छोटे सवाल भी पूछना चाहेंगे। इनके जवाब आपके नंबर के बिना रखे जाते हैं। जवाब देने के लिए 1 दबाएँ। छोड़ने के लिए 2 दबाएँ।",
+    "doi": "असें कुत्ते दे कट्टने बारै चार निक्के सुआल बी पुच्छना चांगे। इनें दे जवाब तुंदे नंबर दे बगैर रक्खे जंदे न। जवाब देने लेई 1 दबाओ। छड्डने लेई 2 दबाओ।",
+    "ur": "ہم کتے کے کاٹنے کے بارے میں چار چھوٹے سوال بھی پوچھنا چاہیں گے۔ ان کے جواب آپ کے نمبر کے بغیر رکھے جاتے ہیں۔ جواب دینے کے لیے 1 دبائیں۔ چھوڑنے کے لیے 2 دبائیں۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "machine_draft_needs_native_review",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Added 2026-10-19. Skipping (2) means the place, place type, animal, notch and sick-dog questions are not asked; the dose question still is. Wording to match the printed sticker notice."
+  },
+  {
+   "id": "FC_CONSENT_NO",
+   "call": "first call",
+   "purpose": "Consent refused: promise and keep it (delete the number now)",
+   "keys": {},
+   "text": {
+    "en": "Alright. We will not call you again, and we are deleting this number now. Please come to the clinic on the date on your card. Goodbye.",
+    "hi": "ठीक है। हम आपको दोबारा फ़ोन नहीं करेंगे और यह नंबर अभी मिटा रहे हैं। कृपया कार्ड पर लिखी तारीख़ को क्लिनिक आइए। नमस्ते।",
+    "doi": "ठीक ऐ। असें तुसेंगी फही फोन नेईं करगे ते एह् नंबर हुनै मटाई ओड़दे आं। मेहरबानी करियै कार्ड उप्पर लिखी दी तरीख़ उप्पर क्लिनिक आओ। नमस्ते।",
+    "ur": "ٹھیک ہے۔ ہم آپ کو دوبارہ فون نہیں کریں گے اور یہ نمبر ابھی مٹا رہے ہیں۔ براہِ کرم کارڈ پر لکھی تاریخ پر کلینک آئیے۔ خدا حافظ۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": ""
+  },
+  {
+   "id": "FC_PLACE",
+   "call": "first call",
+   "purpose": "BITE PLACE, spoken. The key question. Recorded for ASR.",
+   "keys": {
+    "(voice)": "say the mohalla or nearest landmark; ends on 2 s of silence, max 12 s"
+   },
+   "text": {
+    "en": "Where did the dog bite? Not your home or the hospital. Your voice is recorded. After the beep, say the mohalla or nearest landmark.",
+    "hi": "कुत्ते ने कहाँ काटा? घर या अस्पताल नहीं। आपकी आवाज़ रिकॉर्ड होगी। बीप के बाद मोहल्ले का नाम या पास की पहचान वाली जगह बोलिए।",
+    "doi": "कुत्ते नै कुत्थें कट्टेआ? घर जां हस्पताल नेईं। तुंदी अवाज़ रिकॉर्ड होग। बीप दे बाद मुहल्ले दा नां जां नेड़ले दी पन्छान आली जगह्ज बोल्लो।",
+    "ur": "کتے نے کہاں کاٹا؟ گھر یا ہسپتال نہیں۔ آپ کی آواز ریکارڈ ہوگی۔ بیپ کے بعد محلے کا نام یا قریب کی پہچان والی جگہ بولیے۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "machine_draft_needs_native_review",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Wording from the dossier. Keep the beep. Dogri 'जगह्ज' is a guess; native speaker to fix. Test with real mohalla names before locking the text. Trimmed 2026-10-19 (layered-notice change) from about 15 s to about 10 s: 'not where you live, not the hospital' became 'not your home or the hospital' (the Hindi, Dogri and Urdu say 'not home or hospital'); the voice-recording line and the beep stay."
+  },
+  {
+   "id": "FC_PLACE_AGAIN",
+   "call": "first call",
+   "purpose": "Nothing heard after the beep: ask once more",
+   "keys": {
+    "(voice)": "as FC_PLACE"
+   },
+   "text": {
+    "en": "We did not hear you. After the beep, please say the mohalla or the nearest landmark.",
+    "hi": "हमें आपकी आवाज़ नहीं सुनाई दी। बीप के बाद कृपया मोहल्ले का नाम या सबसे पास की जगह बोलिए।",
+    "doi": "असेंगी तुंदी अवाज़ नेईं सुनोई। बीप दे बाद मेहरबानी करियै मुहल्ले दा नां जां सारें थमां नेड़ले दी जगह्ज बोल्लो।",
+    "ur": "ہمیں آپ کی آواز سنائی نہیں دی۔ بیپ کے بعد براہِ کرم محلے کا نام یا سب سے قریب کی جگہ بولیے۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "After a second silence: record 'place not captured' and move on (no guess is made)."
+  },
+  {
+   "id": "FC_PLACETYPE",
+   "call": "first call",
+   "purpose": "Place type",
+   "keys": {
+    "1": "home or street (home_street)",
+    "2": "school (school)",
+    "3": "hospital (hospital)",
+    "4": "bus stand or market (bus_market)",
+    "5": "anywhere else (other)"
+   },
+   "text": {
+    "en": "What kind of place was it? Press 1 for a home or the street. Press 2 for a school. Press 3 for a hospital. Press 4 for a bus stand or market. Press 5 for anywhere else.",
+    "hi": "वह किस तरह की जगह थी? घर या गली-सड़क के लिए 1 दबाएँ। स्कूल के लिए 2। अस्पताल के लिए 3। बस अड्डे या बाज़ार के लिए 4। और कहीं भी हो तो 5 दबाएँ।",
+    "doi": "ओह् केह्ड़ी जगह्ज ही? घर जां गली-सड़क लेई 1 दबाओ। स्कूल लेई 2। हस्पताल लेई 3। बस अड्डे जां बजार लेई 4। होर कुत्थें बी होऐ तां 5 दबाओ।",
+    "ur": "وہ کس طرح کی جگہ تھی؟ گھر یا گلی سڑک کے لیے 1 دبائیں۔ اسکول کے لیے 2۔ ہسپتال کے لیے 3۔ بس اڈے یا بازار کے لیے 4۔ کہیں اور ہو تو 5 دبائیں۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "machine_draft_needs_native_review",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Keys match the schema's place_type values one to one: 1 home_street, 2 school, 3 hospital, 4 bus_market, 5 other (the flow's key map must be 1 home_street, 2 school, 3 hospital, 4 bus_market, 5 other). Changed 2026-10-19."
+  },
+  {
+   "id": "FC_ANIMAL",
+   "call": "first call",
+   "purpose": "Which animal",
+   "keys": {
+    "1": "street dog",
+    "2": "pet or owned dog",
+    "3": "monkey, cat or other",
+    "4": "not sure"
+   },
+   "text": {
+    "en": "Which animal bit? Press 1 for a street dog. Press 2 for a dog that has an owner. Press 3 for a monkey, cat or other animal. Press 4 if you are not sure.",
+    "hi": "किस जानवर ने काटा? गली के कुत्ते के लिए 1 दबाएँ। मालिक वाले कुत्ते के लिए 2। बंदर, बिल्ली या किसी और जानवर के लिए 3। पक्का न पता हो तो 4 दबाएँ।",
+    "doi": "केह्ड़े जानवर नै कट्टेआ? गली दे कुत्ते लेई 1 दबाओ। मालक आले कुत्ते लेई 2। बांदर, बिल्ली जां कोई होर जानवर लेई 3। पक्का नेईं पता होऐ तां 4 दबाओ।",
+    "ur": "کس جانور نے کاٹا؟ گلی کے کتے کے لیے 1 دبائیں۔ مالک والے کتے کے لیے 2۔ بندر، بلی یا کسی اور جانور کے لیے 3۔ پکا پتہ نہ ہو تو 4 دبائیں۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Dossier has one 5-way menu (notch / no notch / could not see / pet / other). This script splits it into animal then notch: easier to hear, and it maps one-to-one onto the dossier values."
+  },
+  {
+   "id": "FC_NOTCH",
+   "call": "first call (street dog only)",
+   "purpose": "EAR-NOTCH (JMC's sterilisation mark)",
+   "keys": {
+    "1": "had the cut",
+    "2": "no cut",
+    "3": "could not see"
+   },
+   "text": {
+    "en": "JMC marks the dogs it has sterilised with a small cut in the dog's own right ear. If the dog faces you, that ear is on your left. Did this dog have the cut? Press 1 for yes. Press 2 for no. Press 3 if you could not see.",
+    "hi": "नगर निगम नसबंदी किए हुए कुत्तों के दाहिने कान में एक छोटा कट लगाता है, यानी कुत्ते का अपना दाहिना कान। अगर कुत्ता आपकी तरफ़ मुँह करके खड़ा हो तो वह कान आपके बाईं तरफ़ होगा। क्या इस कुत्ते के कान में कट था? हाँ के लिए 1, नहीं के लिए 2, देख नहीं पाए तो 3 दबाएँ।",
+    "doi": "नगर निगम नसबंदी कित्ते दे कुत्तें दे सज्जे कन्न च इक्क निक्का जेहा कट्ट लांदा ऐ, मतलब कुत्ते दा अपना सज्जा कन्न। जेकर कुत्ता तुंदे अग्गे मूंह करियै खड़ोता होऐ तां ओह् कन्न तुंदे खब्बे पास्से होग। के इस कुत्ते दे कन्न च कट्ट हा? हां लेई 1, नेईं लेई 2, दिक्खी नेईं सके तां 3 दबाओ।",
+    "ur": "بلدیہ نس بندی کیے ہوئے کتوں کے دائیں کان میں ایک چھوٹا سا کٹ لگاتی ہے، یعنی کتے کا اپنا دایاں کان۔ اگر کتا آپ کی طرف منہ کر کے کھڑا ہو تو وہ کان آپ کی بائیں طرف ہوگا۔ کیا اس کتے کے کان میں کٹ تھا؟ ہاں کے لیے 1، نہیں کے لیے 2، دیکھ نہیں پائے تو 3 دبائیں۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Mark is 'Right Ear-notch' per JMC press releases (dossier). Open: ask the ABC team what the cut looks like (V-notch vs tip) so the words are exact, and confirm the left/right explanation. Longest question (about 22 s); trim if call length matters."
+  },
+  {
+   "id": "FC_SICK",
+   "call": "first call",
+   "purpose": "Rabid-dog flag",
+   "keys": {
+    "1": "yes",
+    "2": "no",
+    "3": "do not know"
+   },
+   "text": {
+    "en": "Did the dog look sick or act strangely, bite other people or animals, or die afterwards? Press 1 for yes. Press 2 for no. Press 3 if you do not know.",
+    "hi": "क्या कुत्ता बीमार दिखा या अजीब व्यवहार कर रहा था, दूसरे लोगों या जानवरों को काटा, या बाद में मर गया? हाँ के लिए 1, नहीं के लिए 2, पता न हो तो 3 दबाएँ।",
+    "doi": "के कुत्ता बमार लग्गा जां अजीब बर्ताव करा दा हा, होर लोकें जां जानवरें गी कट्टेआ, जां बाद च मरी गेआ? हां लेई 1, नेईं लेई 2, पता नेईं होऐ तां 3 दबाओ।",
+    "ur": "کیا کتا بیمار لگا یا عجیب برتاؤ کر رہا تھا، دوسرے لوگوں یا جانوروں کو کاٹا، یا بعد میں مر گیا؟ ہاں کے لیے 1، نہیں کے لیے 2، پتہ نہ ہو تو 3 دبائیں۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Dossier question was 'sick, bite others, or die?'; 'do not know' added so people are not forced into a yes/no."
+  },
+  {
+   "id": "FC_SICK_YES",
+   "call": "first call",
+   "purpose": "Only after SICK=1: say what happens next (no medical advice beyond the clinic)",
+   "keys": {},
+   "text": {
+    "en": "Thank you. We are passing this on to the animal team. Please also tell the doctor at the clinic.",
+    "hi": "धन्यवाद। हम यह जानकारी पशु टीम तक पहुँचा रहे हैं। कृपया क्लिनिक के डॉक्टर को भी यह बताइए।",
+    "doi": "मेहरबानी। असें एह् जानकारी पशु टीम तक पुजा दे आं। मेहरबानी करियै क्लिनिक दे डॉक्टर गी बी एह् दस्सो।",
+    "ur": "شکریہ۔ ہم یہ معلومات جانوروں کی ٹیم تک پہنچا رہے ہیں۔ براہِ کرم کلینک کے ڈاکٹر کو بھی یہ بتائیے۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Promise = the same-day vet alert in the dossier. Do not play this unless that alert is really wired to a person."
+  },
+  {
+   "id": "FC_CLOSE",
+   "call": "first call",
+   "purpose": "Close: next dose date out loud",
+   "keys": {},
+   "text": {
+    "en": "Thank you. Your next injection is injection {n} of {total}, on {date}, at {time}, at {clinic}. We will try to call you the evening before. If you ever want to stop these calls, press 9 when we call.",
+    "hi": "धन्यवाद। आपका अगला टीका, कुल {total} में से टीका नंबर {n}, {date} को {time} {clinic} में है। हम एक शाम पहले आपको फ़ोन करने की कोशिश करेंगे। अगर कभी ये फ़ोन बंद करवाने हों तो फ़ोन आने पर 9 दबाइए।",
+    "doi": "मेहरबानी। तुंदा अगला टीका, कुल {total} टीकें विच्चों टीका नंबर {n}, {date} गी {time} {clinic} च ऐ। असें इक्क संञ पैह्लें तुसेंगी फोन करने दी कोशश करगे। जेकर कदें एह् फोन बंद करुआने होन तां फोन आए पर 9 दबाओ।",
+    "ur": "شکریہ۔ آپ کا اگلا ٹیکہ، کل {total} میں سے ٹیکہ نمبر {n}، {date} کو {time} {clinic} میں ہے۔ ہم ایک شام پہلے آپ کو فون کرنے کی کوشش کریں گے۔ اگر کبھی یہ فون بند کروانے ہوں تو فون آنے پر 9 دبائیں۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": ""
+  },
+  {
+   "id": "FC_CLOSE_COME",
+   "call": "first call (next dose date already passed)",
+   "purpose": "Close when the next injection date in the schedule has already gone: say nothing about a date, ask the patient to come or call",
+   "keys": {},
+   "text": {
+    "en": "Thank you. Your next injection date has already passed. Please come to {clinic} as soon as you can, or call the clinic on {clinic_phone}.",
+    "hi": "धन्यवाद। आपके अगले टीके की तारीख़ निकल चुकी है। कृपया जितना जल्दी हो सके {clinic} आइए, या क्लिनिक को {clinic_phone} पर फ़ोन कीजिए।",
+    "doi": "मेहरबानी। तुंदे अगले टीके दी तरीख़ लंघी गेदी ऐ। मेहरबानी करियै जिन्नी छेती होई सकै {clinic} आओ, जां क्लिनिक गी {clinic_phone} उप्पर फोन करो।",
+    "ur": "شکریہ۔ آپ کے اگلے ٹیکے کی تاریخ گزر چکی ہے۔ براہِ کرم جتنی جلدی ہو سکے {clinic} آئیے، یا کلینک کو {clinic_phone} پر فون کیجیے۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Replaces FC_CLOSE_NODATE, which said the clinic would set the dates. Played only when the dose table's next pending dose is already past due. Needs the clinic's phone number."
+  },
+  {
+   "id": "FC_CLOSE_LAST",
+   "call": "first call (last dose taken today)",
+   "purpose": "Close when today's dose was the last one",
+   "keys": {},
+   "text": {
+    "en": "Thank you. That was your last scheduled injection. We will not need to call again. Your number will be deleted in 7 days.",
+    "hi": "धन्यवाद। यह आपका आख़िरी तय टीका था। अब हमें फ़ोन करने की ज़रूरत नहीं पड़ेगी। आपका नंबर 7 दिन में मिटा दिया जाएगा।",
+    "doi": "मेहरबानी। एह् तुंदा आखरी तैह् कीता होआ टीका हा। हुन असेंगी फोन करने दी लोड़ नेईं पौग। तुंदा नंबर 7 दिनें च मटाई दित्ता जाग।",
+    "ur": "شکریہ۔ یہ آپ کا آخری طے شدہ ٹیکہ تھا۔ اب ہمیں فون کرنے کی ضرورت نہیں پڑے گی۔ آپ کا نمبر 7 دن میں مٹا دیا جائے گا۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": ""
+  },
+  {
+   "id": "RM_HELLO",
+   "call": "reminders",
+   "purpose": "Second line of every reminder call, after the listener has pressed 1: names the clinic",
+   "keys": {},
+   "text": {
+    "en": "Thank you. This is the anti-rabies clinic at {clinic}.",
+    "hi": "धन्यवाद। यह {clinic} के रेबीज़ टीका केंद्र की ओर से फ़ोन है।",
+    "doi": "मेहरबानी। एह् {clinic} दे रेबीज़ टीका केंदर दा फोन ऐ।",
+    "ur": "شکریہ۔ یہ {clinic} کے ریبیز ٹیکہ مرکز کی طرف سے فون ہے۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "The wrong-number key now lives in RM_GATE, before anything about health is said."
+  },
+  {
+   "id": "RM_WHO",
+   "call": "reminders (shared phone)",
+   "purpose": "When two or more patients share one phone number, say which register entry this call is about (digits only)",
+   "keys": {},
+   "text": {
+    "en": "This reminder is for the patient with register number {register}.",
+    "hi": "यह याद दिलाने वाला फ़ोन रजिस्टर नंबर {register} वाले मरीज़ के लिए है।",
+    "doi": "एह् याद करुआने आला फोन रजिस्टर नंबर {register} आले मरीज़ लेई ऐ।",
+    "ur": "یہ یاد دہانی رجسٹر نمبر {register} والے مریض کے لیے ہے۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Only the digits of the register number are spoken. Played right after RM_HELLO."
+  },
+  {
+   "id": "RM_EVE_BODY",
+   "call": "evening-before reminder",
+   "purpose": "EVENING-BEFORE REMINDER (target 5-8 pm, before the 9 pm limit)",
+   "keys": {},
+   "text": {
+    "en": "Tomorrow, {date}, is injection {n} of {total}. Please come to {clinic} at {time}. Even if you do not get a call, come on the date on your card.",
+    "hi": "कल, {date}, कुल {total} में से टीका नंबर {n} लगना है। कृपया {time} {clinic} आइए। फ़ोन न आए तब भी कार्ड पर लिखी तारीख़ को आइए।",
+    "doi": "कल्ल, {date}, कुल {total} टीकें विच्चों टीका नंबर {n} लगना ऐ। मेहरबानी करियै {time} {clinic} आओ। फोन नेईं बी औऐ तां बी कार्ड उप्पर लिखी दी तरीख़ उप्पर आओ।",
+    "ur": "کل، {date}، کل {total} میں سے ٹیکہ نمبر {n} لگنا ہے۔ براہِ کرم {time} {clinic} آئیے۔ فون نہ آئے تب بھی کارڈ پر لکھی تاریخ پر آئیے۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Matches the demo line 'Kal aapka teesra teeka hai, GMC Jammu, subah 9 baje'. Check: if 'kal' falls on a day the clinic is closed, the date logic must catch it."
+  },
+  {
+   "id": "RM_EVE_BODY_OUT",
+   "call": "evening-before reminder (vaccine out)",
+   "purpose": "Replaces RM_EVE_BODY while the clinic's 'vaccine out' switch is on",
+   "keys": {},
+   "text": {
+    "en": "Tomorrow, {date}, is injection {n} of {total}. The clinic says the vaccine is not available right now. Please call the clinic on {clinic_phone} before you come.",
+    "hi": "कल, {date}, कुल {total} में से टीका नंबर {n} लगना है। क्लिनिक के अनुसार अभी टीका उपलब्ध नहीं है। आने से पहले कृपया क्लिनिक को {clinic_phone} पर फ़ोन कीजिए।",
+    "doi": "कल्ल, {date}, कुल {total} टीकें विच्चों टीका नंबर {n} लगना ऐ। क्लिनिक दे मताबक हुन टीका नेईं उपलब्ध ऐ। औने थमां पैह्लें मेहरबानी करियै क्लिनिक गी {clinic_phone} उप्पर फोन करो।",
+    "ur": "کل، {date}، کل {total} میں سے ٹیکہ نمبر {n} لگنا ہے۔ کلینک کے مطابق ابھی ٹیکہ دستیاب نہیں ہے۔ آنے سے پہلے براہِ کرم کلینک کو {clinic_phone} پر فون کیجیے۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Needs the clinic's phone number in the clinic setup. Digits are read one by one."
+  },
+  {
+   "id": "RM_EVE_END",
+   "call": "reminders",
+   "purpose": "Closing hints on the evening reminder",
+   "keys": {
+    "9": "stop calls",
+    "*": "hear again"
+   },
+   "text": {
+    "en": "To hear this again, press star. To stop these reminder calls, press 9. Thank you.",
+    "hi": "इसे दोबारा सुनने के लिए स्टार दबाएँ। ये याद दिलाने वाले फ़ोन बंद करवाने के लिए 9 दबाएँ। धन्यवाद।",
+    "doi": "एह् फही सुनने लेई स्टार दबाओ। एह् याद करुआने आले फोन बंद करुआने लेई 9 दबाओ। मेहरबानी।",
+    "ur": "اسے دوبارہ سننے کے لیے اسٹار دبائیں۔ یہ یاد دہانی کے فون بند کروانے کے لیے 9 دبائیں۔ شکریہ۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": ""
+  },
+  {
+   "id": "RM_MISS_Q",
+   "call": "missed-dose morning call",
+   "purpose": "MISSED-DOSE MORNING CALL + 'PRESS 1 IF YOU TOOK IT' (target after 9 am)",
+   "keys": {
+    "1": "took it",
+    "2": "did not take it",
+    "8": "not for me"
+   },
+   "text": {
+    "en": "Yesterday, {date}, was the day for injection {n} of {total}. The clinic has no note that it was given. If you took it, press 1. If you did not, press 2.",
+    "hi": "बीते कल, {date} को, {total} में से टीका नंबर {n} लगना था। क्लिनिक में इसके लगने का कोई रिकॉर्ड नहीं है। अगर आपने लगवा लिया है तो 1 दबाएँ। अगर नहीं लगवाया तो 2 दबाएँ।",
+    "doi": "बीते कल्ल, {date} गी, {total} टीकें विच्चों टीका नंबर {n} लगना हा। क्लिनिक च इसदे लगने दा कोई रिकॉर्ड नेईं ऐ। जेकर तुसें लुआई लेआ ऐ तां 1 दबाओ। जेकर नेईं लुआया तां 2 दबाओ।",
+    "ur": "گزشتہ کل، {date} کو، {total} میں سے ٹیکہ نمبر {n} لگنا تھا۔ کلینک میں اس کے لگنے کا کوئی ریکارڈ نہیں ہے۔ اگر آپ نے لگوا لیا ہے تو 1 دبائیں۔ اگر نہیں لگوایا تو 2 دبائیں۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "machine_draft_needs_native_review",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Played after RM_HELLO. Key 1 is the primary dose signal per the dossier. If the clinic marks the dose after this call is queued, the call must be cancelled, not played. The call is made the morning after the due date, so it asks about yesterday; a 1 marks the dose given on its due date. Changed 2026-10-19."
+  },
+  {
+   "id": "RM_MISS_TAKEN",
+   "call": "missed-dose morning call",
+   "purpose": "After key 1",
+   "keys": {},
+   "text": {
+    "en": "Thank you. We have noted it. Your next injection is injection {n} of {total}, on {date}, at {time}.",
+    "hi": "धन्यवाद। हमने इसे दर्ज कर लिया है। आपका अगला टीका, कुल {total} में से टीका नंबर {n}, {date} को {time} है।",
+    "doi": "मेहरबानी। असें इसी दर्ज करी लेआ ऐ। तुंदा अगला टीका, कुल {total} टीकें विच्चों टीका नंबर {n}, {date} गी {time} ऐ।",
+    "ur": "شکریہ۔ ہم نے اسے درج کر لیا ہے۔ آپ کا اگلا ٹیکہ، کل {total} میں سے ٹیکہ نمبر {n}، {date} کو {time} ہے۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": ""
+  },
+  {
+   "id": "RM_MISS_TAKEN_LAST",
+   "call": "missed-dose morning call",
+   "purpose": "After key 1 when that was the last scheduled dose",
+   "keys": {},
+   "text": {
+    "en": "Thank you. We have noted it. That was your last scheduled injection.",
+    "hi": "धन्यवाद। हमने इसे दर्ज कर लिया है। यह आपका आख़िरी तय टीका था।",
+    "doi": "मेहरबानी। असें इसी दर्ज करी लेआ ऐ। एह् तुंदा आखरी तैह् कीता होआ टीका हा।",
+    "ur": "شکریہ۔ ہم نے اسے درج کر لیا ہے۔ یہ آپ کا آخری طے شدہ ٹیکہ تھا۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": ""
+  },
+  {
+   "id": "RM_MISS_NOT",
+   "call": "missed-dose morning call",
+   "purpose": "After key 2: go to the clinic today (no medical advice beyond that)",
+   "keys": {},
+   "text": {
+    "en": "Please go to {clinic} today, as soon as you can. Do not wait for the next date. The doctor will tell you what to do.",
+    "hi": "कृपया आज ही, जितनी जल्दी हो सके, {clinic} जाइए। अगली तारीख़ का इंतज़ार मत कीजिए। आगे क्या करना है, यह डॉक्टर बताएँगे।",
+    "doi": "मेहरबानी करियै अज्जै गै, जित्नी छेती होई सकै, {clinic} जाओ। अगली तरीख दा इंतजार नेईं करो। अग्गें केह् करना ऐ, एह् डॉक्टर दसङन।",
+    "ur": "براہِ کرم آج ہی، جتنی جلدی ہو سکے، {clinic} جائیے۔ اگلی تاریخ کا انتظار مت کیجیے۔ آگے کیا کرنا ہے، یہ ڈاکٹر بتائیں گے۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "No second call follows this prompt: the clinic's missed-dose list is the follow-up."
+  },
+  {
+   "id": "VAX_OUT_NOTICE",
+   "call": "vaccine-out notice",
+   "purpose": "Standalone call when the clinic sets 'vaccine out' after reminders have already gone",
+   "keys": {},
+   "text": {
+    "en": "Hello. A message from the anti-rabies clinic at {clinic}. The vaccine is not available right now. Please call the clinic on {clinic_phone} before you come.",
+    "hi": "नमस्ते। {clinic} के रेबीज़ टीका केंद्र की ओर से संदेश। अभी टीका उपलब्ध नहीं है। आने से पहले कृपया क्लिनिक को {clinic_phone} पर फ़ोन कीजिए।",
+    "doi": "नमस्ते। {clinic} दे रेबीज़ टीका केंदर दा संदेश। हुन टीका नेईं उपलब्ध ऐ। औने थमां पैह्लें मेहरबानी करियै क्लिनिक गी {clinic_phone} उप्पर फोन करो।",
+    "ur": "السلام علیکم۔ {clinic} کے ریبیز ٹیکہ مرکز کی طرف سے پیغام۔ ابھی ٹیکہ دستیاب نہیں ہے۔ آنے سے پہلے براہِ کرم کلینک کو {clinic_phone} پر فون کیجیے۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Sent only to people whose next dose is due within the outage. 'Wrong number' (8) and 'stop' (9) still work; add RM_EVE_END after it."
+  },
+  {
+   "id": "VAX_BACK",
+   "call": "vaccine-out notice",
+   "purpose": "Vaccine is back",
+   "keys": {},
+   "text": {
+    "en": "Hello. Good news from the anti-rabies clinic at {clinic}. The vaccine is available again. Please come on your date as planned.",
+    "hi": "नमस्ते। {clinic} के रेबीज़ टीका केंद्र से अच्छी ख़बर। टीका फिर से उपलब्ध है। कृपया तय तारीख़ पर ही आइए।",
+    "doi": "नमस्ते। {clinic} दे रेबीज़ टीका केंदर थमां चंगी खबर। टीका फही उपलब्ध ऐ। मेहरबानी करियै तैह् कीती दी तरीख उप्पर गै आओ।",
+    "ur": "السلام علیکم۔ {clinic} کے ریبیز ٹیکہ مرکز سے اچھی خبر۔ ٹیکہ دوبارہ دستیاب ہے۔ براہِ کرم طے شدہ تاریخ پر ہی آئیے۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": ""
+  },
+  {
+   "id": "FIN_Q",
+   "call": "final call",
+   "purpose": "FINAL CALL after the last scheduled dose",
+   "keys": {
+    "1": "took all",
+    "2": "missed some",
+    "8": "not for me"
+   },
+   "text": {
+    "en": "Our record shows your last injection was on {date}. If you took all your injections, press 1. If you missed any, press 2.",
+    "hi": "हमारे रिकॉर्ड के अनुसार आपका आख़िरी टीका {date} को था। अगर आपने सभी टीके लगवा लिए हैं तो 1 दबाएँ। अगर कोई टीका छूट गया है तो 2 दबाएँ।",
+    "doi": "साढ़े रिकॉर्ड मताबक तुंदा आखरी टीका {date} गी हा। जेकर तुसें सारे टीके लुआई लैते न तां 1 दबाओ। जेकर कोई टीका रेहा दा ऐ तां 2 दबाओ।",
+    "ur": "ہمارے ریکارڈ کے مطابق آپ کا آخری ٹیکہ {date} کو تھا۔ اگر آپ نے تمام ٹیکے لگوا لیے ہیں تو 1 دبائیں۔ اگر کوئی ٹیکہ رہ گیا ہے تو 2 دبائیں۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Played after RM_HELLO."
+  },
+  {
+   "id": "FIN_ALL",
+   "call": "final call",
+   "purpose": "After key 1",
+   "keys": {},
+   "text": {
+    "en": "Thank you for finishing all your injections.",
+    "hi": "सभी टीके पूरे करने के लिए धन्यवाद।",
+    "doi": "सारे टीके पूरे करने लेई मेहरबानी।",
+    "ur": "تمام ٹیکے مکمل کرنے کا شکریہ۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": ""
+  },
+  {
+   "id": "FIN_MISSED",
+   "call": "final call",
+   "purpose": "After key 2",
+   "keys": {},
+   "text": {
+    "en": "Please visit the clinic and show your bite card to the doctor. The doctor will advise you.",
+    "hi": "कृपया क्लिनिक जाकर डॉक्टर को अपना बाइट कार्ड दिखाइए। डॉक्टर आपको सलाह देंगे।",
+    "doi": "मेहरबानी करियै क्लिनिक च जाइयै डॉक्टर गी अपना बाइट कार्ड दस्सो। डॉक्टर तुसेंगी सलाह देङन।",
+    "ur": "براہِ کرم کلینک جا کر ڈاکٹر کو اپنا بائٹ کارڈ دکھائیے۔ ڈاکٹر آپ کو مشورہ دیں گے۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": ""
+  },
+  {
+   "id": "FIN_TEAM",
+   "call": "final call",
+   "purpose": "'TEAM WORKED YOUR AREA' line. Played ONLY if the ABC team has a logged visit to that ward after the bite date; otherwise it is left out (the call is still complete without it).",
+   "keys": {},
+   "text": {
+    "en": "One more thing. Since you told us where the bite happened, the animal birth control team has worked in {ward}. Thank you for your help.",
+    "hi": "एक बात और। आपने बताया था कि कुत्ते ने कहाँ काटा, उसके बाद से पशु जन्म नियंत्रण टीम ने {ward} में काम किया है। आपकी मदद के लिए धन्यवाद।",
+    "doi": "इक्क गल्ल होर। तुसें दस्सेआ हा के कुत्ते नै कुत्थें कट्टेआ, उसदे बाद थमां पशु जन्म नियंत्रण टीम नै {ward} च कम्म कीता ऐ। तुंदी मदद लेई मेहरबानी।",
+    "ur": "ایک بات اور۔ آپ نے بتایا تھا کہ کتے نے کہاں کاٹا، اس کے بعد سے جانوروں کی پیدائش پر کنٹرول کی ٹیم نے {ward} میں کام کیا ہے۔ آپ کی مدد کا شکریہ۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": "Needs a ward-level activity log from the ABC team. The sentence states a sequence ('since'), not a cause. OPEN: does the ABC team keep and share such a log?"
+  },
+  {
+   "id": "FIN_DELETE",
+   "call": "final call",
+   "purpose": "Deletion promise",
+   "keys": {},
+   "text": {
+    "en": "Your phone number will be deleted in 7 days. We will not call you again. Take care.",
+    "hi": "आपका फ़ोन नंबर 7 दिन में मिटा दिया जाएगा। हम आपको फिर फ़ोन नहीं करेंगे। अपना ख़याल रखिए।",
+    "doi": "तुंदा फोन नंबर 7 दिनें च मटाई दित्ता जाग। असें तुसेंगी फही फोन नेईं करगे। अपना ख्याल रक्खो।",
+    "ur": "آپ کا فون نمبر 7 دن میں مٹا دیا جائے گا۔ ہم آپ کو دوبارہ فون نہیں کریں گے۔ اپنا خیال رکھیے۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": ""
+  },
+  {
+   "id": "WN_CONFIRM",
+   "call": "wrong number",
+   "purpose": "After key 8: confirm so an accidental press does not stop a real patient's reminders",
+   "keys": {
+    "8": "yes wrong number",
+    "1": "keep listening"
+   },
+   "text": {
+    "en": "You said this call is not for you. To confirm, press 8. To keep listening, press 1.",
+    "hi": "आपने बताया कि यह फ़ोन आपके लिए नहीं है। पक्का करने के लिए 8 दबाएँ। सुनते रहने के लिए 1 दबाएँ।",
+    "doi": "तुसें दस्सेआ के एह् फोन तुंदे लेई नेईं ऐ। पक्का करने लेई 8 दबाओ। सुनदे रौहने लेई 1 दबाओ।",
+    "ur": "آپ نے بتایا کہ یہ فون آپ کے لیے نہیں ہے۔ پکا کرنے کے لیے 8 دبائیں۔ سنتے رہنے کے لیے 1 دبائیں۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": ""
+  },
+  {
+   "id": "WN_DONE",
+   "call": "wrong number",
+   "purpose": "Wrong number confirmed: number deleted, clinic dashboard flags the patient as unreachable",
+   "keys": {},
+   "text": {
+    "en": "Sorry for the trouble. We will not call this number again. Goodbye.",
+    "hi": "असुविधा के लिए खेद है। हम इस नंबर पर दोबारा फ़ोन नहीं करेंगे। नमस्ते।",
+    "doi": "तकलीफ लेई माफी। असें इस नंबर उप्पर फही फोन नेईं करगे। नमस्ते।",
+    "ur": "تکلیف کے لیے معذرت۔ ہم اس نمبر پر دوبارہ فون نہیں کریں گے۔ خدا حافظ۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": ""
+  },
+  {
+   "id": "OPT_CONFIRM",
+   "call": "opt-out",
+   "purpose": "After key 9 on any reminder: confirm, because stopping reminders is the one risky choice",
+   "keys": {
+    "9": "yes stop",
+    "1": "keep reminders"
+   },
+   "text": {
+    "en": "You pressed to stop the reminder calls. To confirm, press 9. To keep getting reminders, press 1.",
+    "hi": "आपने याद दिलाने वाले फ़ोन बंद करने के लिए बटन दबाया है। पक्का करने के लिए 9 दबाएँ। याद दिलाने वाले फ़ोन जारी रखने के लिए 1 दबाएँ।",
+    "doi": "तुसें याद करुआने आले फोन बंद करने लेई बटन दबाया ऐ। पक्का करने लेई 9 दबाओ। याद करुआने आले फोन जारी रक्खने लेई 1 दबाओ।",
+    "ur": "آپ نے یاد دہانی کے فون بند کرنے کے لیے بٹن دبایا ہے۔ پکا کرنے کے لیے 9 دبائیں۔ یاد دہانی کے فون جاری رکھنے کے لیے 1 دبائیں۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": ""
+  },
+  {
+   "id": "OPT_DONE",
+   "call": "opt-out",
+   "purpose": "Opt-out confirmed: number deleted; patient told to finish the course anyway",
+   "keys": {},
+   "text": {
+    "en": "We have stopped the reminder calls and are deleting your number. Please still come to the clinic on the date on your card. Goodbye.",
+    "hi": "हमने याद दिलाने वाले फ़ोन बंद कर दिए हैं और आपका नंबर मिटा रहे हैं। फिर भी कृपया कार्ड पर लिखी तारीख़ को क्लिनिक आइए। नमस्ते।",
+    "doi": "असें याद करुआने आले फोन बंद करी ओड़े न ते तुंदा नंबर मटाई ओड़दे आं। फी बी मेहरबानी करियै कार्ड उप्पर लिखी दी तरीख़ उप्पर क्लिनिक आओ। नमस्ते।",
+    "ur": "ہم نے یاد دہانی کے فون بند کر دیے ہیں اور آپ کا نمبر مٹا رہے ہیں۔ پھر بھی براہِ کرم کارڈ پر لکھی تاریخ پر کلینک آئیے۔ خدا حافظ۔"
+   },
+   "review_status": {
+    "en": "source",
+    "hi": "needs_check",
+    "doi": "machine_draft_needs_native_review",
+    "ur": "machine_draft_needs_native_review"
+   },
+   "notes": ""
+  }
+ ]
+}

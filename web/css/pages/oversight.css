@@ -1,0 +1,88 @@
+/* Oversight summary. Logical properties only; tokens from tokens.css. */
+
+.ov-window {
+  font-size: var(--text-sm);
+}
+
+.ov-top,
+.ov-split {
+  display: grid;
+  gap: var(--s-5);
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+}
+@media (min-width: 64rem) {
+  .ov-split {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  }
+  /* the share stays in view while the long list of areas scrolls */
+  .ov-cov {
+    position: sticky;
+    inset-block-start: var(--s-4);
+  }
+}
+
+/* ---- the headline */
+.ov-headline {
+  display: grid;
+  gap: var(--s-2);
+}
+.ov-rate {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--s-1) var(--s-3);
+  max-inline-size: none;
+}
+.ov-rate__n {
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.ov-rate__ci {
+  font-size: var(--text-lg);
+  color: var(--ink-2);
+}
+.ov-rate--none {
+  align-items: center;
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  color: var(--ink-2);
+}
+.ov-basis {
+  color: var(--ink-2);
+}
+
+/* ---- the counts: one column of tiles on a phone, a row of three under the headline from 40rem */
+.ov-tiles {
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 40rem) {
+  .ov-tiles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.ov-tiles .stat__n {
+  font-size: var(--text-2xl);
+}
+
+/* ---- areas */
+.area-row {
+  padding-block: var(--s-3);
+}
+
+.ov-foot {
+  display: flex;
+}
+.method-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  min-block-size: var(--target);
+}
+
+/* a status line with nothing in it takes no room */
+[role="status"]:empty {
+  display: none;
+}

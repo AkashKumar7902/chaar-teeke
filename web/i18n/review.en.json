@@ -1,0 +1,94 @@
+{
+  "_meta": {
+    "lang": "en",
+    "bundle": "review",
+    "note": "Review queue. Likely and possible are words, never scores."
+  },
+  "review": {
+    "title": "Review",
+    "left": "{count} left",
+    "case": "Place to review",
+    "heard": "Heard {when}",
+    "deleted": "The recording is deleted when you decide, or by {date}.",
+    "wardNo": "Ward {no}",
+    "player": {
+      "label": "Recording",
+      "play": "Play",
+      "pause": "Pause",
+      "again": "Play again",
+      "loading": "Loading",
+      "tryAgain": "Try again",
+      "space": "Space plays and pauses",
+      "time": "{now} of {total}",
+      "failed": "The recording could not be played."
+    },
+    "noAudio": "This item has no recording",
+    "noAudioHint": "Only Can't tell can be chosen.",
+    "transcript": {
+      "title": "Transcript",
+      "off": "No transcript: speech model off.",
+      "failed": "No transcript. Listen and choose.",
+      "pending": "The words are still being read.",
+      "empty": "No words were recognised.",
+      "reason": "Reason: {why}"
+    },
+    "candidates": {
+      "title": "Closest wards (estimates)",
+      "none": "No ward matched the words.",
+      "matched": "Matched on"
+    },
+    "outside": "Outside Jammu city (pick tehsil)",
+    "cant": "Can't tell",
+    "other": "Another ward",
+    "tehsil": {
+      "label": "Tehsil or town",
+      "hint": "Write the name of the place.",
+      "required": "Write a place name."
+    },
+    "pick": {
+      "label": "Ward",
+      "choose": "Choose a ward",
+      "required": "Choose a ward.",
+      "loading": "Loading the wards",
+      "failed": "The list of wards did not load."
+    },
+    "use": "Choose this",
+    "dismiss": "Cancel",
+    "remember": "Remember this name for this ward",
+    "placed": {
+      "ward": "Ward {no}, {name}",
+      "wardNameless": "Ward {no}",
+      "outside": "Outside Jammu city: {tehsil}",
+      "cant": "Can't tell"
+    },
+    "sending": "Sending in {s} s",
+    "sendingSr": "Chosen. Sending in 5 seconds. Press Undo to stop.",
+    "undo": "Undo",
+    "sendNow": "Send now",
+    "notSent": "Not sent. What you chose is still here.",
+    "retrySend": "Send again",
+    "saved": "Saved. The recording is deleted.",
+    "taken": {
+      "title": "Someone else already decided this one.",
+      "body": "Your choice was not saved.",
+      "next": "Next case"
+    },
+    "empty": {
+      "title": "Nothing to review.",
+      "again": "Check again"
+    },
+    "readOnly": "Your role can't do this",
+    "only": "This is the only case left.",
+    "keys": {
+      "topic": "the keys",
+      "use": "Use the keyboard shortcuts",
+      "space": "Space: play or pause",
+      "ward": "1 to 3: choose a ward",
+      "outside": "4: outside Jammu city",
+      "cant": "5: can't tell",
+      "other": "6: another ward",
+      "move": "J and K: next and previous case",
+      "undo": "Esc: undo; Enter: send now"
+    }
+  }
+}

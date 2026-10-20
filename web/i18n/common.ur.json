@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "lang": "ur",
+    "bundle": "common",
+    "subset": true,
+    "machine_written": true,
+    "needs_native_check": true,
+    "note": "Patient-page subset only (frame, retry, loading, errors, QR). Written by Claude and not yet read by a native Urdu speaker. Pages put their own Urdu text in their own bundle."
+  },
+  "frame": {
+    "skip": "صفحے پر جائیں",
+    "home": "چار ٹیکے کا صفحۂ اول",
+    "brand": "چار ٹیکے",
+    "language": "زبان",
+    "draft": "یہ ترجمہ مسودہ ہے۔ کسی اردو بولنے والے نے ابھی اسے نہیں دیکھا۔",
+    "demo": {
+      "region": "ڈیمو ڈیٹا کی اطلاع",
+      "label": "DEMO DATA:",
+      "note": "مصنوعی اعداد و شمار، حقیقی مریض نہیں",
+      "clock": "ڈیمو گھڑی: {when}"
+    }
+  },
+  "buttons": {
+    "retry": "دوبارہ کوشش کریں",
+    "close": "بند کریں"
+  },
+  "states": {
+    "loading": "لوڈ ہو رہا ہے",
+    "offline": "سرور سے رابطہ نہیں ہو پا رہا۔ دوبارہ کوشش کی جا رہی ہے۔",
+    "notifications": "اطلاعات"
+  },
+  "errors": {
+    "network": "سرور سے رابطہ نہیں ہو سکا۔ کنکشن دیکھ کر دوبارہ کوشش کریں۔",
+    "timeout": "سرور نے جواب دینے میں بہت دیر کی۔",
+    "server": "سرور پر کچھ گڑبڑ ہوئی۔",
+    "generic": "کچھ گڑبڑ ہوئی۔",
+    "signedOut": "جاری رکھنے کے لیے سائن اِن کریں۔"
+  },
+  "qr": {
+    "alt": "فون کا صفحہ کھولنے والا QR کوڈ",
+    "missing": "QR تصویر لوڈ نہیں ہوئی۔ اس کی جگہ فون پر یہ لنک کھولیں:"
+  }
+}

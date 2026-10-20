@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "lang": "en",
+    "bundle": "sight",
+    "note": "Sight count from the team's rounds."
+  },
+  "sight": {
+    "title": "Dogs seen on rounds",
+    "ward": "Ward",
+    "chooseWard": "Choose a ward",
+    "date": "Date counted",
+    "notched": "Notched",
+    "unnotched": "Not notched",
+    "unsure": "Could not see",
+    "send": "Send count",
+    "sent": "Sent for ward {ward}.",
+    "needWard": "Choose a ward",
+    "needDate": "Choose the date",
+    "futureDate": "That day has not come yet",
+    "needCount": "Add at least one dog",
+    "recent": "Recent counts",
+    "recentNone": "No counts of dogs seen on rounds recorded yet",
+    "caption": "Recent counts of dogs seen on rounds",
+    "readOnly": "Read-only view. The team records the dogs it sees on rounds.",
+    "wardsFailed": "The ward list did not load",
+    "more": "Show more"
+  }
+}

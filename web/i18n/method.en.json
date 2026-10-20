@@ -1,0 +1,59 @@
+{
+  "_meta": {
+    "lang": "en",
+    "bundle": "method",
+    "note": "Under 600 words. Sections have fixed anchors that (i) links elsewhere point to: measured, proxy, could-not-see, minimum, deletion, who-sees."
+  },
+  "method": {
+    "title": "How we know",
+    "intro": "What the figures measure, what they cannot tell you, and what happens to the data.",
+    "contents": "On this page",
+    "measured": {
+      "title": "What is measured",
+      "0": "A patient gives a missed call and, with consent, answers four questions: where the bite happened, the kind of place, what the dog looked like, and whether it showed signs of rabies.",
+      "1": "Clinic staff mark each dose. Course completion is the share of courses, past their last dose date, that the clinic marked complete.",
+      "2": "The notched share is the share of street-dog bites, among those where the patient could tell, where the dog had the right-ear V-notch that marks a sterilised dog.",
+      "3": "Figures cover the last 12 weeks.",
+      "4": "An area is marked \"Look here\" when, over the last 4 full weeks, its notched share is lower than the rest of the city's by more than chance explains, even after allowing for looking at all the areas at once. A low share that chance could explain is not marked, so some real gaps go unmarked. A mark is a place to look, not a finding."
+    },
+    "proxy": {
+      "title": "The notch is a stand-in",
+      "0": "Biting is not sampling. A dog that bites is not a random pick from all street dogs, and we count bites, not dogs.",
+      "1": "The claimed 78 to 80% is expected to show up in bite reports only if sterilised and unsterilised dogs bite equally often. They may not.",
+      "2": "So a low share may mean fewer sterilised dogs, or sterilised dogs that bite less. Read it as a sign of where to look."
+    },
+    "could-not-see": {
+      "title": "What patients could not see",
+      "0": "A patient who could not see the dog's ears is counted, and left out of the percentage.",
+      "1": "If every could-not-see answer had gone one way, the share would lie between two bounds. Both are in the (i) beside the share on the Summary page.",
+      "2": "The interval is the range chance alone could explain, at 95%."
+    },
+    "minimum": {
+      "title": "Small numbers",
+      "0": "A percentage appears only with at least 25 answers. From 25 to 49 it carries the note \"Fewer than 50 answers. Read with care.\" Below 25 you see how many are still needed.",
+      "1": "A count below 5 shows as <5, so no one can be picked out. If a total would give a hidden count away, that count is hidden too.",
+      "2": "Wards show counts only, never shares and never a point on a map. Areas are groups of neighbouring wards made for this study, not JMC zones."
+    },
+    "deletion": {
+      "title": "What is deleted, and when",
+      "0": "Phone numbers are kept apart from every answer, encrypted, and every look is logged.",
+      "1": "A number leaves the reminder system 7 days after the last dose, or at once when the patient withdraws by pressing 9 or giving a second missed call.",
+      "2": "A missed call no clinic has linked is deleted after 48 hours.",
+      "3": "A place recording and its transcript are deleted when a reviewer decides, and after 7 days at the latest.",
+      "4": "The weekly export holds counts only. The register extract has one row per patient (register number, ward, doses) and no name, phone number or date."
+    },
+    "who-sees": {
+      "title": "Who sees what",
+      "0": "Clinic: its own patients, the last four digits of a number (the rest only through a logged tap), never place or dog answers.",
+      "1": "ABC team and vets: coverage, areas, ward counts and alerts (ward, day, place type, answer). No phone number.",
+      "2": "Oversight: counts and shares, and the weekly figures. Not the register extract.",
+      "3": "Reviewer (Health staff): hears place recordings, teaches place names, and gets the register extract.",
+      "4": "Admin: settings and system status, no recordings.",
+      "5": "Visitors in the demo can look and never change anything."
+    },
+    "demo-data": {
+      "title": "About this demo data",
+      "0": "This demo history is synthetic and sized like several clinics over 12 weeks. A one-clinic pilot gives about 175 answers in 12 weeks: enough for a city-wide share, not for area flags."
+    }
+  }
+}

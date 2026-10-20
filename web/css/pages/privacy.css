@@ -1,0 +1,40 @@
+/* Privacy notice: a heading and seven short answers. Reads the same in every script. */
+
+.privacy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-5);
+  padding-block-start: var(--s-6);
+}
+.privacy__list {
+  display: grid;
+  gap: var(--s-4);
+}
+.privacy__item {
+  display: grid;
+  gap: var(--s-1);
+  padding-block-end: var(--s-4);
+  border-block-end: var(--border) solid var(--line);
+}
+.privacy__item dt {
+  font-weight: var(--weight-bold);
+  font-size: var(--text-lg);
+}
+.privacy__item dd {
+  max-inline-size: var(--measure);
+}
+.privacy__draft {
+  padding: var(--s-3);
+  border: var(--border-strong) dashed var(--estimate-line);
+  background: var(--estimate-tint);
+  border-radius: var(--radius-m);
+}
+/* Nastaliq has tall strokes above and below the line: give each answer more room. */
+[lang="ur"] .privacy__item {
+  gap: var(--s-3);
+}
+
+/* base.css gives body its own line height, which beats the one set on html[lang=ur]: Nastaliq needs 2 */
+html[lang="ur"] main {
+  line-height: var(--leading-urdu);
+}

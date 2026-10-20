@@ -1,0 +1,15 @@
+# Chaar Teeke - Asterisk logs may hold a patient's number, so they are kept 7 days and then deleted.
+# Install as /etc/logrotate.d/asterisk
+/var/log/asterisk/messages.log {
+    daily
+    rotate 7
+    maxage 7
+    missingok
+    notifempty
+    compress
+    delaycompress
+    sharedscripts
+    postrotate
+        /usr/sbin/asterisk -rx 'logger reload'
+    endscript
+}

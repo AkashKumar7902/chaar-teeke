@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "lang": "en",
+    "bundle": "notfound"
+  },
+  "notfound": {
+    "page": "Page not found · Chaar Teeke",
+    "title": "This page does not exist.",
+    "body": "Check the address, or go to the start.",
+    "home": "Go to the start"
+  }
+}

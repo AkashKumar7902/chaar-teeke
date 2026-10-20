@@ -1,0 +1,11 @@
+{
+  "version": "2026.10.1",
+  "source": "NCDC National Guidelines for Rabies Prophylaxis 2019 s4.1.3, s4.2.1; NCDC Training Module 2025 s2.2.3, s2.4 (research/DOMAIN.md section B)",
+  "regimens": [
+    {"id": "id_trc", "name": "Intradermal, Updated Thai Red Cross", "route": "ID", "days": [0, 3, 7, 28], "enabled": true},
+    {"id": "im_essen", "name": "Intramuscular, Essen", "route": "IM", "days": [0, 3, 7, 14, 28], "enabled": true},
+    {"id": "reexposure", "name": "Re-exposure after a complete course", "route": "ID or IM", "days": [0, 3], "enabled": true},
+    {"id": "id_1week", "name": "Intradermal one-week (WHO 2018)", "route": "ID", "days": [0, 3, 7], "enabled": false},
+    {"id": "im_abbrev", "name": "Intramuscular abbreviated (WHO 2018)", "route": "IM", "days": [0, 3, 7, 14], "enabled": false}
+  ]
+}

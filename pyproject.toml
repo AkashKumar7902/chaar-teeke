@@ -1,0 +1,55 @@
+[project]
+name = "chaarteeke"
+version = "0.1.0"
+description = "Chaar Teeke: rabies-dose reminder calls that also check Jammu's dog sterilisation coverage where people are bitten"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "pydantic>=2.8",
+    "pydantic-settings>=2.4",
+    "cryptography>=43",
+    "rapidfuzz>=3.9",
+    "indic-transliteration>=2.3",
+    "aiohttp>=3.10",
+    "python-multipart>=0.0.9",
+    "segno>=1.6",
+]
+
+[project.optional-dependencies]
+asr = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "soundfile>=0.12",
+    "onnxruntime>=1.18",
+    "torch>=2.3",
+]
+
+[project.scripts]
+chaar-teeke = "chaarteeke.main:cli"
+
+[dependency-groups]
+dev = ["pytest>=8", "pytest-asyncio>=0.24", "httpx>=0.27", "ruff==0.8.6"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["chaarteeke"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+markers = ["real_asterisk: needs a running Asterisk (opt-in)", "asr: needs the speech model (opt-in)"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+extend-exclude = ["telephony/", "var/"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "DTZ"]
+ignore = ["E501"]

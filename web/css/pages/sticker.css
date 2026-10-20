@@ -1,0 +1,192 @@
+/* Bite-card sticker: one sticker on screen, eight on an A4 sheet in print (2 across, 4 down, 105 x 74 mm each).
+   The sticker is always black on white, whatever the theme, so the preview is what prints. Logical properties only. */
+
+.sticker-main {
+  max-inline-size: 48rem;
+}
+.sticker-draft {
+  padding: var(--s-3);
+  border: var(--border-strong) dashed var(--estimate-line);
+  background: var(--estimate-tint);
+  border-radius: var(--radius-m);
+}
+
+/* ---- the sticker */
+.sticker-sheet {
+  display: grid;
+  gap: var(--s-4);
+}
+.sticker {
+  --ink: #12202a;
+  --ink-2: #33434e;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--s-3);
+  padding: var(--s-4);
+  background: #fff;
+  color: var(--ink);
+  border: var(--border) dashed var(--line-strong);
+  border-radius: var(--radius-m);
+  font-size: var(--text-sm);
+  line-height: 1.45;
+  break-inside: avoid;
+}
+.sticker :where(p, figure) {
+  margin: 0;
+}
+.sticker__main {
+  display: grid;
+  gap: var(--s-2);
+  align-content: start;
+  min-inline-size: 0;
+}
+.sticker__clinic {
+  font-weight: var(--weight-bold);
+}
+.sticker__number {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.02em;
+}
+.sticker__sim {
+  justify-self: start;
+  padding: 0 var(--s-2);
+  border: var(--border-strong) dashed var(--ink);
+  border-radius: var(--radius-s, 4px);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.08em;
+}
+.sticker__none {
+  font-weight: var(--weight-bold);
+}
+.sticker__lang {
+  display: grid;
+  gap: 0;
+  padding-block-start: var(--s-1);
+  border-block-start: 1px solid var(--line);
+}
+.sticker__line--call {
+  font-weight: var(--weight-bold);
+}
+.sticker__line--keep {
+  color: var(--ink-2);
+}
+.sticker__codes {
+  display: grid;
+  gap: var(--s-3);
+  align-content: start;
+  justify-items: center;
+}
+.sticker__code {
+  display: grid;
+  gap: var(--s-1);
+  justify-items: center;
+  max-inline-size: 8rem;
+  text-align: center;
+  font-size: var(--text-xs);
+}
+.sticker__qr {
+  display: block;
+  inline-size: 7.5rem;
+  block-size: 7.5rem;
+}
+.sticker__qr-missing {
+  max-inline-size: 7.5rem;
+}
+
+/* only the first sticker on screen; all eight in print */
+.sticker-sheet .sticker:not(:first-child) {
+  display: none;
+}
+
+@media (max-width: 47.99rem) {
+  .sticker {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sticker__codes {
+    grid-auto-flow: column;
+    justify-content: start;
+  }
+}
+
+/* ---- print: A4, only the stickers, black on white */
+@page {
+  size: A4;
+  margin: 0;
+}
+@media print {
+  .frame,
+  .demo-strip,
+  .toast-region,
+  .banner,
+  .draft-note,
+  .skip-link,
+  .sticker-screen {
+    display: none !important;
+  }
+  html,
+  body {
+    background: #fff;
+    color: #000;
+  }
+  .page,
+  .sticker-main {
+    max-inline-size: none;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+  }
+  .sticker-sheet {
+    display: grid;
+    grid-template-columns: repeat(2, 105mm);
+    grid-template-rows: repeat(4, 74mm);
+    gap: 0;
+    inline-size: 210mm;
+    block-size: 296mm;
+    break-after: avoid;
+  }
+  .sticker-sheet .sticker:not(:first-child) {
+    display: grid;
+  }
+  /* no missed-call number set up: nothing to print */
+  .sticker-sheet--unset {
+    display: none;
+  }
+  .sticker {
+    box-sizing: border-box;
+    inline-size: 105mm;
+    block-size: 74mm;
+    padding: 3.5mm;
+    gap: 2.5mm;
+    border: 0.2mm dashed #888;
+    border-radius: 0;
+    overflow: hidden;
+    font-size: 8.5pt;
+    line-height: 1.35;
+  }
+  .sticker__main {
+    gap: 1mm;
+  }
+  .sticker__number {
+    font-size: 15pt;
+  }
+  .sticker__sim {
+    padding: 0 2mm;
+    border-width: 0.4mm;
+  }
+  .sticker__lang {
+    padding-block-start: 0.6mm;
+  }
+  .sticker__codes {
+    gap: 2mm;
+  }
+  .sticker__code {
+    max-inline-size: 22mm;
+    font-size: 6.5pt;
+    line-height: 1.2;
+  }
+  .sticker__qr {
+    inline-size: 20mm;
+    block-size: 20mm;
+  }
+}

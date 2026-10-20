@@ -1,0 +1,7 @@
+# Stable names for the SIMCom SIM7600G-H (Waveshare dongle), default PID 1e0e:9001.
+# Interface numbers: 00 diag, 01 NMEA, 02 AT, 03 modem, 04 PCM audio.
+# DRAFT: confirm with `udevadm info -a /dev/ttyUSB2` after the dongle arrives.
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1e0e", ATTRS{idProduct}=="9001", ENV{ID_USB_INTERFACE_NUM}=="02", SYMLINK+="sim7600-at",   GROUP="asterisk", MODE="0660"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1e0e", ATTRS{idProduct}=="9001", ENV{ID_USB_INTERFACE_NUM}=="04", SYMLINK+="sim7600-audio", GROUP="asterisk", MODE="0660"
+# ModemManager must not grab the AT ports: it sends probes and corrupts calls.
+SUBSYSTEM=="usb", ATTRS{idVendor}=="1e0e", ATTRS{idProduct}=="9001", ENV{ID_MM_DEVICE_IGNORE}="1"

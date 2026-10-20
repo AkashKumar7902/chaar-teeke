@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "lang": "hi",
+    "bundle": "sticker",
+    "note": "The sticker's own lines (lines, privacy) are for the patient and are the same in the en and hi bundles: Hindi, Dogri and Urdu, whatever language the staff page is in. Dogri and Urdu are machine drafts, not yet read by a native speaker.",
+    "machine_written_lines": [
+      "doi",
+      "ur"
+    ],
+    "needs_native_check": true
+  },
+  "sticker": {
+    "title": "बाइट कार्ड के स्टिकर",
+    "intro": "A4 पर छापें, एक शीट पर 8 स्टिकर। हर बाइट कार्ड पर एक चिपकाएँ।",
+    "print": "8 स्टिकर छापें",
+    "today": "आज पर वापस",
+    "draft": "डोगरी और उर्दू की पंक्तियाँ मशीनी मसौदा हैं। छापने से पहले किसी मातृभाषी से पढ़वाएँ।",
+    "localOnly": "कोई सार्वजनिक पता तय नहीं है, इसलिए कोड सिर्फ़ इसी कंप्यूटर पर खुलते हैं।",
+    "noNumber": "मिस्ड कॉल का नंबर अभी तय नहीं है। छापने को कुछ नहीं है।",
+    "simulator": "SIMULATOR",
+    "codeAlt": "QR कोड",
+    "lines": {
+      "hi": {
+        "call": "टीके की याद दिलाने के लिए मिस्ड कॉल दें।",
+        "keep": "फ़ोन नंबर कोर्स के 7 दिन बाद रिमाइंडर सिस्टम से हट जाता है। रोकने के लिए कॉल पर 9 दबाएँ।"
+      },
+      "doi": {
+        "call": "टीके दी याद करुआने लेई मिस्ड कॉल देओ।",
+        "keep": "फ़ोन नंबर कोर्स दे 7 दिन बाद याद करुआने आले सिस्टम चा हटी जंदा ऐ। कॉल बंद करुआने लेई 9 दबाओ।"
+      },
+      "ur": {
+        "call": "ٹیکے کی یاد دہانی کے لیے مسڈ کال دیں۔",
+        "keep": "فون نمبر کورس کے 7 دن بعد یاد دہانی کے نظام سے ہٹ جاتا ہے۔ روکنے کے لیے کال پر 9 دبائیں۔"
+      }
+    },
+    "privacy": {
+      "hi": "गोपनीयता सूचना",
+      "doi": "गोपनीयता सूचना",
+      "ur": "رازداری کا نوٹس"
+    }
+  }
+}

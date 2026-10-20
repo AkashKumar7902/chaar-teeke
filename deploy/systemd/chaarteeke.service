@@ -1,0 +1,54 @@
+# Chaar Teeke: the web app, the call runner and the scheduler, as one process.
+# Installed by deploy/install.sh as /etc/systemd/system/chaarteeke.service (@@USER@@ is filled in then).
+[Unit]
+Description=Chaar Teeke (reminder calls and coverage statistics)
+Documentation=file:///opt/chaarteeke/docs/DEPLOY.md
+After=network-online.target asterisk.service
+Wants=network-online.target asterisk.service
+# Without the env file there are no keys, and pilot mode refuses to start anyway.
+ConditionPathExists=/etc/chaarteeke/env
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=@@USER@@
+Group=@@GROUP@@
+WorkingDirectory=/opt/chaarteeke
+EnvironmentFile=/etc/chaarteeke/env
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/chaarteeke/.venv/bin/chaar-teeke serve
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+# 0022 so that prompt recordings uploaded in the admin page can be read by Asterisk (data/prompts/audio).
+# Everything private sits in /var/lib/chaarteeke, which is mode 0700.
+UMask=0022
+
+# Hardening. The app may write /var/lib/chaarteeke and the prompt audio folder, and nothing else.
+NoNewPrivileges=yes
+ProtectSystem=strict
+ReadWritePaths=/var/lib/chaarteeke /opt/chaarteeke/data/prompts/audio
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+ProtectControlGroups=yes
+ProtectClock=yes
+ProtectHostname=yes
+LockPersonality=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+RestrictNamespaces=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+CapabilityBoundingSet=
+AmbientCapabilities=
+SystemCallArchitectures=native
+# Not set on purpose: SystemCallFilter and MemoryDenyWriteExecute. They can break the speech model's
+# libraries (onnxruntime, torch) and nobody has run those under them. Add them only after a test with the model.
+
+[Install]
+WantedBy=multi-user.target

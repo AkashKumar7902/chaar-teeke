@@ -1,0 +1,320 @@
+/* Clinic pages: Today, Enrol, Patient. Logical properties only; tokens from tokens.css. */
+
+.clinic .page-title,
+.page-title.row--between {
+  justify-content: space-between;
+}
+.page-title h1 {
+  flex: 1 1 auto;
+}
+
+/* ---------------------------------------------------------- vaccine switch */
+.vaccine {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s-3);
+}
+.vaccine__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-2) var(--s-3);
+  inline-size: 100%;
+}
+.vaccine .seg__btn {
+  min-inline-size: 5.5rem;
+}
+.vaccine .seg__btn[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+.vaccine__line {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-2);
+  color: var(--ink-2);
+}
+.vaccine__line--out {
+  color: var(--attention);
+  font-weight: var(--weight-medium);
+}
+.vaccine[data-out="true"] {
+  border-color: var(--attention-line);
+  background: var(--attention-tint);
+}
+.vaccine__line .icon {
+  flex: none;
+  margin-block-start: 0.2em;
+}
+
+/* ------------------------------------------------------------ count tiles */
+.tiles {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.tile {
+  color: inherit;
+  font: inherit;
+  text-align: start;
+  text-decoration: none;
+  min-block-size: var(--target);
+  justify-content: space-between;
+}
+button.tile {
+  cursor: pointer;
+  border-width: var(--border-strong);
+}
+button.tile:hover,
+a.tile:hover {
+  background: var(--surface-2);
+}
+button.tile[aria-pressed="true"] {
+  border-color: var(--primary);
+  background: var(--primary-tint);
+  box-shadow: inset 0 -4px 0 var(--primary);
+}
+button.tile.stat--attention[aria-pressed="true"] {
+  border-color: var(--attention-line);
+  box-shadow: inset 0 -4px 0 var(--attention-line);
+}
+.tile .stat__n {
+  font-size: var(--text-xl);
+}
+.tile .stat__label {
+  font-size: var(--text-xs);
+  line-height: 1.3;
+}
+:lang(hi) .tile .stat__label {
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------- call-back and link tasks */
+.tasks {
+  display: flex;
+  flex-direction: column;
+}
+.task {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-2) var(--s-3);
+  padding-block: var(--s-3);
+}
+.task + .task {
+  border-block-start: var(--border) solid var(--line);
+}
+.task__main {
+  display: flex;
+  flex-direction: column;
+  min-inline-size: 0;
+  flex: 1 1 10rem;
+}
+.task__title {
+  font-weight: var(--weight-bold);
+}
+/* a register number that opens the patient is a link: a full-height target without bigger text */
+a.task__title {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--target);
+}
+.task--one {
+  flex-wrap: nowrap;
+}
+.task--one .task__main {
+  flex: 1 1 0;
+}
+.task__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+}
+.card .card__head + .muted {
+  margin-block-start: var(--s-1);
+}
+.card .tasks {
+  margin-block-start: var(--s-2);
+}
+
+/* ---------------------------------------------------------- patient rows */
+/* the row is not a link, because it can hold a button: the register number and its facts are the link */
+.prow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: var(--s-1) var(--s-3);
+  padding-block: var(--s-2);
+  min-block-size: 3.5rem;
+}
+.prow:hover {
+  background: var(--surface-2);
+}
+.prow__link {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  min-inline-size: 0;
+  min-block-size: var(--target);
+  align-content: center;
+  color: inherit;
+  text-decoration: none;
+}
+.prow__link:hover .prow__no {
+  text-decoration: underline;
+}
+.prow__no {
+  font-weight: var(--weight-bold);
+  font-size: var(--text-lg);
+  min-inline-size: 0;
+  overflow-wrap: anywhere;
+}
+.prow__meta {
+  min-inline-size: 0;
+}
+.prow__state {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: var(--s-2);
+}
+.prow__given {
+  flex: none;
+}
+@media (min-width: 48rem) {
+  .prow {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .prow__link {
+    grid-template-columns: 6rem minmax(0, 1fr);
+    align-items: center;
+    column-gap: var(--s-3);
+  }
+  .prow__state {
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+}
+/* search results sit in the narrow column: the register number above its facts */
+.find__results .prow,
+.find__results .prow__link {
+  grid-template-columns: minmax(0, 1fr);
+}
+.find__results .prow__state {
+  justify-content: flex-start;
+}
+.tile .stat__unit {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--ink-2);
+}
+.stat--attention .stat__unit {
+  color: inherit;
+}
+.clinic .list-head {
+  margin-block-end: 0;
+}
+.find[hidden] {
+  display: none;
+}
+.pick {
+  max-block-size: 50vh;
+  overflow-y: auto;
+}
+.pick__row {
+  inline-size: 100%;
+  background: transparent;
+  border: 0;
+  text-align: start;
+  gap: var(--s-3);
+  justify-content: space-between;
+}
+.pick li + li .pick__row {
+  border-block-start: var(--border) solid var(--line);
+}
+.pick__row:hover {
+  background: var(--surface-2);
+}
+.pick__row[aria-disabled="true"] {
+  opacity: 0.7;
+}
+
+/* a server refusal, in its own words: amber, an icon, no red */
+.inline-error {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-2);
+  padding: var(--s-3);
+  background: var(--attention-tint);
+  border: var(--border) solid var(--attention-line);
+  border-radius: var(--radius-m);
+  color: var(--attention);
+  font-weight: var(--weight-medium);
+}
+.inline-error .icon {
+  flex: none;
+  margin-block-start: 0.2em;
+}
+
+@media (min-width: 64rem) {
+  .clinic__grid {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    align-items: start;
+  }
+}
+
+/* big radio rows: Enrol questions and the stop-reminders dialog */
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+.choice {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  min-block-size: var(--target-lg);
+  padding: var(--s-2) var(--s-4);
+  background: var(--surface);
+  border: var(--border-strong) solid var(--line-strong);
+  border-radius: var(--radius-m);
+  cursor: pointer;
+}
+.choice:hover {
+  background: var(--surface-2);
+}
+.choice:has(input:checked) {
+  border-color: var(--primary);
+  background: var(--primary-tint);
+}
+.choice:has(input:focus-visible) {
+  outline: var(--focus-width) solid var(--focus);
+  outline-offset: var(--focus-offset);
+}
+.choice input {
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  flex: none;
+  margin: 0;
+  accent-color: var(--primary);
+}
+.choice__text {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-inline-size: 0;
+}
+.choice__label {
+  font-weight: var(--weight-medium);
+}
+.choice__hint {
+  color: var(--ink-2);
+  font-size: var(--text-sm);
+}
+.choice__aux {
+  color: var(--ink-2);
+  font-size: var(--text-lg);
+}
+
+
+.switch {
+  max-inline-size: 26rem;
+}

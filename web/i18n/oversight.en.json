@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "lang": "en",
+    "bundle": "oversight",
+    "note": "Summary page and the strings the weekly digest shares with it."
+  },
+  "oversight": {
+    "title": "Summary",
+    "window": "{from} to {to}",
+    "methodLink": "How we know",
+    "completion": {
+      "title": "Course completion",
+      "topic": "course completion",
+      "about": "A course is counted once its last dose date has passed. It is complete when the clinic marked it complete. Courses still running are left out."
+    },
+    "noRate": "No percentage yet",
+    "interval": "interval {range}",
+    "basisRate": "{done} of {ended} courses whose last dose date has passed were marked complete by the clinic. {still} still running are left out.",
+    "basisFew": "n = {n} of {min} needed: too few courses have reached their last dose date for a completion rate.",
+    "basisNone": "No course has reached its last dose date yet.",
+    "noRegister": "No register total is held to compare with.",
+    "enrolled": "Enrolled",
+    "noEnrolled": "No courses yet",
+    "bites": "Bites inside JMC",
+    "noBites": "No calls yet",
+    "bitesOf": "of {n} with a place",
+    "alerts": "Alerts sent",
+    "noAlerts": "None yet",
+    "alertsActed": "{n} acted on",
+    "alertsNoneActed": "None acted on yet",
+    "tiles": "Counts in this window",
+    "coverage": {
+      "title": "Coverage",
+      "topic": "the notched share",
+      "about": "The notch is a stand-in. It shows what patients saw on the dog that bit them, not how many street dogs are sterilised."
+    },
+    "areas": {
+      "title": "Areas",
+      "topic": "the areas",
+      "about": "Analysis areas: groups of neighbouring wards made for this study. They are not Jammu Municipal Corporation zones."
+    },
+    "shareLine": "{pct}, interval {range}, n = {n}",
+    "couldNotSee": "Could not see: {n}",
+    "fewer50": "Fewer than 50 answers",
+    "bounds": "If every could-not-see answer had gone one way, the share would lie between {lo}% and {hi}%.",
+    "empty": {
+      "title": "Nothing recorded in this window yet",
+      "body": "Figures appear once courses are enrolled and patients answer calls."
+    }
+  }
+}

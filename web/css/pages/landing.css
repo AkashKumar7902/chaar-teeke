@@ -1,0 +1,163 @@
+/* Landing (J1). One column on a phone, two from 64rem. Logical properties only. */
+
+.landing {
+  display: grid;
+  gap: var(--s-5);
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
+}
+.landing > * {
+  min-inline-size: 0;
+}
+/* on a phone the two columns dissolve, so the call card sits right after the share */
+.landing__col {
+  display: contents;
+}
+.landing__head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+.landing__head h1 {
+  max-inline-size: 34ch;
+}
+.landing__how {
+  color: var(--ink-2);
+  font-size: var(--text-lg);
+  max-inline-size: 60ch;
+}
+.landing__share { order: 1; }
+.landing__call { order: 2; }
+.landing__map { order: 3; }
+.landing__see { order: 4; }
+.landing__feed { order: 5; }
+.landing__map {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+.landing__see {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+/* the compact map: shorter than the full coverage map, the same component */
+.landing__map .map {
+  block-size: clamp(16rem, 42vh, 24rem);
+}
+.landing__map > :first-child {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+/* the three things to know about the map, in one line; the full legend is behind the (i) */
+.landing__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-1) var(--s-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--ink-2);
+  font-size: var(--text-sm);
+}
+.landing__legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-1);
+}
+.landing__legend-item .sw {
+  flex: none;
+}
+.landing__look {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2) var(--s-3);
+}
+.landing__look:empty {
+  display: none;
+}
+.landing__look-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-1);
+  color: var(--attention);
+  font-weight: var(--weight-bold);
+}
+.landing__look-label .icon {
+  inline-size: 1.25em;
+  block-size: 1.25em;
+}
+.landing__look-link {
+  min-block-size: var(--target);
+  text-decoration: none;
+  font-weight: var(--weight-medium);
+}
+.landing__look-link:hover {
+  text-decoration: underline;
+}
+
+/* try the call */
+.landing__call-card {
+  align-items: flex-start;
+}
+.landing__call-card .btn {
+  align-self: stretch;
+}
+.landing__qr {
+  align-self: center;
+}
+@media (max-width: 47.99rem) {
+  /* the person holding the phone does not need a code to scan */
+  .landing__qr {
+    display: none;
+  }
+}
+
+.landing__see-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s-2);
+}
+.landing__feed .list__title .icon {
+  display: inline-block;
+  vertical-align: -0.2em;
+}
+.landing__feed .list__side {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--s-1);
+}
+
+.landing__feed .list-head {
+  margin-block-end: var(--s-2);
+}
+.landing__feed .list__row {
+  align-items: center;
+}
+
+@media (min-width: 64rem) {
+  .landing {
+    gap: var(--s-5) var(--s-6);
+    /* the answer and the call on the left, the map and the live feed on the right: both on the first screen */
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    align-items: start;
+  }
+  .landing__head {
+    grid-column: 1 / -1;
+  }
+  .landing__col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-5);
+    min-inline-size: 0;
+  }
+  .landing__call-card .btn {
+    align-self: flex-start;
+  }
+  .landing__map .map {
+    block-size: clamp(22rem, 52vh, 34rem);
+  }
+}

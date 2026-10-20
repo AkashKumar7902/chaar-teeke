@@ -1,0 +1,257 @@
+/* The browser phone (J2). Built for a phone at 390 px first. Logical properties only; the keypad and the
+   meter never mirror, the captions follow the script of what is being said. */
+
+/* The SIMULATOR bar is first on screen and stays: the body is a column so the bar can sit above the frame. */
+.phone-page {
+  display: flex;
+  flex-direction: column;
+}
+.sim-bar {
+  order: -1;
+  position: sticky;
+  inset-block-start: 0;
+  z-index: calc(var(--z-sticky) + 5);
+  padding: var(--s-2) var(--gutter);
+  background: var(--estimate-tint);
+  color: var(--ink);
+  border-block-end: var(--border-strong) dashed var(--estimate-line);
+  text-align: center;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+}
+.sim-bar__label {
+  font-weight: var(--weight-bold);
+}
+.phone-page > main {
+  flex: 1 1 auto;
+}
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  padding-block-start: var(--s-5);
+}
+.phone__stage {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+.phone__panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  padding: var(--s-5) var(--s-4);
+  background: var(--surface);
+  border: var(--border) solid var(--line);
+  border-radius: var(--radius-l);
+}
+.phone__panel h1 {
+  font-size: var(--text-2xl);
+}
+.phone__big {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+}
+.phone__promise {
+  padding-inline: var(--s-1);
+}
+.phone__note {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-2);
+  padding: var(--s-3);
+  background: var(--attention-tint);
+  color: var(--attention);
+  border: var(--border) solid var(--attention-line);
+  border-radius: var(--radius-m);
+  font-weight: var(--weight-medium);
+}
+.phone__note .icon {
+  flex: none;
+  margin-block-start: 0.2em;
+}
+.phone__note .btn {
+  flex: none;
+}
+.phone__note:empty {
+  display: none;
+}
+
+/* waiting: a quiet ring */
+.phone__spinner {
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  border: 4px solid var(--line);
+  border-block-start-color: var(--primary);
+  border-radius: 50%;
+  animation: phone-spin 1s linear infinite;
+  align-self: center;
+}
+@keyframes phone-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* incoming call */
+.phone__panel--ring {
+  align-items: center;
+  text-align: center;
+  padding-block: var(--s-6);
+}
+.phone__avatar {
+  display: grid;
+  place-items: center;
+  inline-size: 6rem;
+  block-size: 6rem;
+  border-radius: 50%;
+  background: var(--primary-tint);
+  color: var(--primary);
+  animation: phone-pulse 1.6s ease-out infinite;
+}
+.phone__avatar .mark {
+  inline-size: 3rem;
+  block-size: 3rem;
+}
+@keyframes phone-pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--primary) 40%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 1.5rem transparent;
+  }
+}
+.phone__ring-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s-3);
+  inline-size: 100%;
+}
+
+/* in call */
+.phone__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-2);
+}
+.phone__status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-weight: var(--weight-bold);
+}
+.phone__status .num {
+  color: var(--ink-2);
+  font-weight: var(--weight-regular);
+}
+.phone__caption {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  min-block-size: 7.5rem;
+  padding: var(--s-4);
+  background: var(--surface);
+  border: var(--border-strong) solid var(--line-strong);
+  border-radius: var(--radius-l);
+  font-size: var(--text-lg);
+}
+.phone__line {
+  max-inline-size: none;
+  text-align: start;
+}
+.phone__line--wait {
+  color: var(--ink-3);
+}
+/* the English words under a line in the call's language (the English page only) */
+.phone__line--en {
+  margin-block-start: calc(-1 * var(--s-2));
+  color: var(--ink-2);
+  font-size: var(--text-base);
+}
+.phone__keys {
+  display: flex;
+  justify-content: center;
+}
+.phone__keys .keypad__key {
+  min-block-size: 3.75rem;
+}
+.phone__end {
+  margin-block-start: var(--s-1);
+}
+
+/* hold to speak */
+.phone__record {
+  border-color: var(--primary);
+}
+.phone__record.is-live {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-tint);
+}
+.phone__warn {
+  display: flex;
+  gap: var(--s-2);
+  color: var(--attention);
+  font-weight: var(--weight-medium);
+}
+.phone__warn .icon {
+  flex: none;
+  margin-block-start: 0.2em;
+}
+.phone__speak {
+  min-block-size: var(--target-lg);
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+.phone__meter {
+  block-size: 0.75rem;
+  background: var(--surface-2);
+  border: var(--border) solid var(--line-strong);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  direction: ltr;
+}
+.phone__meter-fill {
+  display: block;
+  inline-size: var(--level, 0%);
+  block-size: 100%;
+  background: var(--primary);
+  transition: inline-size var(--dur-fast) linear;
+}
+.phone__count {
+  font-weight: var(--weight-bold);
+}
+.phone__sent {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  color: var(--primary-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .phone__spinner,
+  .phone__avatar {
+    animation: none;
+  }
+}
+
+@media (min-width: 40rem) {
+  .phone__panel {
+    padding: var(--s-6);
+  }
+}
+
+/* Nastaliq inside a pill: the tall strokes need more than the pill's tight line height */
+html[lang="ur"] .phone__bar .pill {
+  line-height: 1.9;
+  padding-block: var(--s-1);
+}
+
+/* base.css gives body its own line height, which beats the one set on html[lang=ur]: Nastaliq needs 2 */
+html[lang="ur"] main {
+  line-height: var(--leading-urdu);
+}
